@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fishdle — Guess the Fish</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>🐟 Fishdle</h1>
+      <div class="score-bar">
+        <span id="streak" class="score-pill">Streak: 0</span>
+        <span id="score" class="score-pill">0 / 0 correct</span>
+      </div>
+    </header>
+
+    <main class="card">
+      <div class="image-wrap">
+        <img id="fish-image" src="" alt="Mystery fish" />
+        <div id="guesses-remaining" class="guesses-remaining">3 guesses left</div>
+      </div>
+      <button id="flag-photo-btn" type="button" class="flag-photo-btn">
+        🚩 Flag this photo as poor quality
+      </button>
+
+      <div id="hints" class="hints" aria-live="polite"></div>
+
+      <form id="guess-form" class="guess-form" autocomplete="off">
+        <div class="autocomplete-wrap">
+          <input
+            id="guess-input"
+            type="text"
+            name="fishdle-guess"
+            placeholder="Type a species name…"
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+            spellcheck="false"
+            aria-autocomplete="list"
+            aria-expanded="false"
+            aria-controls="suggestion-list"
+            role="combobox"
+            aria-label="Guess the species"
+          />
+          <ul id="suggestion-list" class="suggestion-list hidden" role="listbox"></ul>
+        </div>
+        <button id="guess-submit" type="submit">Guess</button>
+      </form>
+
+      <div id="feedback" class="feedback" aria-live="polite"></div>
+
+      <ul id="guess-history" class="guess-history"></ul>
+
+      <div id="result-panel" class="result-panel hidden">
+        <p id="result-text"></p>
+        <button id="next-fish-btn" type="button">Next fish →</button>
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      <p>Photos courtesy of iNaturalist contributors. Identify the species in 3 guesses or fewer.</p>
+    </footer>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
