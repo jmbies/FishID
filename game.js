@@ -1,30 +1,39 @@
 // game.js — Fishdle
-// Plain vanilla JS, no framework. Continuous round loop: load a fish, guess
-// it in 3 tries, see the result, auto-advance to the next fish.
+// Plain vanilla JS, no framework. Continuous round loop: load a species photo,
+// guess it in 3 tries, see the result, auto-advance to the next.
+//
+// Data comes from data/species-<category>.json, produced by the local
+// curation tool (curate/server.js) + scripts/export-game-data.js.
 
 (function () {
   "use strict";
 
   const TOTAL_GUESSES = 3;
   const RESULT_AUTO_ADVANCE_MS = 4000;
+  const CATEGORIES = {
+    fish: { label: "Fishes", file: "data/species-fish.json" },
+    herps: { label: "Herps", file: "data/species-herps.json" },
+  };
 
-  // A tiny inline placeholder so the game still "runs" before
-  // scripts/fetch-images.js has been used to populate species.json.
   const PLACEHOLDER_IMAGE =
     "data:image/svg+xml;utf8," +
     encodeURIComponent(
       `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300">
         <rect width="100%" height="100%" fill="#e5e7eb"/>
-        <text x="50%" y="50%" font-family="sans-serif" font-size="16"
+        <text x="50%" y="50%" font-family="sans-serif" font-size="15"
           fill="#6b7280" text-anchor="middle" dominant-baseline="middle">
-          No image yet — run scripts/fetch-images.js
+          No curated photo yet
         </text>
       </svg>`
     );
 
   // ---- DOM refs ----------------------------------------------------------
   const els = {
+    categorySwitch: document.getElementById("category-switch"),
+    loadError: document.getElementById("load-error"),
+    gameBody: document.getElementById("game-body"),
     image: document.getElementById("fish-image"),
+    photoCredit: document.getElementById("photo-credit"),
     guessesRemaining: document.getElementById("guesses-remaining"),
     hints: document.getElementById("hints"),
     form: document.getElementById("guess-form"),
@@ -42,20 +51,27 @@
   };
 
   // ---- Session state ------------------------------------------------------
+  // Scores are tracked per category so switching between Fishes and Herps
+  // doesn't scramble a run. In memory only — resets on reload, by design.
   const session = {
-    streak: 0,
-    correctCount: 0,
-    totalRounds: 0,
-    // Photos the player flagged as poor quality this session — skipped for
-    // the rest of the session (in-memory only, like streak/score).
+    scores: {},
     flaggedImages: new Set(),
   };
 
+  function scoreFor(category) {
+    if (!session.scores[category]) {
+      session.scores[category] = { streak: 0, correctCount: 0, totalRounds: 0 };
+    }
+    return session.scores[category];
+  }
+
   const state = {
+    category: "fish",
+    loaded: {},
     allSpecies: [],
     previousSpeciesId: null,
     currentSpecies: null,
-    currentImage: PLACEHOLDER_IMAGE,
+    currentImage: null,
     guessesRemaining: TOTAL_GUESSES,
     hintsRevealed: 0,
     roundOver: false,
@@ -63,27 +79,21 @@
   };
 
   // ---- Autocomplete -------------------------------------------------------
-  // A hand-rolled dropdown rather than a native <datalist>: datalist popups
-  // can't be styled (unreadable in some browsers) and collide with the OS
-  // autofill menu. This owns its own markup, so it's fully themeable.
-  const autocomplete = {
-    matches: [],
-    activeIndex: -1,
-    open: false,
-  };
+  // Hand-rolled rather than a native <datalist>: datalist popups can't be
+  // styled (unreadable in some browsers) and collide with OS autofill.
+  const autocomplete = { matches: [], activeIndex: -1, open: false };
 
+  // Prefix matching only: typing "B" lists everything starting with B, then
+  // "Bi" narrows to Bigmouth… — the list only ever gets shorter as you type.
+  // An empty query matches nothing, so the dropdown stays shut until you type.
   function filterSpecies(query) {
     const q = query.trim().toLowerCase();
-    if (!q) return state.allSpecies.slice();
-    // Prefix matches first, then any substring match.
-    const prefix = [];
-    const substring = [];
-    for (const s of state.allSpecies) {
-      const name = s.commonName.toLowerCase();
-      if (name.startsWith(q)) prefix.push(s);
-      else if (name.includes(q)) substring.push(s);
-    }
-    return prefix.concat(substring);
+    if (!q) return [];
+    return state.allSpecies
+      .filter((s) => s.commonName.toLowerCase().startsWith(q))
+      // Alphabetical: the underlying list is in taxonomic order, which reads
+      // as random when you're scanning a dozen suggestions.
+      .sort((a, b) => a.commonName.localeCompare(b.commonName));
   }
 
   function renderSuggestions() {
@@ -92,11 +102,9 @@
       const li = document.createElement("li");
       li.textContent = species.commonName;
       li.setAttribute("role", "option");
-      li.dataset.speciesId = species.id;
       if (index === autocomplete.activeIndex) li.classList.add("active");
       li.addEventListener("mousedown", (e) => {
-        // mousedown (not click) so it fires before the input's blur.
-        e.preventDefault();
+        e.preventDefault(); // fire before the input's blur
         selectSuggestion(index);
       });
       els.suggestions.appendChild(li);
@@ -107,10 +115,7 @@
     if (state.roundOver) return;
     autocomplete.matches = filterSpecies(query);
     autocomplete.activeIndex = -1;
-    if (autocomplete.matches.length === 0) {
-      closeSuggestions();
-      return;
-    }
+    if (autocomplete.matches.length === 0) return closeSuggestions();
     autocomplete.open = true;
     els.suggestions.classList.remove("hidden");
     els.input.setAttribute("aria-expanded", "true");
@@ -127,8 +132,7 @@
   function moveActive(delta) {
     if (!autocomplete.open || autocomplete.matches.length === 0) return;
     const count = autocomplete.matches.length;
-    autocomplete.activeIndex =
-      (autocomplete.activeIndex + delta + count) % count;
+    autocomplete.activeIndex = (autocomplete.activeIndex + delta + count) % count;
     renderSuggestions();
   }
 
@@ -144,79 +148,78 @@
     const normalized = text.trim().toLowerCase();
     if (!normalized) return null;
     return (
-      state.allSpecies.find(
-        (s) => s.commonName.toLowerCase() === normalized
-      ) || null
+      state.allSpecies.find((s) => s.commonName.toLowerCase() === normalized) ||
+      null
     );
   }
 
-  // ---- Data loading ---------------------------------------------------------
-  async function loadSpeciesData() {
-    const res = await fetch("species.json", { cache: "no-store" });
+  // ---- Data loading -------------------------------------------------------
+  async function loadCategory(category) {
+    if (state.loaded[category]) return state.loaded[category];
+    const res = await fetch(CATEGORIES[category].file, { cache: "no-store" });
     if (!res.ok) {
-      throw new Error(`Failed to load species.json (${res.status})`);
+      throw new Error(`Failed to load ${CATEGORIES[category].file} (${res.status})`);
     }
     const data = await res.json();
-    return data.species || [];
+    state.loaded[category] = data.species || [];
+    return state.loaded[category];
   }
 
-  // ---- Helpers --------------------------------------------------------------
+  // ---- Helpers ------------------------------------------------------------
   function pickRandom(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
   }
 
   function getRandomSpecies(excludeId) {
+    const playable = state.allSpecies.filter((s) => getUsableImages(s).length > 0);
+    const pool = playable.length > 0 ? playable : state.allSpecies;
     const candidates =
-      state.allSpecies.length > 1
-        ? state.allSpecies.filter((s) => s.id !== excludeId)
-        : state.allSpecies;
-    return pickRandom(candidates);
+      pool.length > 1 ? pool.filter((s) => s.id !== excludeId) : pool;
+    return pickRandom(candidates.length > 0 ? candidates : pool);
   }
 
-  // Usable = in "images", not in the curated "excludedImages" list, and not
-  // flagged during this session.
+  // Usable = curated for this species and not flagged during this session.
   function getUsableImages(species) {
-    const excluded = new Set(species.excludedImages || []);
     return (species.images || []).filter(
-      (url) => !excluded.has(url) && !session.flaggedImages.has(url)
+      (img) => !session.flaggedImages.has(img.url)
     );
   }
 
   function getImageForSpecies(species) {
     const usable = getUsableImages(species);
     if (usable.length > 0) return pickRandom(usable);
-    // Everything's been flagged away this session — fall back to the full
-    // list rather than showing nothing.
     if (species.images && species.images.length > 0) {
       return pickRandom(species.images);
     }
-    return PLACEHOLDER_IMAGE;
+    return null;
   }
 
-  // Flagging a photo hides it for the rest of the session and logs the URL
-  // to the console so it can be pasted into species.json's "excludedImages".
+  function setImage(image) {
+    state.currentImage = image;
+    els.image.src = image ? image.url : PLACEHOLDER_IMAGE;
+    els.photoCredit.textContent = image && image.attribution ? image.attribution : "";
+  }
+
+  // Flagging hides a photo for the session and logs it for permanent removal.
   function flagCurrentImage() {
-    const url = state.currentImage;
-    if (!url || url === PLACEHOLDER_IMAGE) return;
-    session.flaggedImages.add(url);
+    const image = state.currentImage;
+    if (!image) return;
+    session.flaggedImages.add(image.url);
     console.log(
-      `[Fishdle] Flagged poor-quality photo for "${state.currentSpecies.commonName}":\n  ${url}\n` +
-        `Add it to that species' "excludedImages" array in species.json to exclude it permanently.`
+      `[Fishdle] Flagged photo for "${state.currentSpecies.commonName}":\n  ${image.url}\n` +
+        `Reject it in the curation tool (curate/server.js) to remove it permanently.`
     );
-    els.flagBtn.textContent = "🚩 Flagged — thanks!";
+    els.flagBtn.textContent = "🚩 Flagged";
     els.flagBtn.disabled = true;
 
-    // Swap in a different photo for the same species so the round continues.
     const replacement = getImageForSpecies(state.currentSpecies);
-    if (replacement !== url) {
-      state.currentImage = replacement;
-      els.image.src = replacement;
-    }
+    if (replacement && replacement.url !== image.url) setImage(replacement);
   }
 
   function updateScoreDisplay() {
-    els.streak.textContent = `Streak: ${session.streak}`;
-    els.score.textContent = `${session.correctCount} / ${session.totalRounds} correct`;
+    const s = scoreFor(state.category);
+    els.streak.textContent = `Streak: ${s.streak}`;
+    els.score.textContent = `${s.correctCount} / ${s.totalRounds} correct`;
   }
 
   function updateGuessesRemainingDisplay() {
@@ -253,7 +256,7 @@
     els.hints.appendChild(div);
   }
 
-  // ---- Round lifecycle --------------------------------------------------------
+  // ---- Round lifecycle ----------------------------------------------------
   function startNewRound() {
     if (state.advanceTimer) {
       clearTimeout(state.advanceTimer);
@@ -262,13 +265,12 @@
 
     const species = getRandomSpecies(state.previousSpeciesId);
     state.currentSpecies = species;
-    state.currentImage = getImageForSpecies(species);
+    setImage(getImageForSpecies(species));
     state.guessesRemaining = TOTAL_GUESSES;
     state.hintsRevealed = 0;
     state.roundOver = false;
 
-    els.image.src = state.currentImage;
-    els.image.alt = "Mystery fish — guess the species";
+    els.image.alt = "Mystery species — guess it";
     els.hints.innerHTML = "";
     els.history.innerHTML = "";
     clearFeedback();
@@ -279,7 +281,7 @@
     els.input.disabled = false;
     els.submitBtn.disabled = false;
     els.flagBtn.disabled = false;
-    els.flagBtn.textContent = "🚩 Flag this photo as poor quality";
+    els.flagBtn.textContent = "🚩 Flag photo";
     closeSuggestions();
     document.removeEventListener("keydown", advanceOnKeydown);
 
@@ -288,12 +290,13 @@
 
   function endRound(correct) {
     state.roundOver = true;
-    session.totalRounds += 1;
+    const s = scoreFor(state.category);
+    s.totalRounds += 1;
     if (correct) {
-      session.correctCount += 1;
-      session.streak += 1;
+      s.correctCount += 1;
+      s.streak += 1;
     } else {
-      session.streak = 0;
+      s.streak = 0;
     }
     updateScoreDisplay();
 
@@ -306,22 +309,12 @@
 
     els.resultPanel.classList.remove("hidden");
     els.resultText.className = correct ? "correct" : "incorrect";
-    if (correct) {
-      els.resultText.textContent = `✅ Correct! It's the ${species.commonName} (${species.sciName}) — guessed in ${guessesUsed} ${
-        guessesUsed === 1 ? "try" : "tries"
-      }.`;
-    } else {
-      els.resultText.textContent = `❌ Out of guesses. It was the ${species.commonName} (${species.sciName}).`;
-    }
+    els.resultText.textContent = correct
+      ? `✅ Correct! ${species.commonName} (${species.sciName}) — in ${guessesUsed} ${guessesUsed === 1 ? "try" : "tries"}.`
+      : `❌ Out of guesses. It was the ${species.commonName} (${species.sciName}).`;
 
     state.previousSpeciesId = species.id;
-
-    // Auto-advance after a short delay, but let the player skip ahead with a
-    // click or keypress too.
-    state.advanceTimer = setTimeout(() => {
-      startNewRound();
-    }, RESULT_AUTO_ADVANCE_MS);
-
+    state.advanceTimer = setTimeout(startNewRound, RESULT_AUTO_ADVANCE_MS);
     document.addEventListener("keydown", advanceOnKeydown);
   }
 
@@ -333,9 +326,7 @@
     event.preventDefault();
     if (state.roundOver) return;
 
-    const rawValue = els.input.value;
-    const matched = findSpeciesByCommonName(rawValue);
-
+    const matched = findSpeciesByCommonName(els.input.value);
     if (!matched) {
       showFeedback(
         "Pick a species from the suggestion list to submit a guess.",
@@ -350,18 +341,14 @@
     const isCorrect = matched.id === state.currentSpecies.id;
     addHistoryRow(matched.commonName, isCorrect);
 
-    if (isCorrect) {
-      endRound(true);
-      return;
-    }
+    if (isCorrect) return endRound(true);
 
     state.guessesRemaining -= 1;
     updateGuessesRemainingDisplay();
 
     if (state.guessesRemaining <= 0) {
       revealNextHint();
-      endRound(false);
-      return;
+      return endRound(false);
     }
 
     revealNextHint();
@@ -370,24 +357,65 @@
     els.input.focus();
   }
 
+  // ---- Category switching -------------------------------------------------
+  async function switchCategory(category) {
+    if (!CATEGORIES[category]) return;
+    state.category = category;
+    els.categorySwitch.querySelectorAll("button").forEach((b) =>
+      b.classList.toggle("active", b.dataset.category === category)
+    );
+
+    try {
+      state.allSpecies = await loadCategory(category);
+    } catch (err) {
+      console.error(err);
+      return showLoadError(
+        `Couldn't load ${CATEGORIES[category].file}. ` +
+          `Run <code>node scripts/export-game-data.js</code> after curating photos, ` +
+          `and serve the site over http:// rather than opening the file directly.`
+      );
+    }
+
+    if (state.allSpecies.length < 2) {
+      return showLoadError(
+        `<strong>${CATEGORIES[category].label}</strong> has ${state.allSpecies.length} curated species — ` +
+          `at least 2 are needed to play.<br><br>Curate photos with ` +
+          `<code>node curate/server.js</code>, then run ` +
+          `<code>node scripts/export-game-data.js</code>.`
+      );
+    }
+
+    hideLoadError();
+    state.previousSpeciesId = null;
+    updateScoreDisplay();
+    startNewRound();
+  }
+
+  function showLoadError(html) {
+    els.loadError.innerHTML = html;
+    els.loadError.classList.remove("hidden");
+    els.gameBody.classList.add("hidden");
+  }
+
+  function hideLoadError() {
+    els.loadError.classList.add("hidden");
+    els.gameBody.classList.remove("hidden");
+  }
+
   // ---- Wire up & boot -----------------------------------------------------
   els.form.addEventListener("submit", handleGuessSubmit);
-
   els.nextFishBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     startNewRound();
   });
-
   els.flagBtn.addEventListener("click", flagCurrentImage);
 
-  els.input.addEventListener("input", () => {
-    openSuggestions(els.input.value);
+  els.categorySwitch.querySelectorAll("button").forEach((btn) => {
+    btn.addEventListener("click", () => switchCategory(btn.dataset.category));
   });
 
-  els.input.addEventListener("focus", () => {
-    openSuggestions(els.input.value);
-  });
-
+  // Only typing opens the dropdown — focusing the empty box should not.
+  els.input.addEventListener("input", () => openSuggestions(els.input.value));
   els.input.addEventListener("blur", () => {
     // Delay so a mousedown on a suggestion still registers.
     setTimeout(closeSuggestions, 120);
@@ -396,13 +424,16 @@
   els.input.addEventListener("keydown", (e) => {
     if (e.key === "ArrowDown") {
       e.preventDefault();
-      if (!autocomplete.open) openSuggestions(els.input.value);
-      else moveActive(1);
+      // Reopen only if there's something typed — never an empty full list.
+      if (!autocomplete.open) {
+        if (els.input.value.trim()) openSuggestions(els.input.value);
+      } else {
+        moveActive(1);
+      }
     } else if (e.key === "ArrowUp") {
       e.preventDefault();
       moveActive(-1);
     } else if (e.key === "Enter") {
-      // If a suggestion is highlighted, Enter picks it instead of submitting.
       if (autocomplete.open && autocomplete.activeIndex >= 0) {
         e.preventDefault();
         selectSuggestion(autocomplete.activeIndex);
@@ -412,26 +443,5 @@
     }
   });
 
-  async function init() {
-    try {
-      state.allSpecies = await loadSpeciesData();
-    } catch (err) {
-      showFeedback(
-        "Couldn't load species.json. Are you running this from a local server?",
-        "no-match"
-      );
-      console.error(err);
-      return;
-    }
-
-    if (state.allSpecies.length === 0) {
-      showFeedback("species.json has no species entries.", "no-match");
-      return;
-    }
-
-    updateScoreDisplay();
-    startNewRound();
-  }
-
-  init();
+  switchCategory("fish");
 })();

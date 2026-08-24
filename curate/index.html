@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fishdle — Photo Curation</title>
+  <link rel="stylesheet" href="curate.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-head">
+        <h1>Curation</h1>
+        <div class="tabs" id="category-tabs"></div>
+        <input id="card-filter" type="search" placeholder="Filter species…" />
+        <label class="checkbox">
+          <input type="checkbox" id="hide-done" /> Hide completed
+        </label>
+        <div class="place-note" id="place-note"></div>
+      </div>
+      <ul class="card-list" id="card-list"></ul>
+    </aside>
+
+    <main class="main" id="main">
+      <div class="empty-state" id="empty-state">
+        <h2>Pick a species to start curating</h2>
+        <p>
+          Approve the photos that make good ID puzzles; reject the blurry,
+          the mostly-hand, and the wrong-angle ones. Your picks are written
+          to <code>data/curation-*.json</code> as you go.
+        </p>
+        <p class="shortcut-help">
+          <strong>Keyboard:</strong> <kbd>A</kbd> approve · <kbd>R</kbd> reject
+          · <kbd>←</kbd>/<kbd>→</kbd> move · <kbd>U</kbd> undo last
+        </p>
+      </div>
+
+      <div class="workspace hidden" id="workspace">
+        <header class="workspace-head">
+          <div>
+            <h2 id="card-title"></h2>
+            <div class="sci" id="card-sci"></div>
+          </div>
+          <div class="progress">
+            <div class="progress-count"><span id="approved-count">0</span> / <span id="target-count">20</span></div>
+            <div class="progress-bar"><div id="progress-fill"></div></div>
+          </div>
+        </header>
+
+        <div class="review-banner hidden" id="review-banner">
+          <div class="review-text" id="review-text"></div>
+          <div class="taxon-picker" id="taxon-picker"></div>
+          <div class="review-actions">
+            <input id="taxon-search" type="search" placeholder="Search iNaturalist taxa…" />
+            <button id="confirm-taxon-btn" type="button" class="btn-secondary">Looks right, confirm</button>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div class="mode-switch" id="mode-switch">
+            <button type="button" data-mode="photos" class="active">Photos</button>
+            <button type="button" data-mode="sounds">Calls / audio</button>
+          </div>
+          <label class="scope-select">
+            Search scope
+            <select id="widen-select">
+              <option value="0">5 states · research grade</option>
+              <option value="1">5 states · any quality</option>
+              <option value="2">Nationwide · research grade</option>
+            </select>
+          </label>
+        </div>
+        <div class="scope-hint" id="scope-hint"></div>
+
+        <section class="approved-strip" id="approved-strip"></section>
+
+        <section class="candidates" id="candidates"></section>
+
+        <div class="loading hidden" id="loading">Loading candidates…</div>
+        <button class="btn-more" id="load-more" type="button">Load more candidates</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="curate.js"></script>
+</body>
+</html>

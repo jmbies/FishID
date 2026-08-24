@@ -1,0 +1,4598 @@
+{
+  "generatedAt": "2026-08-21T23:11:22.281Z",
+  "categories": {
+    "fish": [
+      {
+        "id": "muskellunge",
+        "commonName": "Muskellunge",
+        "group": "Pike & Mudminnows",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 100429,
+        "sciName": "Esox masquinongy",
+        "resolvedCommonName": "Muskellunge",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 100429,
+            "name": "Esox masquinongy",
+            "rank": "species",
+            "commonName": "Muskellunge",
+            "observationCount": 1025,
+            "ancestry": "48460/1/2/355675/47178/47521/1555656/51369/1439611/51370"
+          },
+          {
+            "id": 417618,
+            "name": "Esox masquinongy × lucius",
+            "rank": "hybrid",
+            "commonName": "Tiger Muskellunge",
+            "observationCount": 153,
+            "ancestry": "48460/1/2/355675/47178/47521/1555656/51369/1439611/51370"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "northern-pike",
+        "commonName": "Northern Pike",
+        "group": "Pike & Mudminnows",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 55387,
+        "sciName": "Esox lucius",
+        "resolvedCommonName": "Northern Pike",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 55387,
+            "name": "Esox lucius",
+            "rank": "species",
+            "commonName": "Northern Pike",
+            "observationCount": 14892,
+            "ancestry": "48460/1/2/355675/47178/47521/1555656/51369/1439611/51370"
+          },
+          {
+            "id": 417618,
+            "name": "Esox masquinongy × lucius",
+            "rank": "hybrid",
+            "commonName": "Tiger Muskellunge",
+            "observationCount": 153,
+            "ancestry": "48460/1/2/355675/47178/47521/1555656/51369/1439611/51370"
+          },
+          {
+            "id": 1490323,
+            "name": "Esox lucius × niger",
+            "rank": "hybrid",
+            "commonName": "Northern Pike × Chain Pickerel",
+            "observationCount": 7,
+            "ancestry": "48460/1/2/355675/47178/47521/1555656/51369/1439611/51370"
+          },
+          {
+            "id": 1598285,
+            "name": "Esox lucius × aquitanicus",
+            "rank": "hybrid",
+            "commonName": "",
+            "observationCount": 0,
+            "ancestry": "48460/1/2/355675/47178/47521/1555656/51369/1439611/51370"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "grass-pickerel",
+        "commonName": "Grass Pickerel",
+        "group": "Pike & Mudminnows",
+        "stage": null,
+        "hasCall": false,
+        "note": "Grass Pickerel is the subspecies E. a. vermiculatus; iNat may resolve to the species E. americanus (Redfin Pickerel).",
+        "taxonId": 100428,
+        "sciName": "Esox americanus",
+        "resolvedCommonName": "American Pickerel",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 100428,
+            "name": "Esox americanus",
+            "rank": "species",
+            "commonName": "American Pickerel",
+            "observationCount": 2859,
+            "ancestry": "48460/1/2/355675/47178/47521/1555656/51369/1439611/51370"
+          },
+          {
+            "id": 58650,
+            "name": "Esox americanus vermiculatus",
+            "rank": "subspecies",
+            "commonName": "Grass Pickerel",
+            "observationCount": 1103,
+            "ancestry": "48460/1/2/355675/47178/47521/1555656/51369/1439611/51370/100428"
+          },
+          {
+            "id": 130345,
+            "name": "Esox americanus americanus",
+            "rank": "subspecies",
+            "commonName": "Redfin Pickerel",
+            "observationCount": 936,
+            "ancestry": "48460/1/2/355675/47178/47521/1555656/51369/1439611/51370/100428"
+          },
+          {
+            "id": 1277473,
+            "name": "Esox americanus × niger",
+            "rank": "hybrid",
+            "commonName": "American × Chain Pickerel",
+            "observationCount": 10,
+            "ancestry": "48460/1/2/355675/47178/47521/1555656/51369/1439611/51370"
+          }
+        ],
+        "confirmed": true
+      },
+      {
+        "id": "central-mudminnow",
+        "commonName": "Central Mudminnow",
+        "group": "Pike & Mudminnows",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 58646,
+        "sciName": "Umbra limi",
+        "resolvedCommonName": "Central Mudminnow",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 58646,
+            "name": "Umbra limi",
+            "rank": "species",
+            "commonName": "Central Mudminnow",
+            "observationCount": 2638,
+            "ancestry": "48460/1/2/355675/47178/47521/1555656/58651/58652"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "gizzard-shad",
+        "commonName": "Gizzard Shad",
+        "group": "Herrings",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 99544,
+        "sciName": "Dorosoma cepedianum",
+        "resolvedCommonName": "American Gizzard Shad",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 99544,
+            "name": "Dorosoma cepedianum",
+            "rank": "species",
+            "commonName": "American Gizzard Shad",
+            "observationCount": 5859,
+            "ancestry": "48460/1/2/355675/47178/49235/1416129/1416130/88030"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "brown-trout",
+        "commonName": "Brown Trout",
+        "group": "Trout & Salmon",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 47518,
+        "sciName": "Salmo trutta",
+        "resolvedCommonName": "Brown Trout",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 47518,
+            "name": "Salmo trutta",
+            "rank": "species",
+            "commonName": "Brown Trout",
+            "observationCount": 17426,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/47519"
+          },
+          {
+            "id": 47514,
+            "name": "Salmo trutta fario",
+            "rank": "subspecies",
+            "commonName": "River Brown Trout",
+            "observationCount": 583,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/47519/47518"
+          },
+          {
+            "id": 705661,
+            "name": "Salmo trutta × Salvelinus fontinalis",
+            "rank": "hybrid",
+            "commonName": "Tiger Trout",
+            "observationCount": 503,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/1151390"
+          },
+          {
+            "id": 47517,
+            "name": "Salmo trutta trutta",
+            "rank": "subspecies",
+            "commonName": "Sea Brown Trout",
+            "observationCount": 78,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/47519/47518"
+          },
+          {
+            "id": 1569187,
+            "name": "Salmo marmoratus × trutta",
+            "rank": "hybrid",
+            "commonName": "Marble × Brown Trout",
+            "observationCount": 46,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/47519"
+          },
+          {
+            "id": 1554424,
+            "name": "Salmo trutta lacustris",
+            "rank": "subspecies",
+            "commonName": "Lake Brown Trout",
+            "observationCount": 14,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/47519/47518"
+          },
+          {
+            "id": 416627,
+            "name": "Salmo caspius",
+            "rank": "species",
+            "commonName": "Caspian trout",
+            "observationCount": 4,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/47519"
+          },
+          {
+            "id": 188248,
+            "name": "Salmo macrostigma",
+            "rank": "species",
+            "commonName": "Algerian Trout",
+            "observationCount": 1,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/47519"
+          },
+          {
+            "id": 135193,
+            "name": "Salmo trutta aralensis",
+            "rank": "subspecies",
+            "commonName": "Aral Sea Trout",
+            "observationCount": 0,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/47519/47518"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "rainbow-trout",
+        "commonName": "Rainbow Trout",
+        "group": "Trout & Salmon",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 47516,
+        "sciName": "Oncorhynchus mykiss",
+        "resolvedCommonName": "Rainbow Trout",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 47516,
+            "name": "Oncorhynchus mykiss",
+            "rank": "species",
+            "commonName": "Rainbow Trout",
+            "observationCount": 26729,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/47522"
+          },
+          {
+            "id": 143607,
+            "name": "Oncorhynchus mykiss irideus",
+            "rank": "subspecies",
+            "commonName": "Coastal Rainbow Trout",
+            "observationCount": 2355,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/47522/47516"
+          },
+          {
+            "id": 237543,
+            "name": "Oncorhynchus mykiss gairdneri",
+            "rank": "subspecies",
+            "commonName": "Columbia River Redband Trout",
+            "observationCount": 1065,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/47522/47516"
+          },
+          {
+            "id": 68076,
+            "name": "Oncorhynchus aguabonita",
+            "rank": "species",
+            "commonName": "Golden Trout",
+            "observationCount": 554,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/47522"
+          },
+          {
+            "id": 1529905,
+            "name": "Oncorhynchus mykiss × virginalis",
+            "rank": "hybrid",
+            "commonName": "Rocky Mountain Cutbow",
+            "observationCount": 103,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/47522"
+          },
+          {
+            "id": 1552699,
+            "name": "Oncorhynchus aguabonita gilberti",
+            "rank": "subspecies",
+            "commonName": "Kern River Rainbow Trout",
+            "observationCount": 56,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/47522/68076"
+          },
+          {
+            "id": 320327,
+            "name": "Oncorhynchus mykiss stonei",
+            "rank": "subspecies",
+            "commonName": "Sacramento Redband Trout",
+            "observationCount": 50,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/47522/47516"
+          },
+          {
+            "id": 1459463,
+            "name": "Oncorhynchus mykiss calisulat",
+            "rank": "subspecies",
+            "commonName": "McCloud River Redband Trout",
+            "observationCount": 48,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/47522/47516"
+          },
+          {
+            "id": 1552748,
+            "name": "Oncorhynchus aguabonita × mykiss",
+            "rank": "hybrid",
+            "commonName": "Golden × Rainbow Trout",
+            "observationCount": 44,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/47522"
+          },
+          {
+            "id": 1156615,
+            "name": "Oncorhynchus mykiss newberrii",
+            "rank": "subspecies",
+            "commonName": "Great Basin Redband Trout",
+            "observationCount": 43,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/47522/47516"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "brook-trout",
+        "commonName": "Brook Trout",
+        "group": "Trout & Salmon",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 49596,
+        "sciName": "Salvelinus fontinalis",
+        "resolvedCommonName": "Brook Trout",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 49596,
+            "name": "Salvelinus fontinalis",
+            "rank": "species",
+            "commonName": "Brook Trout",
+            "observationCount": 13280,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/49597"
+          },
+          {
+            "id": 705661,
+            "name": "Salmo trutta × Salvelinus fontinalis",
+            "rank": "hybrid",
+            "commonName": "Tiger Trout",
+            "observationCount": 503,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/1151390"
+          },
+          {
+            "id": 415468,
+            "name": "Salvelinus namaycush × fontinalis",
+            "rank": "hybrid",
+            "commonName": "Splake",
+            "observationCount": 180,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/49597"
+          },
+          {
+            "id": 238361,
+            "name": "Salvelinus fontinalis fontinalis",
+            "rank": "subspecies",
+            "commonName": "",
+            "observationCount": 68,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/49597/49596"
+          },
+          {
+            "id": 1552048,
+            "name": "Salvelinus confluentus × fontinalis",
+            "rank": "hybrid",
+            "commonName": "Brook × Bull Trout",
+            "observationCount": 35,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/49597"
+          },
+          {
+            "id": 238362,
+            "name": "Salvelinus fontinalis timagamiensis",
+            "rank": "subspecies",
+            "commonName": "Aurora Trout",
+            "observationCount": 10,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/49597/49596"
+          },
+          {
+            "id": 1583008,
+            "name": "Salvelinus alpinus × fontinalis",
+            "rank": "hybrid",
+            "commonName": "Arctic Char × Brook Trout",
+            "observationCount": 5,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/49597"
+          },
+          {
+            "id": 1425700,
+            "name": "Oncorhynchus mykiss × Salvelinus fontinalis",
+            "rank": "hybrid",
+            "commonName": "Cheetah Trout",
+            "observationCount": 1,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/1425699"
+          },
+          {
+            "id": 111973,
+            "name": "Salvelinus agassizii",
+            "rank": "species",
+            "commonName": "Silver Trout",
+            "observationCount": 0,
+            "ancestry": "48460/1/2/355675/47178/47521/1555655/47520/342904/49597"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "walleye",
+        "commonName": "Walleye",
+        "group": "Perches & Darters",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 48154,
+        "sciName": "Sander vitreus",
+        "resolvedCommonName": "Walleye",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 48154,
+            "name": "Sander vitreus",
+            "rank": "species",
+            "commonName": "Walleye",
+            "observationCount": 4547,
+            "ancestry": "48460/1/2/355675/47178/1632273/47233/1303566/48158/788528/48157"
+          },
+          {
+            "id": 1194518,
+            "name": "Sander canadensis × vitreus",
+            "rank": "hybrid",
+            "commonName": "Saugeye",
+            "observationCount": 161,
+            "ancestry": "48460/1/2/355675/47178/1632273/47233/1303566/48158/788528/48157"
+          },
+          {
+            "id": 238372,
+            "name": "Sander vitreus vitreus",
+            "rank": "subspecies",
+            "commonName": "Yellow Walleye",
+            "observationCount": 15,
+            "ancestry": "48460/1/2/355675/47178/1632273/47233/1303566/48158/788528/48157/48154"
+          },
+          {
+            "id": 238371,
+            "name": "Sander vitreus glaucus",
+            "rank": "subspecies",
+            "commonName": "Blue Walleye",
+            "observationCount": 1,
+            "ancestry": "48460/1/2/355675/47178/1632273/47233/1303566/48158/788528/48157/48154"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "sauger",
+        "commonName": "Sauger",
+        "group": "Perches & Darters",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 48155,
+        "sciName": "Sander canadensis",
+        "resolvedCommonName": "Sauger",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 48155,
+            "name": "Sander canadensis",
+            "rank": "species",
+            "commonName": "Sauger",
+            "observationCount": 634,
+            "ancestry": "48460/1/2/355675/47178/1632273/47233/1303566/48158/788528/48157"
+          },
+          {
+            "id": 1194518,
+            "name": "Sander canadensis × vitreus",
+            "rank": "hybrid",
+            "commonName": "Saugeye",
+            "observationCount": 161,
+            "ancestry": "48460/1/2/355675/47178/1632273/47233/1303566/48158/788528/48157"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "yellow-perch",
+        "commonName": "Yellow Perch",
+        "group": "Perches & Darters",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 58627,
+        "sciName": "Perca flavescens",
+        "resolvedCommonName": "Yellow Perch",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 58627,
+            "name": "Perca flavescens",
+            "rank": "species",
+            "commonName": "Yellow Perch",
+            "observationCount": 11392,
+            "ancestry": "48460/1/2/355675/47178/1632273/47233/1303566/48158/788529/58629"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "fantail-darter",
+        "commonName": "Fantail Darter",
+        "group": "Perches & Darters",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 100476,
+        "sciName": "Etheostoma flabellare",
+        "resolvedCommonName": "Fantail Darter",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 100476,
+            "name": "Etheostoma flabellare",
+            "rank": "species",
+            "commonName": "Fantail Darter",
+            "observationCount": 5179,
+            "ancestry": "48460/1/2/355675/47178/1632273/47233/1303566/48158/551942/58632"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "rainbow-darter",
+        "commonName": "Rainbow Darter",
+        "group": "Perches & Darters",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 58633,
+        "sciName": "Etheostoma caeruleum",
+        "resolvedCommonName": "Rainbow Darter",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 58633,
+            "name": "Etheostoma caeruleum",
+            "rank": "species",
+            "commonName": "Rainbow Darter",
+            "observationCount": 6878,
+            "ancestry": "48460/1/2/355675/47178/1632273/47233/1303566/48158/551942/58632"
+          },
+          {
+            "id": 1508224,
+            "name": "Etheostoma caeruleum × spectabile",
+            "rank": "hybrid",
+            "commonName": "Rainbow × Orangethroat Darter",
+            "observationCount": 9,
+            "ancestry": "48460/1/2/355675/47178/1632273/47233/1303566/48158/551942/58632"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "johnny-darter",
+        "commonName": "Johnny Darter",
+        "group": "Perches & Darters",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 58630,
+        "sciName": "Etheostoma nigrum",
+        "resolvedCommonName": "Johnny Darter",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 58630,
+            "name": "Etheostoma nigrum",
+            "rank": "species",
+            "commonName": "Johnny Darter",
+            "observationCount": 3186,
+            "ancestry": "48460/1/2/355675/47178/1632273/47233/1303566/48158/551942/58632"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "northern-logperch",
+        "commonName": "Northern Logperch",
+        "group": "Perches & Darters",
+        "stage": null,
+        "hasCall": false,
+        "note": "Percina caprodes is often called simply Logperch on iNat.",
+        "taxonId": 58626,
+        "sciName": "Percina caprodes",
+        "resolvedCommonName": "Common Logperch",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 58626,
+            "name": "Percina caprodes",
+            "rank": "species",
+            "commonName": "Common Logperch",
+            "observationCount": 2082,
+            "ancestry": "48460/1/2/355675/47178/1632273/47233/1303566/48158/551942/58628"
+          },
+          {
+            "id": 109081,
+            "name": "Percina fulvitaenia",
+            "rank": "species",
+            "commonName": "Ozark Logperch",
+            "observationCount": 261,
+            "ancestry": "48460/1/2/355675/47178/1632273/47233/1303566/48158/551942/58628"
+          },
+          {
+            "id": 1230628,
+            "name": "Percina caprodes × maculata",
+            "rank": "hybrid",
+            "commonName": "Logperch × Blackside Darter",
+            "observationCount": 12,
+            "ancestry": "48460/1/2/355675/47178/1632273/47233/1303566/48158/551942/58628"
+          },
+          {
+            "id": 1607814,
+            "name": "Percina caprodes × macrocephala",
+            "rank": "hybrid",
+            "commonName": "Logperch × Longhead Darter",
+            "observationCount": 1,
+            "ancestry": "48460/1/2/355675/47178/1632273/47233/1303566/48158/551942/58628"
+          },
+          {
+            "id": 1662571,
+            "name": "Percina caprodes semifasciata",
+            "rank": "subspecies",
+            "commonName": "",
+            "observationCount": 0,
+            "ancestry": "48460/1/2/355675/47178/1632273/47233/1303566/48158/551942/58628/58626"
+          },
+          {
+            "id": 1662572,
+            "name": "Percina caprodes caprodes",
+            "rank": "subspecies",
+            "commonName": "",
+            "observationCount": 0,
+            "ancestry": "48460/1/2/355675/47178/1632273/47233/1303566/48158/551942/58628/58626"
+          }
+        ],
+        "confirmed": true
+      },
+      {
+        "id": "flathead-catfish",
+        "commonName": "Flathead Catfish",
+        "group": "Catfishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 81552,
+        "sciName": "Pylodictis olivaris",
+        "resolvedCommonName": "Flathead Catfish",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 81552,
+            "name": "Pylodictis olivaris",
+            "rank": "species",
+            "commonName": "Flathead Catfish",
+            "observationCount": 1805,
+            "ancestry": "48460/1/2/355675/47178/1543570/49175/1303579/58655/81553"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "channel-catfish",
+        "commonName": "Channel Catfish",
+        "group": "Catfishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 81554,
+        "sciName": "Ictalurus punctatus",
+        "resolvedCommonName": "Channel Catfish",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 81554,
+            "name": "Ictalurus punctatus",
+            "rank": "species",
+            "commonName": "Channel Catfish",
+            "observationCount": 12192,
+            "ancestry": "48460/1/2/355675/47178/1543570/49175/1303579/58655/81555"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "black-bullhead",
+        "commonName": "Black Bullhead",
+        "group": "Catfishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 82278,
+        "sciName": "Ameiurus melas",
+        "resolvedCommonName": "Black Bullhead",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 82278,
+            "name": "Ameiurus melas",
+            "rank": "species",
+            "commonName": "Black Bullhead",
+            "observationCount": 4145,
+            "ancestry": "48460/1/2/355675/47178/1543570/49175/1303579/58655/58658"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "stonecat",
+        "commonName": "Stonecat",
+        "group": "Catfishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 58653,
+        "sciName": "Noturus flavus",
+        "resolvedCommonName": "Stonecat",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 58653,
+            "name": "Noturus flavus",
+            "rank": "species",
+            "commonName": "Stonecat",
+            "observationCount": 1272,
+            "ancestry": "48460/1/2/355675/47178/1543570/49175/1303579/58655/58656"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "shorthead-redhorse",
+        "commonName": "Shorthead Redhorse",
+        "group": "Suckers",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 106216,
+        "sciName": "Moxostoma macrolepidotum",
+        "resolvedCommonName": "Shorthead Redhorse",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 106216,
+            "name": "Moxostoma macrolepidotum",
+            "rank": "species",
+            "commonName": "Shorthead Redhorse",
+            "observationCount": 1246,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303594/58661/788653/62024"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "white-sucker",
+        "commonName": "White Sucker",
+        "group": "Suckers",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 81556,
+        "sciName": "Catostomus commersonii",
+        "resolvedCommonName": "White Sucker",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 81556,
+            "name": "Catostomus commersonii",
+            "rank": "species",
+            "commonName": "White Sucker",
+            "observationCount": 7243,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303594/58661/788653/67614"
+          },
+          {
+            "id": 1582995,
+            "name": "Catostomus commersonii × latipinnis",
+            "rank": "hybrid",
+            "commonName": "White × Flannelmouth Sucker",
+            "observationCount": 2,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303594/58661/788653/67614"
+          },
+          {
+            "id": 1593317,
+            "name": "Catostomus catostomus × commersonii",
+            "rank": "hybrid",
+            "commonName": "Longnose × White Sucker",
+            "observationCount": 1,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303594/58661/788653/67614"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "northern-hogsucker",
+        "commonName": "Northern Hogsucker",
+        "group": "Suckers",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 58659,
+        "sciName": "Hypentelium nigricans",
+        "resolvedCommonName": "Northern Hog Sucker",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 58659,
+            "name": "Hypentelium nigricans",
+            "rank": "species",
+            "commonName": "Northern Hog Sucker",
+            "observationCount": 3603,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303594/58661/788653/58665"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "quillback-carpsucker",
+        "commonName": "Quillback Carpsucker",
+        "group": "Suckers",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 96819,
+        "sciName": "Carpiodes cyprinus",
+        "resolvedCommonName": "Quillback",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 96819,
+            "name": "Carpiodes cyprinus",
+            "rank": "species",
+            "commonName": "Quillback",
+            "observationCount": 578,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303594/58661/788654/87243"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "bigmouth-buffalo",
+        "commonName": "Bigmouth Buffalo",
+        "group": "Suckers",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 103293,
+        "sciName": "Ictiobus cyprinellus",
+        "resolvedCommonName": "Bigmouth Buffalo",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 103293,
+            "name": "Ictiobus cyprinellus",
+            "rank": "species",
+            "commonName": "Bigmouth Buffalo",
+            "observationCount": 530,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303594/58661/788654/89066"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "white-bass",
+        "commonName": "White Bass",
+        "group": "Temperate Basses",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 106195,
+        "sciName": "Morone chrysops",
+        "resolvedCommonName": "White Bass",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 106195,
+            "name": "Morone chrysops",
+            "rank": "species",
+            "commonName": "White Bass",
+            "observationCount": 2513,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303726/51393/51394"
+          },
+          {
+            "id": 737685,
+            "name": "Morone chrysops × saxatilis",
+            "rank": "hybrid",
+            "commonName": "White × Striped Bass",
+            "observationCount": 558,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303726/51393/51394"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "yellow-bass",
+        "commonName": "Yellow Bass",
+        "group": "Temperate Basses",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 106196,
+        "sciName": "Morone mississippiensis",
+        "resolvedCommonName": "Yellow Bass",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 106196,
+            "name": "Morone mississippiensis",
+            "rank": "species",
+            "commonName": "Yellow Bass",
+            "observationCount": 793,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303726/51393/51394"
+          },
+          {
+            "id": 1595281,
+            "name": "Morone americana × mississippiensis",
+            "rank": "hybrid",
+            "commonName": "White Perch × Yellow Bass",
+            "observationCount": 1,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303726/51393/51394"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "wiper",
+        "commonName": "Wiper",
+        "group": "Temperate Basses",
+        "stage": null,
+        "hasCall": false,
+        "note": "HYBRID: Wiper = White Bass x Striped Bass (Morone chrysops x M. saxatilis). iNaturalist has no clean species taxon for this. Resolve by hand or drop this card.",
+        "taxonId": 737685,
+        "sciName": "Morone chrysops × saxatilis",
+        "resolvedCommonName": "White × Striped Bass",
+        "rank": "",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 106195,
+            "name": "Morone chrysops",
+            "rank": "species",
+            "commonName": "White Bass",
+            "observationCount": 2513,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303726/51393/51394"
+          },
+          {
+            "id": 737685,
+            "name": "Morone chrysops × saxatilis",
+            "rank": "hybrid",
+            "commonName": "White × Striped Bass",
+            "observationCount": 558,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303726/51393/51394"
+          }
+        ],
+        "confirmed": true
+      },
+      {
+        "id": "common-carp",
+        "commonName": "Carp",
+        "group": "Carps & Minnows",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 53911,
+        "sciName": "Cyprinus carpio",
+        "resolvedCommonName": "European Carp",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 53911,
+            "name": "Cyprinus carpio",
+            "rank": "species",
+            "commonName": "European Carp",
+            "observationCount": 35287,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/49609/607661/53912"
+          },
+          {
+            "id": 187316,
+            "name": "Cyprinus rubrofuscus",
+            "rank": "species",
+            "commonName": "Amur Carp",
+            "observationCount": 23365,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/49609/607661/53912"
+          },
+          {
+            "id": 96819,
+            "name": "Carpiodes cyprinus",
+            "rank": "species",
+            "commonName": "Quillback",
+            "observationCount": 578,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303594/58661/788654/87243"
+          },
+          {
+            "id": 1375351,
+            "name": "Cyprinus carpio × Carassius auratus",
+            "rank": "hybrid",
+            "commonName": "European Carp × Goldfish",
+            "observationCount": 77,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/49609/607661/1375350"
+          },
+          {
+            "id": 1555007,
+            "name": "Cyprinus carpio × rubrofuscus",
+            "rank": "hybrid",
+            "commonName": "Common × Amur Carp",
+            "observationCount": 51,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/49609/607661/53912"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "grass-carp",
+        "commonName": "Grass Carp",
+        "group": "Carps & Minnows",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 128500,
+        "sciName": "Ctenopharyngodon idella",
+        "resolvedCommonName": "Grass Carp",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 128500,
+            "name": "Ctenopharyngodon idella",
+            "rank": "species",
+            "commonName": "Grass Carp",
+            "observationCount": 3336,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303614/87736"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "red-shiner",
+        "commonName": "Red Shiner",
+        "group": "Carps & Minnows",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 98905,
+        "sciName": "Cyprinella lutrensis",
+        "resolvedCommonName": "Red Shiner",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 98905,
+            "name": "Cyprinella lutrensis",
+            "rank": "species",
+            "commonName": "Red Shiner",
+            "observationCount": 2191,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/87809"
+          },
+          {
+            "id": 179663,
+            "name": "Cyprinella lutrensis × venusta",
+            "rank": "hybrid",
+            "commonName": "Red × Blacktail Shiner",
+            "observationCount": 11,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/87809"
+          },
+          {
+            "id": 1603407,
+            "name": "Cyprinella lutrensis × spiloptera",
+            "rank": "hybrid",
+            "commonName": "Red × Spotfin Shiner",
+            "observationCount": 3,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/87809"
+          },
+          {
+            "id": 179662,
+            "name": "Cyprinella lutrensis × lepida",
+            "rank": "hybrid",
+            "commonName": "Red × Plateau Shiner",
+            "observationCount": 0,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/87809"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "fathead-minnow",
+        "commonName": "Fathead Minnow",
+        "group": "Carps & Minnows",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 109536,
+        "sciName": "Pimephales promelas",
+        "resolvedCommonName": "Fathead Minnow",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 109536,
+            "name": "Pimephales promelas",
+            "rank": "species",
+            "commonName": "Fathead Minnow",
+            "observationCount": 4633,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/58625"
+          },
+          {
+            "id": 1392602,
+            "name": "Pimephales promelas harveyensis",
+            "rank": "subspecies",
+            "commonName": "",
+            "observationCount": 0,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/58625/109536"
+          },
+          {
+            "id": 1392603,
+            "name": "Pimephales promelas promelas",
+            "rank": "subspecies",
+            "commonName": "",
+            "observationCount": 0,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/58625/109536"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "bluntnose-minnow",
+        "commonName": "Bluntnose Minnow",
+        "group": "Carps & Minnows",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 58624,
+        "sciName": "Pimephales notatus",
+        "resolvedCommonName": "Bluntnose Minnow",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 58624,
+            "name": "Pimephales notatus",
+            "rank": "species",
+            "commonName": "Bluntnose Minnow",
+            "observationCount": 4912,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/58625"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "golden-shiner",
+        "commonName": "Golden Shiner",
+        "group": "Carps & Minnows",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 51351,
+        "sciName": "Notemigonus crysoleucas",
+        "resolvedCommonName": "Golden Shiner",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 51351,
+            "name": "Notemigonus crysoleucas",
+            "rank": "species",
+            "commonName": "Golden Shiner",
+            "observationCount": 5526,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/613300/51352"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "common-shiner",
+        "commonName": "Common Shiner",
+        "group": "Carps & Minnows",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 58618,
+        "sciName": "Luxilus cornutus",
+        "resolvedCommonName": "Common Shiner",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 58618,
+            "name": "Luxilus cornutus",
+            "rank": "species",
+            "commonName": "Common Shiner",
+            "observationCount": 5213,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/58621"
+          },
+          {
+            "id": 1541750,
+            "name": "Luxilus cornutus × Notropis rubellus",
+            "rank": "hybrid",
+            "commonName": "Common × Rosyface Shiner",
+            "observationCount": 6,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/1401603"
+          },
+          {
+            "id": 1414596,
+            "name": "Luxilus cornutus × Semotilus atromaculatus",
+            "rank": "hybrid",
+            "commonName": "Common Shiner × Creek Chub",
+            "observationCount": 6,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/1414593"
+          },
+          {
+            "id": 1414592,
+            "name": "Luxilus cornutus × Notropis percobromus",
+            "rank": "hybrid",
+            "commonName": "Common × Carmine Shiner",
+            "observationCount": 5,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/1401603"
+          },
+          {
+            "id": 1401610,
+            "name": "Luxilus cornutus × Nocomis biguttatus",
+            "rank": "hybrid",
+            "commonName": "Common Shiner × Hornyhead Chub",
+            "observationCount": 3,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/1401608"
+          },
+          {
+            "id": 1592405,
+            "name": "Clinostomus elongatus × Luxilus cornutus",
+            "rank": "hybrid",
+            "commonName": "Redside Dace × Common Shiner",
+            "observationCount": 2,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/1592404"
+          },
+          {
+            "id": 1222728,
+            "name": "Luxilus chrysocephalus × cornutus",
+            "rank": "hybrid",
+            "commonName": "Striped × Common Shiner",
+            "observationCount": 2,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/58621"
+          },
+          {
+            "id": 1628081,
+            "name": "Luxilus cornutus × zonatus",
+            "rank": "hybrid",
+            "commonName": "Common × Bleeding Shiner",
+            "observationCount": 1,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/58621"
+          },
+          {
+            "id": 1687257,
+            "name": "Luxilus cornutus × Lythrurus ardens",
+            "rank": "hybrid",
+            "commonName": "Common × Rosefin Shiner",
+            "observationCount": 1,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/1687256"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "bigmouth-shiner",
+        "commonName": "Bigmouth Shiner",
+        "group": "Carps & Minnows",
+        "stage": null,
+        "hasCall": false,
+        "note": "Most texts say Notropis dorsalis; iNaturalist files this under Ericymba dorsalis. Verify it's the same fish.",
+        "taxonId": 1545654,
+        "sciName": "Ericymba dorsalis",
+        "resolvedCommonName": "Bigmouth Shiner",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 1545654,
+            "name": "Ericymba dorsalis",
+            "rank": "species",
+            "commonName": "Bigmouth Shiner",
+            "observationCount": 389,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/1545237"
+          }
+        ],
+        "confirmed": true
+      },
+      {
+        "id": "creek-chub",
+        "commonName": "Creek Chub",
+        "group": "Carps & Minnows",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 58662,
+        "sciName": "Semotilus atromaculatus",
+        "resolvedCommonName": "Creek Chub",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 58662,
+            "name": "Semotilus atromaculatus",
+            "rank": "species",
+            "commonName": "Creek Chub",
+            "observationCount": 15227,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303668/58667"
+          },
+          {
+            "id": 1414596,
+            "name": "Luxilus cornutus × Semotilus atromaculatus",
+            "rank": "hybrid",
+            "commonName": "Common Shiner × Creek Chub",
+            "observationCount": 6,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/1414593"
+          },
+          {
+            "id": 1610889,
+            "name": "Clinostomus funduloides × Semotilus atromaculatus",
+            "rank": "hybrid",
+            "commonName": "Rosyside Dace × Creek Chub",
+            "observationCount": 6,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1610888"
+          },
+          {
+            "id": 1637128,
+            "name": "Clinostomus elongatus × Semotilus atromaculatus",
+            "rank": "hybrid",
+            "commonName": "Redside Dace × Creek Chub",
+            "observationCount": 4,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666"
+          },
+          {
+            "id": 1592604,
+            "name": "Chrosomus erythrogaster × Semotilus atromaculatus",
+            "rank": "hybrid",
+            "commonName": "Southern Redbelly Dace × Creek Chub",
+            "observationCount": 3,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/1592603"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "hornyhead-chub",
+        "commonName": "Hornyhead Chub",
+        "group": "Carps & Minnows",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 107069,
+        "sciName": "Nocomis biguttatus",
+        "resolvedCommonName": "Hornyhead Chub",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 107069,
+            "name": "Nocomis biguttatus",
+            "rank": "species",
+            "commonName": "Hornyhead Chub",
+            "observationCount": 1676,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/62022"
+          },
+          {
+            "id": 1401610,
+            "name": "Luxilus cornutus × Nocomis biguttatus",
+            "rank": "hybrid",
+            "commonName": "Common Shiner × Hornyhead Chub",
+            "observationCount": 3,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/1401608"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "central-stoneroller",
+        "commonName": "Central Stoneroller",
+        "group": "Carps & Minnows",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 96631,
+        "sciName": "Campostoma anomalum",
+        "resolvedCommonName": "Central Stoneroller",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 96631,
+            "name": "Campostoma anomalum",
+            "rank": "species",
+            "commonName": "Central Stoneroller",
+            "observationCount": 4609,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/87193"
+          },
+          {
+            "id": 1570810,
+            "name": "Campostoma anomalum × Rhinichthys cataractae",
+            "rank": "hybrid",
+            "commonName": "Central Stoneroller × Longnose Dace",
+            "observationCount": 4,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/1418352"
+          },
+          {
+            "id": 1637462,
+            "name": "Campostoma anomalum × Luxilus chrysocephalus",
+            "rank": "hybrid",
+            "commonName": "Central Stoneroller × Striped shiner",
+            "observationCount": 2,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666"
+          },
+          {
+            "id": 1058998,
+            "name": "Campostoma anomalum anomalum",
+            "rank": "subspecies",
+            "commonName": "Ohio Stoneroller",
+            "observationCount": 2,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/87193/96631"
+          },
+          {
+            "id": 1583006,
+            "name": "Campostoma anomalum × Rhinichthys obtusus",
+            "rank": "hybrid",
+            "commonName": "Central Stoneroller × Western Blacknose Dace",
+            "observationCount": 0,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/1418352"
+          },
+          {
+            "id": 1418353,
+            "name": "Campostoma anomalum × Rhinichthys atratulus",
+            "rank": "hybrid",
+            "commonName": "Central Stoneroller × Eastern Blacknose Dace",
+            "observationCount": 0,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/1418352"
+          },
+          {
+            "id": 1647979,
+            "name": "Campostoma anomalum michauxi",
+            "rank": "subspecies",
+            "commonName": "Catawba Stoneroller",
+            "observationCount": 0,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/87193/96631"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "southern-redbelly-dace",
+        "commonName": "Southern Redbelly Dace",
+        "group": "Carps & Minnows",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 97765,
+        "sciName": "Chrosomus erythrogaster",
+        "resolvedCommonName": "Southern Redbelly Dace",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 97765,
+            "name": "Chrosomus erythrogaster",
+            "rank": "species",
+            "commonName": "Southern Redbelly Dace",
+            "observationCount": 1403,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303669/87470"
+          },
+          {
+            "id": 1592402,
+            "name": "Chrosomus erythrogaster × Clinostomus elongatus",
+            "rank": "hybrid",
+            "commonName": "Southern Redbelly × Redside Dace",
+            "observationCount": 8,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/1592401"
+          },
+          {
+            "id": 1642118,
+            "name": "Clinostomus funduloides × Chrosomus erythrogaster",
+            "rank": "hybrid",
+            "commonName": "Rosyside Dace × Southern Redbelly Dace",
+            "observationCount": 5,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666"
+          },
+          {
+            "id": 1592604,
+            "name": "Chrosomus erythrogaster × Semotilus atromaculatus",
+            "rank": "hybrid",
+            "commonName": "Southern Redbelly Dace × Creek Chub",
+            "observationCount": 3,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/1592603"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "blacknose-dace",
+        "commonName": "Blacknose Dace",
+        "group": "Carps & Minnows",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 84498,
+        "sciName": "Rhinichthys obtusus",
+        "resolvedCommonName": "Western Blacknose Dace",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 58664,
+            "name": "Rhinichthys atratulus",
+            "rank": "species",
+            "commonName": "Eastern Blacknose Dace",
+            "observationCount": 4694,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/58666"
+          },
+          {
+            "id": 84498,
+            "name": "Rhinichthys obtusus",
+            "rank": "species",
+            "commonName": "Western Blacknose Dace",
+            "observationCount": 4340,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/58666"
+          },
+          {
+            "id": 1418353,
+            "name": "Campostoma anomalum × Rhinichthys atratulus",
+            "rank": "hybrid",
+            "commonName": "Central Stoneroller × Eastern Blacknose Dace",
+            "observationCount": 0,
+            "ancestry": "48460/1/2/355675/47178/1543570/49216/1303592/1303618/1303666/1418352"
+          }
+        ],
+        "confirmed": true
+      },
+      {
+        "id": "bowfin",
+        "commonName": "Bowfin",
+        "group": "Primitive Fishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 1439817,
+        "sciName": "Amia ocellicauda",
+        "resolvedCommonName": "Eyetail Bowfin",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 58611,
+            "name": "Amia calva",
+            "rank": "species",
+            "commonName": "Ruddy Bowfin",
+            "observationCount": 1027,
+            "ancestry": "48460/1/2/355675/47178/1124235/58613/58614/58615"
+          }
+        ],
+        "confirmed": true
+      },
+      {
+        "id": "paddlefish",
+        "commonName": "Paddlefish",
+        "group": "Primitive Fishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 54721,
+        "sciName": "Polyodon spathula",
+        "resolvedCommonName": "American Paddlefish",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 54721,
+            "name": "Polyodon spathula",
+            "rank": "species",
+            "commonName": "American Paddlefish",
+            "observationCount": 523,
+            "ancestry": "48460/1/2/355675/47178/49824/54727/54728"
+          },
+          {
+            "id": 1655167,
+            "name": "Huso gueldenstaedtii × Polyodon spathula",
+            "rank": "hybrid",
+            "commonName": "Sturddlefish",
+            "observationCount": 0,
+            "ancestry": "48460/1/2/355675/47178/49824/1655166"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "lake-sturgeon",
+        "commonName": "Lake Sturgeon",
+        "group": "Primitive Fishes",
+        "stage": null,
+        "hasCall": false,
+        "note": "Most texts say Acipenser fulvescens; iNaturalist has moved it to Huso fulvescens. Verify it's the same fish.",
+        "taxonId": 1633139,
+        "sciName": "Huso fulvescens",
+        "resolvedCommonName": "Lake Sturgeon",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 1633139,
+            "name": "Huso fulvescens",
+            "rank": "species",
+            "commonName": "Lake Sturgeon",
+            "observationCount": 1216,
+            "ancestry": "48460/1/2/355675/47178/49824/49825/88976"
+          }
+        ],
+        "confirmed": true
+      },
+      {
+        "id": "shovelnose-sturgeon",
+        "commonName": "Shovelnose Sturgeon",
+        "group": "Primitive Fishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 112107,
+        "sciName": "Scaphirhynchus platorynchus",
+        "resolvedCommonName": "Shovelnose Sturgeon",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 112107,
+            "name": "Scaphirhynchus platorynchus",
+            "rank": "species",
+            "commonName": "Shovelnose Sturgeon",
+            "observationCount": 248,
+            "ancestry": "48460/1/2/355675/47178/49824/49825/91895"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "longnose-gar",
+        "commonName": "Longnose Gar",
+        "group": "Primitive Fishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 58609,
+        "sciName": "Lepisosteus osseus",
+        "resolvedCommonName": "Longnose Gar",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 58609,
+            "name": "Lepisosteus osseus",
+            "rank": "species",
+            "commonName": "Longnose Gar",
+            "observationCount": 5663,
+            "ancestry": "48460/1/2/355675/47178/1124235/54544/54545/58610"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "shortnose-gar",
+        "commonName": "Shortnose Gar",
+        "group": "Primitive Fishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 104250,
+        "sciName": "Lepisosteus platostomus",
+        "resolvedCommonName": "Shortnose Gar",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 104250,
+            "name": "Lepisosteus platostomus",
+            "rank": "species",
+            "commonName": "Shortnose Gar",
+            "observationCount": 948,
+            "ancestry": "48460/1/2/355675/47178/1124235/54544/54545/58610"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "silver-lamprey",
+        "commonName": "Silver Lamprey",
+        "group": "Primitive Fishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 103274,
+        "sciName": "Ichthyomyzon unicuspis",
+        "resolvedCommonName": "Silver Lamprey",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 103274,
+            "name": "Ichthyomyzon unicuspis",
+            "rank": "species",
+            "commonName": "Silver Lamprey",
+            "observationCount": 56,
+            "ancestry": "48460/1/2/355675/797045/49231/49232/49233/788523/81551"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "black-crappie",
+        "commonName": "Black Crappie",
+        "group": "Sunfishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 49594,
+        "sciName": "Pomoxis nigromaculatus",
+        "resolvedCommonName": "Black Crappie",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 49594,
+            "name": "Pomoxis nigromaculatus",
+            "rank": "species",
+            "commonName": "Black Crappie",
+            "observationCount": 9703,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303640/49595"
+          },
+          {
+            "id": 1239362,
+            "name": "Pomoxis annularis × nigromaculatus",
+            "rank": "hybrid",
+            "commonName": "White × Black Crappie",
+            "observationCount": 18,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303640/49595"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "white-crappie",
+        "commonName": "White Crappie",
+        "group": "Sunfishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 49593,
+        "sciName": "Pomoxis annularis",
+        "resolvedCommonName": "White Crappie",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 49593,
+            "name": "Pomoxis annularis",
+            "rank": "species",
+            "commonName": "White Crappie",
+            "observationCount": 2945,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303640/49595"
+          },
+          {
+            "id": 1239362,
+            "name": "Pomoxis annularis × nigromaculatus",
+            "rank": "hybrid",
+            "commonName": "White × Black Crappie",
+            "observationCount": 18,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303640/49595"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "bluegill",
+        "commonName": "Bluegill",
+        "group": "Sunfishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 49591,
+        "sciName": "Lepomis macrochirus",
+        "resolvedCommonName": "Bluegill",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 49591,
+            "name": "Lepomis macrochirus",
+            "rank": "species",
+            "commonName": "Bluegill",
+            "observationCount": 64171,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1102243,
+            "name": "Lepomis macrochirus × cyanellus",
+            "rank": "hybrid",
+            "commonName": "Greengill Sunfish",
+            "observationCount": 3914,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 773855,
+            "name": "Lepomis macrochirus purpurascens",
+            "rank": "subspecies",
+            "commonName": "Coppernose Bluegill",
+            "observationCount": 2841,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592/49591"
+          },
+          {
+            "id": 773857,
+            "name": "Lepomis macrochirus macrochirus",
+            "rank": "subspecies",
+            "commonName": "Northern Bluegill",
+            "observationCount": 1649,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592/49591"
+          },
+          {
+            "id": 1102245,
+            "name": "Lepomis gibbosus × macrochirus",
+            "rank": "hybrid",
+            "commonName": "Pumpkinseed × Bluegill",
+            "observationCount": 1554,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1106549,
+            "name": "Lepomis macrochirus × microlophus",
+            "rank": "hybrid",
+            "commonName": "Bluegill × Redear Sunfish",
+            "observationCount": 779,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1493765,
+            "name": "Lepomis aquilensis × macrochirus",
+            "rank": "hybrid",
+            "commonName": "Plains Longear Sunfish × Bluegill",
+            "observationCount": 239,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1102242,
+            "name": "Lepomis auritus × macrochirus",
+            "rank": "hybrid",
+            "commonName": "Redbreast Sunfish × Bluegill",
+            "observationCount": 185,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1150958,
+            "name": "Lepomis gulosus × macrochirus",
+            "rank": "hybrid",
+            "commonName": "Warmouth × Bluegill",
+            "observationCount": 109,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1136882,
+            "name": "Lepomis macrochirus × megalotis",
+            "rank": "hybrid",
+            "commonName": "Bluegill × Longear Sunfish",
+            "observationCount": 39,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "redear-sunfish",
+        "commonName": "Redear Sunfish",
+        "group": "Sunfishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 85127,
+        "sciName": "Lepomis microlophus",
+        "resolvedCommonName": "Redear Sunfish",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 85127,
+            "name": "Lepomis microlophus",
+            "rank": "species",
+            "commonName": "Redear Sunfish",
+            "observationCount": 5091,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1106549,
+            "name": "Lepomis macrochirus × microlophus",
+            "rank": "hybrid",
+            "commonName": "Bluegill × Redear Sunfish",
+            "observationCount": 779,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1248689,
+            "name": "Lepomis cyanellus × microlophus",
+            "rank": "hybrid",
+            "commonName": "Green × Redear Sunfish",
+            "observationCount": 29,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1468798,
+            "name": "Lepomis gulosus × microlophus",
+            "rank": "hybrid",
+            "commonName": "Warmouth × Redear Sunfish",
+            "observationCount": 5,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1230885,
+            "name": "Lepomis auritus × microlophus",
+            "rank": "hybrid",
+            "commonName": "Redbreast × Redear Sunfish",
+            "observationCount": 5,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1660315,
+            "name": "Lepomis aquilensis × microlophus",
+            "rank": "hybrid",
+            "commonName": "Plains Longear × Redear Sunfish",
+            "observationCount": 3,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1565588,
+            "name": "Lepomis humilis × microlophus",
+            "rank": "hybrid",
+            "commonName": "Orangespotted × Redear Sunfish",
+            "observationCount": 1,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "green-sunfish",
+        "commonName": "Green Sunfish",
+        "group": "Sunfishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 58636,
+        "sciName": "Lepomis cyanellus",
+        "resolvedCommonName": "Green Sunfish",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 58636,
+            "name": "Lepomis cyanellus",
+            "rank": "species",
+            "commonName": "Green Sunfish",
+            "observationCount": 21700,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1102243,
+            "name": "Lepomis macrochirus × cyanellus",
+            "rank": "hybrid",
+            "commonName": "Greengill Sunfish",
+            "observationCount": 3914,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1102244,
+            "name": "Lepomis gibbosus × cyanellus",
+            "rank": "hybrid",
+            "commonName": "Pumpkinseed × Green Sunfish",
+            "observationCount": 726,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1156007,
+            "name": "Lepomis cyanellus × gulosus",
+            "rank": "hybrid",
+            "commonName": "Green Sunfish × Warmouth",
+            "observationCount": 63,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1248689,
+            "name": "Lepomis cyanellus × microlophus",
+            "rank": "hybrid",
+            "commonName": "Green × Redear Sunfish",
+            "observationCount": 29,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1239750,
+            "name": "Lepomis auritus × cyanellus",
+            "rank": "hybrid",
+            "commonName": "Redbreast × Green Sunfish",
+            "observationCount": 28,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1528947,
+            "name": "Lepomis cyanellus × humilis",
+            "rank": "hybrid",
+            "commonName": "Green × Orangespotted Sunfish",
+            "observationCount": 19,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1102246,
+            "name": "Lepomis megalotis × cyanellus",
+            "rank": "hybrid",
+            "commonName": "Longear × Green Sunfish",
+            "observationCount": 18,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1545831,
+            "name": "Lepomis aquilensis × cyanellus",
+            "rank": "hybrid",
+            "commonName": "Plains Longear × Green Sunfish",
+            "observationCount": 16,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1550280,
+            "name": "Lepomis peltastes × cyanellus",
+            "rank": "hybrid",
+            "commonName": "Northern × Green Sunfish",
+            "observationCount": 2,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "orangespotted-sunfish",
+        "commonName": "Orangespotted Sunfish",
+        "group": "Sunfishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 104253,
+        "sciName": "Lepomis humilis",
+        "resolvedCommonName": "Orangespotted Sunfish",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 104253,
+            "name": "Lepomis humilis",
+            "rank": "species",
+            "commonName": "Orangespotted Sunfish",
+            "observationCount": 1217,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1528947,
+            "name": "Lepomis cyanellus × humilis",
+            "rank": "hybrid",
+            "commonName": "Green × Orangespotted Sunfish",
+            "observationCount": 19,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1511202,
+            "name": "Lepomis humilis × macrochirus",
+            "rank": "hybrid",
+            "commonName": "Orangespotted Sunfish × Bluegill",
+            "observationCount": 16,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1687455,
+            "name": "Lepomis humilis × gibbosus",
+            "rank": "hybrid",
+            "commonName": "Orangespotted × Pumpkinseed Sunfish",
+            "observationCount": 3,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1565588,
+            "name": "Lepomis humilis × microlophus",
+            "rank": "hybrid",
+            "commonName": "Orangespotted × Redear Sunfish",
+            "observationCount": 1,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "pumpkinseed",
+        "commonName": "Pumpkinseed",
+        "group": "Sunfishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 49614,
+        "sciName": "Lepomis gibbosus",
+        "resolvedCommonName": "Pumpkinseed",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 49614,
+            "name": "Lepomis gibbosus",
+            "rank": "species",
+            "commonName": "Pumpkinseed",
+            "observationCount": 20088,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1102245,
+            "name": "Lepomis gibbosus × macrochirus",
+            "rank": "hybrid",
+            "commonName": "Pumpkinseed × Bluegill",
+            "observationCount": 1554,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1102244,
+            "name": "Lepomis gibbosus × cyanellus",
+            "rank": "hybrid",
+            "commonName": "Pumpkinseed × Green Sunfish",
+            "observationCount": 726,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1160203,
+            "name": "Lepomis gibbosus × peltastes",
+            "rank": "hybrid",
+            "commonName": "Pumpkinseed × Northern Sunfish",
+            "observationCount": 22,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1283432,
+            "name": "Lepomis auritus × gibbosus",
+            "rank": "hybrid",
+            "commonName": "Redbreast Sunfish × Pumpkinseed",
+            "observationCount": 19,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1455115,
+            "name": "Lepomis gibbosus × gulosus",
+            "rank": "hybrid",
+            "commonName": "Pumpkinseed × Warmouth",
+            "observationCount": 13,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1687455,
+            "name": "Lepomis humilis × gibbosus",
+            "rank": "hybrid",
+            "commonName": "Orangespotted × Pumpkinseed Sunfish",
+            "observationCount": 3,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "warmouth",
+        "commonName": "Warmouth",
+        "group": "Sunfishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 104252,
+        "sciName": "Lepomis gulosus",
+        "resolvedCommonName": "Warmouth",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 104252,
+            "name": "Lepomis gulosus",
+            "rank": "species",
+            "commonName": "Warmouth",
+            "observationCount": 5941,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1150958,
+            "name": "Lepomis gulosus × macrochirus",
+            "rank": "hybrid",
+            "commonName": "Warmouth × Bluegill",
+            "observationCount": 109,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1156007,
+            "name": "Lepomis cyanellus × gulosus",
+            "rank": "hybrid",
+            "commonName": "Green Sunfish × Warmouth",
+            "observationCount": 63,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1455115,
+            "name": "Lepomis gibbosus × gulosus",
+            "rank": "hybrid",
+            "commonName": "Pumpkinseed × Warmouth",
+            "observationCount": 13,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          },
+          {
+            "id": 1468798,
+            "name": "Lepomis gulosus × microlophus",
+            "rank": "hybrid",
+            "commonName": "Warmouth × Redear Sunfish",
+            "observationCount": 5,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49592"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "rock-bass",
+        "commonName": "Rock Bass",
+        "group": "Sunfishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 58637,
+        "sciName": "Ambloplites rupestris",
+        "resolvedCommonName": "Rock Bass",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 58637,
+            "name": "Ambloplites rupestris",
+            "rank": "species",
+            "commonName": "Rock Bass",
+            "observationCount": 10241,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303640/58638"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "largemouth-bass",
+        "commonName": "Largemouth Bass",
+        "group": "Sunfishes",
+        "stage": null,
+        "hasCall": false,
+        "note": "iNat split Largemouth Bass: M. nigricans is the widespread species; M. salmoides is now Florida Bass. Must resolve to M. nigricans.",
+        "taxonId": 1439808,
+        "sciName": "Micropterus nigricans",
+        "resolvedCommonName": "Largemouth Bass",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 1439808,
+            "name": "Micropterus nigricans",
+            "rank": "species",
+            "commonName": "Largemouth Bass",
+            "observationCount": 43237,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49589/1546275"
+          },
+          {
+            "id": 1690688,
+            "name": "Micropterus nigricans × salmoides",
+            "rank": "hybrid",
+            "commonName": "Largemouth × Florida Bass",
+            "observationCount": 524,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49589/1546275"
+          },
+          {
+            "id": 1552136,
+            "name": "Micropterus dolomieu × nigricans",
+            "rank": "hybrid",
+            "commonName": "Smallmouth × Largemouth Bass",
+            "observationCount": 0,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49589"
+          }
+        ],
+        "confirmed": true
+      },
+      {
+        "id": "smallmouth-bass",
+        "commonName": "Smallmouth Bass",
+        "group": "Sunfishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 49590,
+        "sciName": "Micropterus dolomieu",
+        "resolvedCommonName": "Smallmouth Bass",
+        "rank": "complex",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 1632937,
+            "name": "Micropterus dolomieu",
+            "rank": "complex",
+            "commonName": "Smallmouth Bass Complex",
+            "observationCount": 19611,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49589"
+          },
+          {
+            "id": 49590,
+            "name": "Micropterus dolomieu",
+            "rank": "species",
+            "commonName": "Smallmouth Bass",
+            "observationCount": 19416,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49589/1632937"
+          },
+          {
+            "id": 1470359,
+            "name": "Micropterus dolomieu × punctulatus",
+            "rank": "hybrid",
+            "commonName": "Smallmouth × Spotted Bass",
+            "observationCount": 99,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49589"
+          },
+          {
+            "id": 179658,
+            "name": "Micropterus dolomieu × treculii",
+            "rank": "hybrid",
+            "commonName": "Smallmouth × Guadalupe Bass",
+            "observationCount": 8,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49589"
+          },
+          {
+            "id": 1552136,
+            "name": "Micropterus dolomieu × nigricans",
+            "rank": "hybrid",
+            "commonName": "Smallmouth × Largemouth Bass",
+            "observationCount": 0,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49589"
+          },
+          {
+            "id": 1494017,
+            "name": "Micropterus dolomieu × salmoides",
+            "rank": "hybrid",
+            "commonName": "Smallmouth × Florida Bass",
+            "observationCount": 0,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303731/1303755/49588/1303639/49589"
+          }
+        ],
+        "confirmed": true
+      },
+      {
+        "id": "freshwater-drum",
+        "commonName": "Freshwater Drum",
+        "group": "Other Fishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 49749,
+        "sciName": "Aplodinotus grunniens",
+        "resolvedCommonName": "Freshwater Drum",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 49749,
+            "name": "Aplodinotus grunniens",
+            "rank": "species",
+            "commonName": "Freshwater Drum",
+            "observationCount": 5429,
+            "ancestry": "48460/1/2/355675/47178/1632273/1303726/49172/49751"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "burbot",
+        "commonName": "Burbot",
+        "group": "Other Fishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 104813,
+        "sciName": "Lota lota",
+        "resolvedCommonName": "Burbot",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 211103,
+            "name": "Buddleja salviifolia",
+            "rank": "species",
+            "commonName": "Sagewood",
+            "observationCount": 3915,
+            "ancestry": "48460/47126/211194/47125/47124/48151/47151/941811/64571"
+          },
+          {
+            "id": 212855,
+            "name": "Agrochola lota",
+            "rank": "species",
+            "commonName": "Red-line Quaker",
+            "observationCount": 1691,
+            "ancestry": "48460/1/47120/372739/47158/184884/47157/47607/48670/122224/82030/320219/172835"
+          },
+          {
+            "id": 85877,
+            "name": "Lotidae",
+            "rank": "family",
+            "commonName": "Hakes and Burbots",
+            "observationCount": 1427,
+            "ancestry": "48460/1/2/355675/47178/1632273/63741/1303573"
+          },
+          {
+            "id": 89615,
+            "name": "Lota",
+            "rank": "genus",
+            "commonName": "",
+            "observationCount": 1186,
+            "ancestry": "48460/1/2/355675/47178/1632273/63741/1303573/85877"
+          },
+          {
+            "id": 104813,
+            "name": "Lota lota",
+            "rank": "species",
+            "commonName": "Burbot",
+            "observationCount": 1184,
+            "ancestry": "48460/1/2/355675/47178/1632273/63741/1303573/85877/89615"
+          },
+          {
+            "id": 85298,
+            "name": "Moridae",
+            "rank": "family",
+            "commonName": "Codlings",
+            "observationCount": 999,
+            "ancestry": "48460/1/2/355675/47178/1632273/63741/1303570"
+          },
+          {
+            "id": 1507101,
+            "name": "Carystus lota",
+            "rank": "species",
+            "commonName": "Lota Skipper",
+            "observationCount": 194,
+            "ancestry": "48460/1/47120/372739/47158/184884/47157/47224/47653/122493/320552/1363196/247622"
+          },
+          {
+            "id": 244177,
+            "name": "Iotaphora iridicolor",
+            "rank": "species",
+            "commonName": "",
+            "observationCount": 169,
+            "ancestry": "48460/1/47120/372739/47158/184884/47157/49531/49530/123036/244178"
+          },
+          {
+            "id": 1256822,
+            "name": "Salbia lotanalis",
+            "rank": "species",
+            "commonName": "",
+            "observationCount": 134,
+            "ancestry": "48460/1/47120/372739/47158/184884/47157/49682/52002/122486/892460/319016"
+          },
+          {
+            "id": 215458,
+            "name": "Brosme brosme",
+            "rank": "species",
+            "commonName": "Cusk",
+            "observationCount": 111,
+            "ancestry": "48460/1/2/355675/47178/1632273/63741/1303573/85877/87097"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "mooneye",
+        "commonName": "Mooneye",
+        "group": "Other Fishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 102785,
+        "sciName": "Hiodon tergisus",
+        "resolvedCommonName": "Mooneye",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 102785,
+            "name": "Hiodon tergisus",
+            "rank": "species",
+            "commonName": "Mooneye",
+            "observationCount": 384,
+            "ancestry": "48460/1/2/355675/47178/1533789/1303742/49241/49242"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "brook-stickleback",
+        "commonName": "Brook Stickleback",
+        "group": "Other Fishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 58639,
+        "sciName": "Culaea inconstans",
+        "resolvedCommonName": "Brook Stickleback",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 58639,
+            "name": "Culaea inconstans",
+            "rank": "species",
+            "commonName": "Brook Stickleback",
+            "observationCount": 3546,
+            "ancestry": "48460/1/2/355675/47178/1632273/47233/1303586/48405/58641"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "slimy-sculpin",
+        "commonName": "Slimy Sculpin",
+        "group": "Other Fishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 98563,
+        "sciName": "Cottus cognatus",
+        "resolvedCommonName": "Slimy Sculpin",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 98563,
+            "name": "Cottus cognatus",
+            "rank": "species",
+            "commonName": "Slimy Sculpin",
+            "observationCount": 680,
+            "ancestry": "48460/1/2/355675/47178/1632273/47233/1303567/47645/47644"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "blackstripe-topminnow",
+        "commonName": "Blackstripe Topminnow",
+        "group": "Other Fishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 1647740,
+        "sciName": "Fundulus notatus",
+        "resolvedCommonName": "",
+        "rank": "complex",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 1647740,
+            "name": "Fundulus notatus",
+            "rank": "complex",
+            "commonName": "",
+            "observationCount": 5297,
+            "ancestry": "48460/1/2/355675/47178/1632273/49333/1303581/58647/58648/1647725"
+          },
+          {
+            "id": 101064,
+            "name": "Fundulus notatus",
+            "rank": "species",
+            "commonName": "Blackstripe Topminnow",
+            "observationCount": 3175,
+            "ancestry": "48460/1/2/355675/47178/1632273/49333/1303581/58647/58648/1647725/1647740"
+          },
+          {
+            "id": 1591717,
+            "name": "Fundulus diaphanus × notatus",
+            "rank": "hybrid",
+            "commonName": "Banded Killifish × Blackstripe Topminnow",
+            "observationCount": 2,
+            "ancestry": "48460/1/2/355675/47178/1632273/49333/1303581/58647/58648"
+          }
+        ],
+        "confirmed": true
+      },
+      {
+        "id": "american-eel",
+        "commonName": "American Eel",
+        "group": "Other Fishes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 49219,
+        "sciName": "Anguilla rostrata",
+        "resolvedCommonName": "American Eel",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 49219,
+            "name": "Anguilla rostrata",
+            "rank": "species",
+            "commonName": "American Eel",
+            "observationCount": 4440,
+            "ancestry": "48460/1/2/355675/47178/1124233/47314/1555719/49220/49221"
+          }
+        ],
+        "confirmed": false
+      }
+    ],
+    "herps": [
+      {
+        "id": "blue-spotted-salamander",
+        "commonName": "Blue-Spotted Salamander",
+        "group": "Salamanders",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 52354,
+        "sciName": "Ambystoma laterale",
+        "resolvedCommonName": "Blue-spotted Salamander",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 1457707,
+            "name": "Ambystoma unisexual",
+            "rank": "complex",
+            "commonName": "Unisexual Mole Salamander Complex",
+            "observationCount": 29262,
+            "ancestry": "48460/1/2/355675/20978/26718/26720/26721"
+          },
+          {
+            "id": 52354,
+            "name": "Ambystoma laterale",
+            "rank": "species",
+            "commonName": "Blue-spotted Salamander",
+            "observationCount": 15016,
+            "ancestry": "48460/1/2/355675/20978/26718/26720/26721/1457707"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "smallmouth-salamander",
+        "commonName": "Smallmouth Salamander",
+        "group": "Salamanders",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 26745,
+        "sciName": "Ambystoma texanum",
+        "resolvedCommonName": "Small-mouthed Salamander",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 26745,
+            "name": "Ambystoma texanum",
+            "rank": "species",
+            "commonName": "Small-mouthed Salamander",
+            "observationCount": 3324,
+            "ancestry": "48460/1/2/355675/20978/26718/26720/26721/1457707"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "tiger-salamander",
+        "commonName": "Tiger Salamander",
+        "group": "Salamanders",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 26749,
+        "sciName": "Ambystoma tigrinum",
+        "resolvedCommonName": "Eastern Tiger Salamander",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 26765,
+            "name": "Ambystoma mavortium",
+            "rank": "species",
+            "commonName": "Western Tiger Salamander",
+            "observationCount": 7240,
+            "ancestry": "48460/1/2/355675/20978/26718/26720/26721"
+          },
+          {
+            "id": 26749,
+            "name": "Ambystoma tigrinum",
+            "rank": "species",
+            "commonName": "Eastern Tiger Salamander",
+            "observationCount": 3075,
+            "ancestry": "48460/1/2/355675/20978/26718/26720/26721/1457707"
+          },
+          {
+            "id": 26778,
+            "name": "Ambystoma californiense",
+            "rank": "species",
+            "commonName": "California Tiger Salamander",
+            "observationCount": 1248,
+            "ancestry": "48460/1/2/355675/20978/26718/26720/26721"
+          },
+          {
+            "id": 1554926,
+            "name": "Ranavirus ambystoma-i",
+            "rank": "species",
+            "commonName": "Ambystoma tigrinum virus",
+            "observationCount": 0,
+            "ancestry": "48460/131236/1125531/1125532/1125544/460463/1125554/475969"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "mudpuppy",
+        "commonName": "Mudpuppy",
+        "group": "Salamanders",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 27685,
+        "sciName": "Necturus maculosus",
+        "resolvedCommonName": "Common Mudpuppy",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 27685,
+            "name": "Necturus maculosus",
+            "rank": "species",
+            "commonName": "Common Mudpuppy",
+            "observationCount": 1512,
+            "ancestry": "48460/1/2/355675/20978/26718/27675/27679"
+          },
+          {
+            "id": 27690,
+            "name": "Necturus beyeri",
+            "rank": "species",
+            "commonName": "Gulf Coast Waterdog",
+            "observationCount": 108,
+            "ancestry": "48460/1/2/355675/20978/26718/27675/27679"
+          },
+          {
+            "id": 476947,
+            "name": "Necturus louisianensis",
+            "rank": "species",
+            "commonName": "Red River Mudpuppy",
+            "observationCount": 47,
+            "ancestry": "48460/1/2/355675/20978/26718/27675/27679"
+          },
+          {
+            "id": 27688,
+            "name": "Necturus lewisi",
+            "rank": "species",
+            "commonName": "Neuse River Waterdog",
+            "observationCount": 41,
+            "ancestry": "48460/1/2/355675/20978/26718/27675/27679"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "eastern-newt-adult",
+        "commonName": "Eastern Newt (Adult)",
+        "group": "Salamanders",
+        "stage": "adult",
+        "hasCall": false,
+        "note": "Shares a taxon with the Eft card — assign aquatic adult photos here.",
+        "taxonId": 27805,
+        "sciName": "Notophthalmus viridescens",
+        "resolvedCommonName": "Eastern Newt",
+        "rank": "species",
+        "needsReview": true,
+        "reviewReason": "Shares a taxon with the Eft card — assign aquatic adult photos here.",
+        "candidates": [
+          {
+            "id": 27805,
+            "name": "Notophthalmus viridescens",
+            "rank": "species",
+            "commonName": "Eastern Newt",
+            "observationCount": 84133,
+            "ancestry": "48460/1/2/355675/20978/26718/27701/787591/27800"
+          },
+          {
+            "id": 123499,
+            "name": "Notophthalmus viridescens viridescens",
+            "rank": "subspecies",
+            "commonName": "Red-spotted Newt",
+            "observationCount": 15046,
+            "ancestry": "48460/1/2/355675/20978/26718/27701/787591/27800/27805"
+          },
+          {
+            "id": 237423,
+            "name": "Notophthalmus viridescens louisianensis",
+            "rank": "subspecies",
+            "commonName": "Central Newt",
+            "observationCount": 1484,
+            "ancestry": "48460/1/2/355675/20978/26718/27701/787591/27800/27805"
+          },
+          {
+            "id": 237422,
+            "name": "Notophthalmus viridescens dorsalis",
+            "rank": "subspecies",
+            "commonName": "Broken-striped Newt",
+            "observationCount": 201,
+            "ancestry": "48460/1/2/355675/20978/26718/27701/787591/27800/27805"
+          },
+          {
+            "id": 237424,
+            "name": "Notophthalmus viridescens piaropicola",
+            "rank": "subspecies",
+            "commonName": "Peninsula Newt",
+            "observationCount": 162,
+            "ancestry": "48460/1/2/355675/20978/26718/27701/787591/27800/27805"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "eastern-newt-eft",
+        "commonName": "Eastern Newt (Eft)",
+        "group": "Salamanders",
+        "stage": "eft",
+        "hasCall": false,
+        "note": "Shares a taxon with the Adult card — assign terrestrial orange eft photos here.",
+        "taxonId": 27805,
+        "sciName": "Notophthalmus viridescens",
+        "resolvedCommonName": "Eastern Newt",
+        "rank": "species",
+        "needsReview": true,
+        "reviewReason": "Shares a taxon with the Adult card — assign terrestrial orange eft photos here.",
+        "candidates": [
+          {
+            "id": 27805,
+            "name": "Notophthalmus viridescens",
+            "rank": "species",
+            "commonName": "Eastern Newt",
+            "observationCount": 84133,
+            "ancestry": "48460/1/2/355675/20978/26718/27701/787591/27800"
+          },
+          {
+            "id": 123499,
+            "name": "Notophthalmus viridescens viridescens",
+            "rank": "subspecies",
+            "commonName": "Red-spotted Newt",
+            "observationCount": 15046,
+            "ancestry": "48460/1/2/355675/20978/26718/27701/787591/27800/27805"
+          },
+          {
+            "id": 237423,
+            "name": "Notophthalmus viridescens louisianensis",
+            "rank": "subspecies",
+            "commonName": "Central Newt",
+            "observationCount": 1484,
+            "ancestry": "48460/1/2/355675/20978/26718/27701/787591/27800/27805"
+          },
+          {
+            "id": 237422,
+            "name": "Notophthalmus viridescens dorsalis",
+            "rank": "subspecies",
+            "commonName": "Broken-striped Newt",
+            "observationCount": 201,
+            "ancestry": "48460/1/2/355675/20978/26718/27701/787591/27800/27805"
+          },
+          {
+            "id": 237424,
+            "name": "Notophthalmus viridescens piaropicola",
+            "rank": "subspecies",
+            "commonName": "Peninsula Newt",
+            "observationCount": 162,
+            "ancestry": "48460/1/2/355675/20978/26718/27701/787591/27800/27805"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "american-toad",
+        "commonName": "American Toad",
+        "group": "Frogs & Toads",
+        "stage": null,
+        "hasCall": true,
+        "note": null,
+        "taxonId": 64968,
+        "sciName": "Anaxyrus americanus",
+        "resolvedCommonName": "American Toad",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 64968,
+            "name": "Anaxyrus americanus",
+            "rank": "species",
+            "commonName": "American Toad",
+            "observationCount": 227281,
+            "ancestry": "48460/1/2/355675/20978/20979/21359/64747"
+          },
+          {
+            "id": 123594,
+            "name": "Anaxyrus americanus americanus",
+            "rank": "subspecies",
+            "commonName": "Eastern American Toad",
+            "observationCount": 22615,
+            "ancestry": "48460/1/2/355675/20978/20979/21359/64747/64968"
+          },
+          {
+            "id": 122253,
+            "name": "Anaxyrus americanus charlesmithi",
+            "rank": "subspecies",
+            "commonName": "Dwarf American Toad",
+            "observationCount": 1308,
+            "ancestry": "48460/1/2/355675/20978/20979/21359/64747/64968"
+          },
+          {
+            "id": 1634259,
+            "name": "Anaxyrus americanus × fowleri",
+            "rank": "hybrid",
+            "commonName": "",
+            "observationCount": 9,
+            "ancestry": "48460/1/2/355675/20978/20979/21359/64747"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "blanchards-cricket-frog",
+        "commonName": "Blanchard's Cricket Frog",
+        "group": "Frogs & Toads",
+        "stage": null,
+        "hasCall": true,
+        "note": null,
+        "taxonId": 70421,
+        "sciName": "Acris blanchardi",
+        "resolvedCommonName": "Blanchard's Cricket Frog",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 70421,
+            "name": "Acris blanchardi",
+            "rank": "species",
+            "commonName": "Blanchard's Cricket Frog",
+            "observationCount": 37374,
+            "ancestry": "48460/1/2/355675/20978/20979/1658175/24229"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "eastern-gray-tree-frog",
+        "commonName": "Eastern Gray Tree Frog",
+        "group": "Frogs & Toads",
+        "stage": null,
+        "hasCall": true,
+        "note": "Most texts say Hyla versicolor; iNaturalist uses Dryophytes versicolor. ALSO visually identical to Cope's Gray Treefrog (D. chrysoscelis) — call is the reliable separator, so watch for misidentified photos. Note iNat also has a 'complex' rank taxon of the same name — pick the species-rank one.",
+        "taxonId": 1668899,
+        "sciName": "Dryophytes versicolor",
+        "resolvedCommonName": "Gray Treefrog Species Complex",
+        "rank": "complex",
+        "needsReview": true,
+        "reviewReason": "2 taxa share the name \"Dryophytes versicolor\" — confirm the right one.",
+        "candidates": [
+          {
+            "id": 1668899,
+            "name": "Dryophytes versicolor",
+            "rank": "complex",
+            "commonName": "Gray Treefrog Species Complex",
+            "observationCount": 132646,
+            "ancestry": "48460/1/2/355675/20978/20979/1658175/1668830"
+          },
+          {
+            "id": 1668923,
+            "name": "Dryophytes versicolor",
+            "rank": "species",
+            "commonName": "Gray Treefrog",
+            "observationCount": 61256,
+            "ancestry": "48460/1/2/355675/20978/20979/1658175/1668830/1668899"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "spring-peeper",
+        "commonName": "Spring Peeper",
+        "group": "Frogs & Toads",
+        "stage": null,
+        "hasCall": true,
+        "note": null,
+        "taxonId": 24268,
+        "sciName": "Pseudacris crucifer",
+        "resolvedCommonName": "Spring Peeper",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 24268,
+            "name": "Pseudacris crucifer",
+            "rank": "species",
+            "commonName": "Spring Peeper",
+            "observationCount": 70172,
+            "ancestry": "48460/1/2/355675/20978/20979/1658175/24253"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "boreal-chorus-frog",
+        "commonName": "Boreal Chorus Frog",
+        "group": "Frogs & Toads",
+        "stage": null,
+        "hasCall": true,
+        "note": null,
+        "taxonId": 24255,
+        "sciName": "Pseudacris maculata",
+        "resolvedCommonName": "Boreal Chorus Frog",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 24255,
+            "name": "Pseudacris maculata",
+            "rank": "species",
+            "commonName": "Boreal Chorus Frog",
+            "observationCount": 13019,
+            "ancestry": "48460/1/2/355675/20978/20979/1658175/24253"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "plains-leopard-frog",
+        "commonName": "Plains Leopard Frog",
+        "group": "Frogs & Toads",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 65976,
+        "sciName": "Lithobates blairi",
+        "resolvedCommonName": "Plains Leopard Frog",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 65976,
+            "name": "Lithobates blairi",
+            "rank": "species",
+            "commonName": "Plains Leopard Frog",
+            "observationCount": 4068,
+            "ancestry": "48460/1/2/355675/20978/20979/25473/60340"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "bull-frog",
+        "commonName": "Bull Frog",
+        "group": "Frogs & Toads",
+        "stage": null,
+        "hasCall": true,
+        "note": null,
+        "taxonId": 65979,
+        "sciName": "Lithobates catesbeianus",
+        "resolvedCommonName": "American Bullfrog",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 65979,
+            "name": "Lithobates catesbeianus",
+            "rank": "species",
+            "commonName": "American Bullfrog",
+            "observationCount": 146545,
+            "ancestry": "48460/1/2/355675/20978/20979/25473/60340"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "green-frog",
+        "commonName": "Green Frog",
+        "group": "Frogs & Toads",
+        "stage": null,
+        "hasCall": true,
+        "note": null,
+        "taxonId": 65982,
+        "sciName": "Lithobates clamitans",
+        "resolvedCommonName": "Green Frog",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 65982,
+            "name": "Lithobates clamitans",
+            "rank": "species",
+            "commonName": "Green Frog",
+            "observationCount": 162517,
+            "ancestry": "48460/1/2/355675/20978/20979/25473/60340"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "pickerel-frog",
+        "commonName": "Pickerel Frog",
+        "group": "Frogs & Toads",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 66002,
+        "sciName": "Lithobates palustris",
+        "resolvedCommonName": "Pickerel Frog",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 66002,
+            "name": "Lithobates palustris",
+            "rank": "species",
+            "commonName": "Pickerel Frog",
+            "observationCount": 37534,
+            "ancestry": "48460/1/2/355675/20978/20979/25473/60340"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "northern-leopard-frog",
+        "commonName": "Northern Leopard Frog",
+        "group": "Frogs & Toads",
+        "stage": null,
+        "hasCall": true,
+        "note": null,
+        "taxonId": 66003,
+        "sciName": "Lithobates pipiens",
+        "resolvedCommonName": "Northern Leopard Frog",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 66003,
+            "name": "Lithobates pipiens",
+            "rank": "species",
+            "commonName": "Northern Leopard Frog",
+            "observationCount": 69732,
+            "ancestry": "48460/1/2/355675/20978/20979/25473/60340"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "common-snapping-turtle",
+        "commonName": "Common Snapping Turtle",
+        "group": "Turtles",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 39682,
+        "sciName": "Chelydra serpentina",
+        "resolvedCommonName": "Common Snapping Turtle",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 39682,
+            "name": "Chelydra serpentina",
+            "rank": "species",
+            "commonName": "Common Snapping Turtle",
+            "observationCount": 123808,
+            "ancestry": "48460/1/2/355675/26036/39532/39680/39681"
+          },
+          {
+            "id": 97346,
+            "name": "Chelydra acutirostris",
+            "rank": "species",
+            "commonName": "South American Snapping Turtle",
+            "observationCount": 584,
+            "ancestry": "48460/1/2/355675/26036/39532/39680/39681"
+          },
+          {
+            "id": 73714,
+            "name": "Chelydra rossignonii",
+            "rank": "species",
+            "commonName": "Central American Snapping Turtle",
+            "observationCount": 121,
+            "ancestry": "48460/1/2/355675/26036/39532/39680/39681"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "spiny-softshell",
+        "commonName": "Spiny Softshell",
+        "group": "Turtles",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 39556,
+        "sciName": "Apalone spinifera",
+        "resolvedCommonName": "Spiny Softshell",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 39556,
+            "name": "Apalone spinifera",
+            "rank": "species",
+            "commonName": "Spiny Softshell",
+            "observationCount": 24643,
+            "ancestry": "48460/1/2/355675/26036/39532/39539/797526/39555"
+          },
+          {
+            "id": 39557,
+            "name": "Apalone spinifera pallida",
+            "rank": "subspecies",
+            "commonName": "Pallid Spiny Softshell",
+            "observationCount": 1802,
+            "ancestry": "48460/1/2/355675/26036/39532/39539/797526/39555/39556"
+          },
+          {
+            "id": 62722,
+            "name": "Apalone spinifera spinifera",
+            "rank": "subspecies",
+            "commonName": "Eastern Spiny Softshell",
+            "observationCount": 1715,
+            "ancestry": "48460/1/2/355675/26036/39532/39539/797526/39555/39556"
+          },
+          {
+            "id": 39560,
+            "name": "Apalone spinifera emoryi",
+            "rank": "subspecies",
+            "commonName": "Texas Spiny Softshell",
+            "observationCount": 1395,
+            "ancestry": "48460/1/2/355675/26036/39532/39539/797526/39555/39556"
+          },
+          {
+            "id": 39559,
+            "name": "Apalone spinifera guadalupensis",
+            "rank": "subspecies",
+            "commonName": "Guadalupe Spiny Softshell",
+            "observationCount": 799,
+            "ancestry": "48460/1/2/355675/26036/39532/39539/797526/39555/39556"
+          },
+          {
+            "id": 39562,
+            "name": "Apalone spinifera aspera",
+            "rank": "subspecies",
+            "commonName": "Gulf Coast Spiny Softshell",
+            "observationCount": 286,
+            "ancestry": "48460/1/2/355675/26036/39532/39539/797526/39555/39556"
+          },
+          {
+            "id": 208654,
+            "name": "Apalone spinifera atra",
+            "rank": "subspecies",
+            "commonName": "Cuatro Cienegas Softshell",
+            "observationCount": 22,
+            "ancestry": "48460/1/2/355675/26036/39532/39539/797526/39555/39556"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "smooth-softshell",
+        "commonName": "Smooth Softshell",
+        "group": "Turtles",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 39563,
+        "sciName": "Apalone mutica",
+        "resolvedCommonName": "Smooth Softshell",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 39563,
+            "name": "Apalone mutica",
+            "rank": "species",
+            "commonName": "Smooth Softshell",
+            "observationCount": 648,
+            "ancestry": "48460/1/2/355675/26036/39532/39539/797526/39555"
+          },
+          {
+            "id": 39565,
+            "name": "Apalone mutica mutica",
+            "rank": "subspecies",
+            "commonName": "Midland Smooth Softshell Turtle",
+            "observationCount": 340,
+            "ancestry": "48460/1/2/355675/26036/39532/39539/797526/39555/39563"
+          },
+          {
+            "id": 39564,
+            "name": "Apalone mutica calvata",
+            "rank": "subspecies",
+            "commonName": "Gulf Coast Smooth Softshell Turtle",
+            "observationCount": 52,
+            "ancestry": "48460/1/2/355675/26036/39532/39539/797526/39555/39563"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "ornate-box-turtle",
+        "commonName": "Ornate Box Turtle",
+        "group": "Turtles",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 39807,
+        "sciName": "Terrapene ornata",
+        "resolvedCommonName": "Ornate Box Turtle",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 39807,
+            "name": "Terrapene ornata",
+            "rank": "species",
+            "commonName": "Ornate Box Turtle",
+            "observationCount": 11301,
+            "ancestry": "48460/1/2/355675/26036/39532/39760/797516/39806"
+          },
+          {
+            "id": 39808,
+            "name": "Terrapene ornata luteola",
+            "rank": "subspecies",
+            "commonName": "Desert Box Turtle",
+            "observationCount": 951,
+            "ancestry": "48460/1/2/355675/26036/39532/39760/797516/39806/39807"
+          },
+          {
+            "id": 39809,
+            "name": "Terrapene ornata ornata",
+            "rank": "subspecies",
+            "commonName": "Plains Box Turtle",
+            "observationCount": 833,
+            "ancestry": "48460/1/2/355675/26036/39532/39760/797516/39806/39807"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "northern-painted-turtle",
+        "commonName": "Northern Painted Turtle",
+        "group": "Turtles",
+        "stage": null,
+        "hasCall": false,
+        "note": "Northern Painted is the subspecies C. p. marginata; iNat may resolve to the species C. picta.",
+        "taxonId": 39771,
+        "sciName": "Chrysemys picta",
+        "resolvedCommonName": "Painted Turtle",
+        "rank": "species",
+        "needsReview": true,
+        "reviewReason": "Northern Painted is the subspecies C. p. marginata; iNat may resolve to the species C. picta.",
+        "candidates": [
+          {
+            "id": 39771,
+            "name": "Chrysemys picta",
+            "rank": "species",
+            "commonName": "Painted Turtle",
+            "observationCount": 183735,
+            "ancestry": "48460/1/2/355675/26036/39532/39760/797544/39770"
+          },
+          {
+            "id": 39772,
+            "name": "Chrysemys picta marginata",
+            "rank": "subspecies",
+            "commonName": "Midland Painted Turtle",
+            "observationCount": 53310,
+            "ancestry": "48460/1/2/355675/26036/39532/39760/797544/39770/39771"
+          },
+          {
+            "id": 39775,
+            "name": "Chrysemys picta picta",
+            "rank": "subspecies",
+            "commonName": "Eastern Painted Turtle",
+            "observationCount": 27735,
+            "ancestry": "48460/1/2/355675/26036/39532/39760/797544/39770/39771"
+          },
+          {
+            "id": 39773,
+            "name": "Chrysemys picta bellii",
+            "rank": "subspecies",
+            "commonName": "Western Painted Turtle",
+            "observationCount": 12277,
+            "ancestry": "48460/1/2/355675/26036/39532/39760/797544/39770/39771"
+          },
+          {
+            "id": 194100,
+            "name": "Chrysemys dorsalis",
+            "rank": "species",
+            "commonName": "Southern Painted Turtle",
+            "observationCount": 679,
+            "ancestry": "48460/1/2/355675/26036/39532/39760/797544/39770"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "blandings-turtle",
+        "commonName": "Blanding's Turtle",
+        "group": "Turtles",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 39885,
+        "sciName": "Emydoidea blandingii",
+        "resolvedCommonName": "Blanding's Turtle",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 39885,
+            "name": "Emydoidea blandingii",
+            "rank": "species",
+            "commonName": "Blanding's Turtle",
+            "observationCount": 17015,
+            "ancestry": "48460/1/2/355675/26036/39532/39760/797516/39884"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "northern-map-turtle",
+        "commonName": "Northern Map Turtle",
+        "group": "Turtles",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 39858,
+        "sciName": "Graptemys geographica",
+        "resolvedCommonName": "Northern Map Turtle",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 39858,
+            "name": "Graptemys geographica",
+            "rank": "species",
+            "commonName": "Northern Map Turtle",
+            "observationCount": 19698,
+            "ancestry": "48460/1/2/355675/26036/39532/39760/797544/39844"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "false-map-turtle",
+        "commonName": "False Map Turtle",
+        "group": "Turtles",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 39847,
+        "sciName": "Graptemys pseudogeographica",
+        "resolvedCommonName": "False Map Turtle",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 39847,
+            "name": "Graptemys pseudogeographica",
+            "rank": "species",
+            "commonName": "False Map Turtle",
+            "observationCount": 5103,
+            "ancestry": "48460/1/2/355675/26036/39532/39760/797544/39844"
+          },
+          {
+            "id": 371940,
+            "name": "Graptemys ouachitensis",
+            "rank": "species",
+            "commonName": "Ouachita Map Turtle",
+            "observationCount": 2334,
+            "ancestry": "48460/1/2/355675/26036/39532/39760/797544/39844"
+          },
+          {
+            "id": 39849,
+            "name": "Graptemys pseudogeographica kohnii",
+            "rank": "subspecies",
+            "commonName": "Mississippi Map Turtle",
+            "observationCount": 2158,
+            "ancestry": "48460/1/2/355675/26036/39532/39760/797544/39844/39847"
+          },
+          {
+            "id": 39845,
+            "name": "Graptemys versa",
+            "rank": "species",
+            "commonName": "Texas Map Turtle",
+            "observationCount": 979,
+            "ancestry": "48460/1/2/355675/26036/39532/39760/797544/39844"
+          },
+          {
+            "id": 39848,
+            "name": "Graptemys pseudogeographica pseudogeographica",
+            "rank": "subspecies",
+            "commonName": "Northern False Map Turtle",
+            "observationCount": 299,
+            "ancestry": "48460/1/2/355675/26036/39532/39760/797544/39844/39847"
+          },
+          {
+            "id": 39853,
+            "name": "Graptemys oculifera",
+            "rank": "species",
+            "commonName": "Ringed Map Turtle",
+            "observationCount": 253,
+            "ancestry": "48460/1/2/355675/26036/39532/39760/797544/39844"
+          },
+          {
+            "id": 371941,
+            "name": "Graptemys sabinensis",
+            "rank": "species",
+            "commonName": "Sabine Map Turtle",
+            "observationCount": 241,
+            "ancestry": "48460/1/2/355675/26036/39532/39760/797544/39844"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "eastern-musk-turtle",
+        "commonName": "Eastern Musk Turtle",
+        "group": "Turtles",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 39703,
+        "sciName": "Sternotherus odoratus",
+        "resolvedCommonName": "Eastern Musk Turtle",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 39703,
+            "name": "Sternotherus odoratus",
+            "rank": "species",
+            "commonName": "Eastern Musk Turtle",
+            "observationCount": 14989,
+            "ancestry": "48460/1/2/355675/26036/39532/39699/797558/39702"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "wood-turtle",
+        "commonName": "Wood Turtle",
+        "group": "Turtles",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 39865,
+        "sciName": "Glyptemys insculpta",
+        "resolvedCommonName": "Wood Turtle",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 39865,
+            "name": "Glyptemys insculpta",
+            "rank": "species",
+            "commonName": "Wood Turtle",
+            "observationCount": 5487,
+            "ancestry": "48460/1/2/355675/26036/39532/39760/797516/39863"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "yellow-mud-turtle",
+        "commonName": "Yellow Mud Turtle",
+        "group": "Turtles",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 39742,
+        "sciName": "Kinosternon flavescens",
+        "resolvedCommonName": "Yellow Mud Turtle",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 39742,
+            "name": "Kinosternon flavescens",
+            "rank": "species",
+            "commonName": "Yellow Mud Turtle",
+            "observationCount": 1840,
+            "ancestry": "48460/1/2/355675/26036/39532/39699/797558/39712"
+          },
+          {
+            "id": 73838,
+            "name": "Kinosternon durangoense",
+            "rank": "species",
+            "commonName": "Durango Mud Turtle",
+            "observationCount": 85,
+            "ancestry": "48460/1/2/355675/26036/39532/39699/797558/39712"
+          },
+          {
+            "id": 1690213,
+            "name": "Kinosternon stejnegeri",
+            "rank": "species",
+            "commonName": "Arizona Mud Turtle",
+            "observationCount": 59,
+            "ancestry": "48460/1/2/355675/26036/39532/39699/797558/39712"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "north-american-racer",
+        "commonName": "North American Racer",
+        "group": "Snakes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 27137,
+        "sciName": "Coluber constrictor",
+        "resolvedCommonName": "North American Racer",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 27137,
+            "name": "Coluber constrictor",
+            "rank": "species",
+            "commonName": "North American Racer",
+            "observationCount": 58118,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/27030"
+          },
+          {
+            "id": 27140,
+            "name": "Coluber constrictor priapus",
+            "rank": "subspecies",
+            "commonName": "Southern Black Racer",
+            "observationCount": 8937,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/27030/27137"
+          },
+          {
+            "id": 27149,
+            "name": "Coluber constrictor constrictor",
+            "rank": "subspecies",
+            "commonName": "Northern Black Racer",
+            "observationCount": 5706,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/27030/27137"
+          },
+          {
+            "id": 200661,
+            "name": "Coluber constrictor mormon",
+            "rank": "subspecies",
+            "commonName": "Western Yellow-bellied Racer",
+            "observationCount": 5432,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/27030/27137"
+          },
+          {
+            "id": 27153,
+            "name": "Coluber constrictor flaviventris",
+            "rank": "subspecies",
+            "commonName": "Eastern Yellow-bellied Racer",
+            "observationCount": 3974,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/27030/27137"
+          },
+          {
+            "id": 27138,
+            "name": "Coluber constrictor paludicola",
+            "rank": "subspecies",
+            "commonName": "Everglades Racer",
+            "observationCount": 1172,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/27030/27137"
+          },
+          {
+            "id": 27146,
+            "name": "Coluber constrictor foxii",
+            "rank": "subspecies",
+            "commonName": "Blue Racer",
+            "observationCount": 1027,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/27030/27137"
+          },
+          {
+            "id": 27147,
+            "name": "Coluber constrictor anthicus",
+            "rank": "subspecies",
+            "commonName": "Buttermilk Racer",
+            "observationCount": 756,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/27030/27137"
+          },
+          {
+            "id": 27145,
+            "name": "Coluber constrictor latrunculus",
+            "rank": "subspecies",
+            "commonName": "Black-masked Racer",
+            "observationCount": 314,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/27030/27137"
+          },
+          {
+            "id": 27141,
+            "name": "Coluber constrictor oaxaca",
+            "rank": "subspecies",
+            "commonName": "Mexican Racer",
+            "observationCount": 117,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/27030/27137"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "eastern-hognosed-snake",
+        "commonName": "Eastern Hog-nosed Snake",
+        "group": "Snakes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 29925,
+        "sciName": "Heterodon platirhinos",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 29925,
+            "name": "Heterodon platirhinos",
+            "rank": "species",
+            "commonName": "Eastern Hognose Snake",
+            "observationCount": 13384,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797518/29923"
+          }
+        ],
+        "confirmed": false,
+        "resolvedCommonName": "Eastern Hognose Snake",
+        "rank": "species"
+      },
+      {
+        "id": "speckled-king-snake",
+        "commonName": "Speckled King Snake",
+        "group": "Snakes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 29818,
+        "sciName": "Lampropeltis holbrooki",
+        "resolvedCommonName": "Speckled Kingsnake",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 29818,
+            "name": "Lampropeltis holbrooki",
+            "rank": "species",
+            "commonName": "Speckled Kingsnake",
+            "observationCount": 6044,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/29768/1676766"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "eastern-milk-snake",
+        "commonName": "Eastern Milk Snake",
+        "group": "Snakes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 1676768,
+        "sciName": "Lampropeltis triangulum",
+        "resolvedCommonName": "",
+        "rank": "complex",
+        "needsReview": true,
+        "reviewReason": "2 taxa share the name \"Lampropeltis triangulum\" — confirm the right one.",
+        "candidates": [
+          {
+            "id": 1676768,
+            "name": "Lampropeltis triangulum",
+            "rank": "complex",
+            "commonName": "",
+            "observationCount": 29465,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/29768"
+          },
+          {
+            "id": 515419,
+            "name": "Lampropeltis triangulum",
+            "rank": "species",
+            "commonName": "Eastern Milksnake",
+            "observationCount": 26663,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/29768/1676768"
+          },
+          {
+            "id": 515414,
+            "name": "Lampropeltis gentilis",
+            "rank": "species",
+            "commonName": "Western Milksnake",
+            "observationCount": 2260,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/29768/1676768"
+          },
+          {
+            "id": 29793,
+            "name": "Lampropeltis elapsoides",
+            "rank": "species",
+            "commonName": "Scarlet Kingsnake",
+            "observationCount": 1296,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/29768"
+          },
+          {
+            "id": 515420,
+            "name": "Lampropeltis polyzona",
+            "rank": "species",
+            "commonName": "West Mexican Milksnake",
+            "observationCount": 1244,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/29768"
+          },
+          {
+            "id": 515422,
+            "name": "Lampropeltis abnorma",
+            "rank": "species",
+            "commonName": "Central American Milksnake",
+            "observationCount": 857,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/29768"
+          },
+          {
+            "id": 515423,
+            "name": "Lampropeltis micropholis",
+            "rank": "species",
+            "commonName": "South American Milksnake",
+            "observationCount": 793,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/29768"
+          },
+          {
+            "id": 515417,
+            "name": "Lampropeltis annulata",
+            "rank": "species",
+            "commonName": "Tamaulipan Milksnake",
+            "observationCount": 512,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/29768/1676768"
+          },
+          {
+            "id": 29803,
+            "name": "Lampropeltis ruthveni",
+            "rank": "species",
+            "commonName": "Ruthvens Kingsnake",
+            "observationCount": 52,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/29768"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "northern-water-snake",
+        "commonName": "Northern Water Snake",
+        "group": "Snakes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 29305,
+        "sciName": "Nerodia sipedon",
+        "resolvedCommonName": "Common Watersnake",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 29305,
+            "name": "Nerodia sipedon",
+            "rank": "species",
+            "commonName": "Common Watersnake",
+            "observationCount": 96350,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/532896/29299"
+          },
+          {
+            "id": 29306,
+            "name": "Nerodia sipedon sipedon",
+            "rank": "subspecies",
+            "commonName": "Northern Watersnake",
+            "observationCount": 34821,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/532896/29299/29305"
+          },
+          {
+            "id": 29309,
+            "name": "Nerodia sipedon pleuralis",
+            "rank": "subspecies",
+            "commonName": "Midland Watersnake",
+            "observationCount": 3963,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/532896/29299/29305"
+          },
+          {
+            "id": 29308,
+            "name": "Nerodia sipedon insularum",
+            "rank": "subspecies",
+            "commonName": "Lake Erie Watersnake",
+            "observationCount": 784,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/532896/29299/29305"
+          },
+          {
+            "id": 29307,
+            "name": "Nerodia sipedon williamengelsi",
+            "rank": "subspecies",
+            "commonName": "Carolina Watersnake",
+            "observationCount": 282,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/532896/29299/29305"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "smooth-green-snake",
+        "commonName": "Smooth Green Snake",
+        "group": "Snakes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 146314,
+        "sciName": "Opheodrys vernalis",
+        "resolvedCommonName": "Smooth Greensnake",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 146314,
+            "name": "Opheodrys vernalis",
+            "rank": "species",
+            "commonName": "Smooth Greensnake",
+            "observationCount": 6902,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/29199"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "western-rat-snake",
+        "commonName": "Western Rat Snake",
+        "group": "Snakes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 73888,
+        "sciName": "Pantherophis obsoletus",
+        "resolvedCommonName": "Western Ratsnake",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 73888,
+            "name": "Pantherophis obsoletus",
+            "rank": "species",
+            "commonName": "Western Ratsnake",
+            "observationCount": 29022,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/59649"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "western-fox-snake",
+        "commonName": "Western Fox Snake",
+        "group": "Snakes",
+        "stage": null,
+        "hasCall": false,
+        "note": "Western Fox Snake was split from P. vulpinus (Eastern Fox Snake) — P. ramspotti is the western form.",
+        "taxonId": 108348,
+        "sciName": "Pantherophis ramspotti",
+        "resolvedCommonName": "Western Foxsnake",
+        "rank": "species",
+        "needsReview": true,
+        "reviewReason": "Western Fox Snake was split from P. vulpinus (Eastern Fox Snake) — P. ramspotti is the western form.",
+        "candidates": [
+          {
+            "id": 108348,
+            "name": "Pantherophis ramspotti",
+            "rank": "species",
+            "commonName": "Western Foxsnake",
+            "observationCount": 1445,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/59649"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "gopher-snake",
+        "commonName": "Gopher Snake (Bullsnake)",
+        "group": "Snakes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 29044,
+        "sciName": "Pituophis catenifer",
+        "resolvedCommonName": "Gopher Snake",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 29044,
+            "name": "Pituophis catenifer",
+            "rank": "species",
+            "commonName": "Gopher Snake",
+            "observationCount": 82045,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/29033"
+          },
+          {
+            "id": 51440,
+            "name": "Pituophis catenifer catenifer",
+            "rank": "subspecies",
+            "commonName": "Pacific Gopher Snake",
+            "observationCount": 15013,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/29033/29044"
+          },
+          {
+            "id": 60347,
+            "name": "Pituophis catenifer sayi",
+            "rank": "subspecies",
+            "commonName": "Bullsnake",
+            "observationCount": 12286,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/29033/29044"
+          },
+          {
+            "id": 29049,
+            "name": "Pituophis catenifer deserticola",
+            "rank": "subspecies",
+            "commonName": "Great Basin Gopher Snake",
+            "observationCount": 10309,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/29033/29044"
+          },
+          {
+            "id": 29053,
+            "name": "Pituophis catenifer annectens",
+            "rank": "subspecies",
+            "commonName": "San Diego Gopher Snake",
+            "observationCount": 8305,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/29033/29044"
+          },
+          {
+            "id": 29052,
+            "name": "Pituophis catenifer affinis",
+            "rank": "subspecies",
+            "commonName": "Sonoran Gopher Snake",
+            "observationCount": 5463,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/29033/29044"
+          },
+          {
+            "id": 73908,
+            "name": "Pituophis vertebralis",
+            "rank": "species",
+            "commonName": "Cape Gopher Snake",
+            "observationCount": 303,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/29033"
+          },
+          {
+            "id": 237949,
+            "name": "Pituophis catenifer pumilus",
+            "rank": "subspecies",
+            "commonName": "Santa Cruz Gopher Snake",
+            "observationCount": 104,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/29033/29044"
+          },
+          {
+            "id": 29041,
+            "name": "Pituophis ruthveni",
+            "rank": "species",
+            "commonName": "Louisiana Pinesnake",
+            "observationCount": 42,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/29033"
+          },
+          {
+            "id": 29048,
+            "name": "Pituophis catenifer fulginatus",
+            "rank": "subspecies",
+            "commonName": "San Martin Gophersnake",
+            "observationCount": 8,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/29033/29044"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "grahams-crawfish-snake",
+        "commonName": "Graham's Crawfish Snake",
+        "group": "Snakes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 111578,
+        "sciName": "Regina grahamii",
+        "resolvedCommonName": "Graham's Crawfish Snake",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 111578,
+            "name": "Regina grahamii",
+            "rank": "species",
+            "commonName": "Graham's Crawfish Snake",
+            "observationCount": 1224,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/532896/28849"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "brown-snake",
+        "commonName": "Brown Snake",
+        "group": "Snakes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 28562,
+        "sciName": "Storeria dekayi",
+        "resolvedCommonName": "DeKay's Brownsnake",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 28562,
+            "name": "Storeria dekayi",
+            "rank": "species",
+            "commonName": "DeKay's Brownsnake",
+            "observationCount": 68276,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/532896/28555"
+          },
+          {
+            "id": 207756,
+            "name": "Storeria victa",
+            "rank": "species",
+            "commonName": "Florida Brownsnake",
+            "observationCount": 1185,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/532896/28555"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "common-garter-snake",
+        "commonName": "Common Garter Snake",
+        "group": "Snakes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 28362,
+        "sciName": "Thamnophis sirtalis",
+        "resolvedCommonName": "Common Garter Snake",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 28362,
+            "name": "Thamnophis sirtalis",
+            "rank": "species",
+            "commonName": "Common Garter Snake",
+            "observationCount": 205839,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/532896/28339"
+          },
+          {
+            "id": 28365,
+            "name": "Thamnophis sirtalis sirtalis",
+            "rank": "subspecies",
+            "commonName": "Eastern Garter Snake",
+            "observationCount": 74368,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/532896/28339/28362"
+          },
+          {
+            "id": 28370,
+            "name": "Thamnophis sirtalis pallidulus",
+            "rank": "subspecies",
+            "commonName": "Maritime Garter Snake",
+            "observationCount": 6029,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/532896/28339/28362"
+          },
+          {
+            "id": 28371,
+            "name": "Thamnophis sirtalis fitchi",
+            "rank": "subspecies",
+            "commonName": "Valley Garter Snake",
+            "observationCount": 4904,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/532896/28339/28362"
+          },
+          {
+            "id": 28375,
+            "name": "Thamnophis sirtalis concinnus",
+            "rank": "subspecies",
+            "commonName": "Red-spotted Garter Snake",
+            "observationCount": 3171,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/532896/28339/28362"
+          },
+          {
+            "id": 28368,
+            "name": "Thamnophis sirtalis parietalis",
+            "rank": "subspecies",
+            "commonName": "Red-sided Garter Snake",
+            "observationCount": 2069,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/532896/28339/28362"
+          },
+          {
+            "id": 49998,
+            "name": "Thamnophis sirtalis infernalis",
+            "rank": "subspecies",
+            "commonName": "California Red-sided Garter Snake",
+            "observationCount": 2067,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/532896/28339/28362"
+          },
+          {
+            "id": 28363,
+            "name": "Thamnophis sirtalis pickeringii",
+            "rank": "subspecies",
+            "commonName": "Puget Sound Garter Snake",
+            "observationCount": 1606,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/532896/28339/28362"
+          },
+          {
+            "id": 28366,
+            "name": "Thamnophis sirtalis semifasciatus",
+            "rank": "subspecies",
+            "commonName": "Chicago Garter Snake",
+            "observationCount": 1024,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/532896/28339/28362"
+          },
+          {
+            "id": 28367,
+            "name": "Thamnophis sirtalis tetrataenia",
+            "rank": "subspecies",
+            "commonName": "San Francisco Garter Snake",
+            "observationCount": 422,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/26504/532896/28339/28362"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "copperhead",
+        "commonName": "Copperhead",
+        "group": "Snakes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 912622,
+        "sciName": "Agkistrodon contortrix",
+        "resolvedCommonName": "Eastern Copperhead",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 912622,
+            "name": "Agkistrodon contortrix",
+            "rank": "species",
+            "commonName": "Eastern Copperhead",
+            "observationCount": 27472,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/30667/797576/30668"
+          },
+          {
+            "id": 907052,
+            "name": "Agkistrodon laticinctus",
+            "rank": "species",
+            "commonName": "Broad-banded Copperhead",
+            "observationCount": 5774,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/30667/797576/30668"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "timber-rattlesnake",
+        "commonName": "Timber Rattlesnake",
+        "group": "Snakes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 30746,
+        "sciName": "Crotalus horridus",
+        "resolvedCommonName": "Timber Rattlesnake",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 30746,
+            "name": "Crotalus horridus",
+            "rank": "species",
+            "commonName": "Timber Rattlesnake",
+            "observationCount": 15462,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/30667/797576/30692"
+          },
+          {
+            "id": 30755,
+            "name": "Crotalus unicolor",
+            "rank": "species",
+            "commonName": "Aruba Island Rattlesnake",
+            "observationCount": 70,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/30667/797576/30692"
+          },
+          {
+            "id": 1367550,
+            "name": "Crotalus horridus × Crotalus adamanteus",
+            "rank": "hybrid",
+            "commonName": "batwing rattlesnake",
+            "observationCount": 4,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/30667/797576/30692"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "prairie-rattlesnake",
+        "commonName": "Prairie Rattlesnake",
+        "group": "Snakes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 81526,
+        "sciName": "Crotalus viridis",
+        "resolvedCommonName": "Prairie Rattlesnake",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 48268,
+            "name": "Crotalus oreganus",
+            "rank": "species",
+            "commonName": "Western Rattlesnake",
+            "observationCount": 38366,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/30667/797576/30692"
+          },
+          {
+            "id": 30713,
+            "name": "Crotalus oreganus helleri",
+            "rank": "subspecies",
+            "commonName": "Southern Pacific Rattlesnake",
+            "observationCount": 15696,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/30667/797576/30692/48268"
+          },
+          {
+            "id": 48267,
+            "name": "Crotalus oreganus oreganus",
+            "rank": "subspecies",
+            "commonName": "Northern Pacific Rattlesnake",
+            "observationCount": 15075,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/30667/797576/30692/48268"
+          },
+          {
+            "id": 81526,
+            "name": "Crotalus viridis",
+            "rank": "species",
+            "commonName": "Prairie Rattlesnake",
+            "observationCount": 9915,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/30667/797576/30692"
+          },
+          {
+            "id": 30714,
+            "name": "Crotalus oreganus lutosus",
+            "rank": "subspecies",
+            "commonName": "Great Basin Rattlesnake",
+            "observationCount": 4917,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/30667/797576/30692/48268"
+          },
+          {
+            "id": 30715,
+            "name": "Crotalus cerberus",
+            "rank": "species",
+            "commonName": "Arizona Black Rattlesnake",
+            "observationCount": 843,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/30667/797576/30692"
+          },
+          {
+            "id": 30716,
+            "name": "Crotalus oreganus concolor",
+            "rank": "subspecies",
+            "commonName": "Midget Faded Rattlesnake",
+            "observationCount": 443,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/30667/797576/30692/48268"
+          },
+          {
+            "id": 870279,
+            "name": "Crotalus scutulatus × viridis",
+            "rank": "hybrid",
+            "commonName": "Mojave × Prairie Rattlesnake",
+            "observationCount": 50,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/30667/797576/30692"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "eastern-massasauga",
+        "commonName": "Eastern Massasauga Rattlesnake",
+        "group": "Snakes",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 520469,
+        "sciName": "Sistrurus catenatus",
+        "resolvedCommonName": "Eastern Massasauga",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 520469,
+            "name": "Sistrurus catenatus",
+            "rank": "species",
+            "commonName": "Eastern Massasauga",
+            "observationCount": 5404,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/30667/797576/30979"
+          },
+          {
+            "id": 520470,
+            "name": "Sistrurus tergeminus",
+            "rank": "species",
+            "commonName": "Western Massasauga",
+            "observationCount": 1896,
+            "ancestry": "48460/1/2/355675/26036/26172/85553/30667/797576/30979"
+          }
+        ],
+        "confirmed": false
+      },
+      {
+        "id": "five-lined-skink",
+        "commonName": "Five-lined Skink",
+        "group": "Lizards",
+        "stage": null,
+        "hasCall": false,
+        "note": null,
+        "taxonId": 73788,
+        "sciName": "Plestiodon fasciatus",
+        "resolvedCommonName": "Common Five-lined Skink",
+        "rank": "species",
+        "needsReview": false,
+        "reviewReason": "",
+        "candidates": [
+          {
+            "id": 73788,
+            "name": "Plestiodon fasciatus",
+            "rank": "species",
+            "commonName": "Common Five-lined Skink",
+            "observationCount": 56352,
+            "ancestry": "48460/1/2/355675/26036/26172/85552/1563904/36982/787700/37763"
+          }
+        ],
+        "confirmed": false
+      }
+    ]
+  }
+}

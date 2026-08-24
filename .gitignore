@@ -1,0 +1,6 @@
+# Cached iNaturalist API responses from the curation tool.
+# Purely a local speed-up — safe to delete, regenerated on demand.
+data/.cache/
+
+.DS_Store
+node_modules/

@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fishdle — Guess the Fish</title>
+  <title>Fishdle — Species ID Practice</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="app">
     <header class="app-header">
       <h1>🐟 Fishdle</h1>
+      <div class="category-switch" id="category-switch">
+        <button type="button" data-category="fish" class="active">Fishes</button>
+        <button type="button" data-category="herps">Herps</button>
+      </div>
       <div class="score-bar">
         <span id="streak" class="score-pill">Streak: 0</span>
         <span id="score" class="score-pill">0 / 0 correct</span>
@@ -17,50 +21,60 @@
     </header>
 
     <main class="card">
-      <div class="image-wrap">
-        <img id="fish-image" src="" alt="Mystery fish" />
-        <div id="guesses-remaining" class="guesses-remaining">3 guesses left</div>
-      </div>
-      <button id="flag-photo-btn" type="button" class="flag-photo-btn">
-        🚩 Flag this photo as poor quality
-      </button>
+      <div id="load-error" class="load-error hidden"></div>
 
-      <div id="hints" class="hints" aria-live="polite"></div>
-
-      <form id="guess-form" class="guess-form" autocomplete="off">
-        <div class="autocomplete-wrap">
-          <input
-            id="guess-input"
-            type="text"
-            name="fishdle-guess"
-            placeholder="Type a species name…"
-            autocomplete="off"
-            autocorrect="off"
-            autocapitalize="off"
-            spellcheck="false"
-            aria-autocomplete="list"
-            aria-expanded="false"
-            aria-controls="suggestion-list"
-            role="combobox"
-            aria-label="Guess the species"
-          />
-          <ul id="suggestion-list" class="suggestion-list hidden" role="listbox"></ul>
+      <div id="game-body">
+        <div class="image-wrap">
+          <img id="fish-image" src="" alt="Mystery species" />
+          <div id="guesses-remaining" class="guesses-remaining">3 guesses left</div>
         </div>
-        <button id="guess-submit" type="submit">Guess</button>
-      </form>
+        <div class="image-meta">
+          <span id="photo-credit" class="photo-credit"></span>
+          <button id="flag-photo-btn" type="button" class="flag-photo-btn">
+            🚩 Flag photo
+          </button>
+        </div>
 
-      <div id="feedback" class="feedback" aria-live="polite"></div>
+        <div id="hints" class="hints" aria-live="polite"></div>
 
-      <ul id="guess-history" class="guess-history"></ul>
+        <form id="guess-form" class="guess-form" autocomplete="off">
+          <div class="autocomplete-wrap">
+            <input
+              id="guess-input"
+              type="text"
+              name="fishdle-guess"
+              placeholder="Type a species name…"
+              autocomplete="off"
+              autocorrect="off"
+              autocapitalize="off"
+              spellcheck="false"
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-controls="suggestion-list"
+              role="combobox"
+              aria-label="Guess the species"
+            />
+            <ul id="suggestion-list" class="suggestion-list hidden" role="listbox"></ul>
+          </div>
+          <button id="guess-submit" type="submit">Guess</button>
+        </form>
 
-      <div id="result-panel" class="result-panel hidden">
-        <p id="result-text"></p>
-        <button id="next-fish-btn" type="button">Next fish →</button>
+        <div id="feedback" class="feedback" aria-live="polite"></div>
+
+        <ul id="guess-history" class="guess-history"></ul>
+
+        <div id="result-panel" class="result-panel hidden">
+          <p id="result-text"></p>
+          <button id="next-fish-btn" type="button">Next species →</button>
+        </div>
       </div>
     </main>
 
     <footer class="app-footer">
-      <p>Photos courtesy of iNaturalist contributors. Identify the species in 3 guesses or fewer.</p>
+      <p>
+        Photos by iNaturalist contributors under CC licenses, from observations
+        in IA, MO, MN, WI &amp; IL.
+      </p>
     </footer>
   </div>
 
