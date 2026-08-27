@@ -3,17 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fishdle — Species ID Practice</title>
+  <meta name="color-scheme" content="light dark" />
+  <title>Field Marks — Species ID Practice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script src="theme.js"></script>
 </head>
 <body>
   <div class="app">
     <header class="app-header">
-      <h1>🐟 Fishdle</h1>
-      <div class="category-switch" id="category-switch">
-        <button type="button" data-category="fish" class="active">Fishes</button>
-        <button type="button" data-category="herps">Herps</button>
+      <div class="header-top">
+        <h1>Field Marks</h1>
+
+        <div class="category-switch" id="category-switch">
+          <button type="button" data-category="fish" class="active">Fishes</button>
+          <button type="button" data-category="herps">Herps</button>
+        </div>
+
+        <button
+          type="button"
+          id="settings-btn"
+          class="settings-btn"
+          aria-label="Settings"
+          aria-expanded="false"
+          aria-controls="settings-sheet"
+        ></button>
       </div>
+
       <div class="score-bar">
         <span id="streak" class="score-pill">Streak: 0</span>
         <span id="score" class="score-pill">0 / 0 correct</span>
@@ -24,31 +42,31 @@
       <div id="load-error" class="load-error hidden"></div>
 
       <div id="game-body">
-        <div class="image-wrap" id="image-wrap">
-          <img
-            id="fish-image"
-            src=""
-            alt="Mystery species"
-            title="Click to enlarge"
-          />
-          <div class="zoom-hint" aria-hidden="true">⤢ Click to enlarge</div>
-          <div id="guesses-remaining" class="guesses-remaining">3 guesses left</div>
-        </div>
-        <div class="image-meta">
-          <span id="photo-credit" class="photo-credit"></span>
-          <button id="flag-photo-btn" type="button" class="flag-photo-btn">
-            🚩 Flag photo
-          </button>
-        </div>
-
-        <div id="hints" class="hints" aria-live="polite"></div>
+        <figure class="plate">
+          <div class="image-wrap" id="image-wrap">
+            <img
+              id="fish-image"
+              src=""
+              alt="Mystery species"
+              title="Click to enlarge"
+            />
+            <div class="zoom-hint" aria-hidden="true">Click to enlarge</div>
+            <div id="guesses-remaining" class="guesses-remaining">3 guesses left</div>
+          </div>
+          <figcaption class="image-meta">
+            <span id="photo-credit" class="photo-credit"></span>
+            <button id="flag-photo-btn" type="button" class="flag-photo-btn">
+              Flag photo
+            </button>
+          </figcaption>
+        </figure>
 
         <form id="guess-form" class="guess-form" autocomplete="off">
           <div class="autocomplete-wrap">
             <input
               id="guess-input"
               type="text"
-              name="fishdle-guess"
+              name="fieldmarks-guess"
               placeholder="Type a species name…"
               autocomplete="off"
               autocorrect="off"
@@ -67,6 +85,11 @@
 
         <div id="feedback" class="feedback" aria-live="polite"></div>
 
+        <section class="marks-section">
+          <h2 class="section-label">Field marks earned</h2>
+          <div id="hints" class="hints" aria-live="polite"></div>
+        </section>
+
         <ul id="guess-history" class="guess-history"></ul>
 
         <div id="result-panel" class="result-panel hidden">
@@ -82,6 +105,56 @@
         in IA, MO, MN, WI &amp; IL.
       </p>
     </footer>
+  </div>
+
+  <div
+    id="settings-sheet"
+    class="settings-sheet hidden"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Settings"
+  >
+    <div class="settings-panel">
+      <div class="settings-head">
+        <h2>Settings</h2>
+        <button type="button" id="settings-close" class="settings-close">Close</button>
+      </div>
+
+      <div class="settings-group">
+        <h3 class="section-label">Appearance</h3>
+        <div class="segmented" id="theme-switch">
+          <button type="button" data-theme-choice="system">System</button>
+          <button type="button" data-theme-choice="light">Light</button>
+          <button type="button" data-theme-choice="dark">Dark</button>
+        </div>
+        <p class="settings-note">
+          System follows your device. Pick Light or Dark to override it — the
+          choice is remembered on this device.
+        </p>
+      </div>
+
+      <div class="settings-group">
+        <h3 class="section-label">Difficulty</h3>
+        <div class="setting-row">
+          <div class="setting-copy">
+            <span class="setting-name">Suggested names</span>
+            <span class="setting-desc">Type and pick from the list</span>
+          </div>
+          <button
+            type="button"
+            id="suggestions-toggle"
+            class="switch"
+            role="switch"
+            aria-checked="true"
+            aria-label="Suggested names"
+          ><span class="switch-knob"></span></button>
+        </div>
+        <p class="settings-note">
+          Turning suggestions off keeps the same input — the dropdown just stops
+          appearing, so nothing shifts. You type the full common name.
+        </p>
+      </div>
+    </div>
   </div>
 
   <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="Enlarged photo">

@@ -1,4 +1,4 @@
-// game.js — Fishdle
+// game.js — Field Marks
 // Plain vanilla JS, no framework. Continuous round loop: load a species photo,
 // guess it in 3 tries, see the result, auto-advance to the next.
 //
@@ -318,10 +318,10 @@
     if (!image) return;
     session.flaggedImages.add(image.url);
     console.log(
-      `[Fishdle] Flagged photo for "${state.currentSpecies.commonName}":\n  ${image.url}\n` +
+      `[Field Marks] Flagged photo for "${state.currentSpecies.commonName}":\n  ${image.url}\n` +
         `Reject it in the curation tool (curate/server.js) to remove it permanently.`
     );
-    els.flagBtn.textContent = "🚩 Flagged";
+    els.flagBtn.textContent = "Flagged";
     els.flagBtn.disabled = true;
 
     const replacement = getImageForSpecies(state.currentSpecies);
@@ -393,7 +393,7 @@
     els.input.disabled = false;
     els.submitBtn.disabled = false;
     els.flagBtn.disabled = false;
-    els.flagBtn.textContent = "🚩 Flag photo";
+    els.flagBtn.textContent = "Flag photo";
     closeSuggestions();
     document.removeEventListener("keydown", advanceOnKeydown);
 
@@ -421,9 +421,19 @@
 
     els.resultPanel.classList.remove("hidden");
     els.resultText.className = correct ? "correct" : "incorrect";
-    els.resultText.textContent = correct
-      ? `✅ Correct! ${species.commonName} (${species.sciName}) — in ${guessesUsed} ${guessesUsed === 1 ? "try" : "tries"}.`
-      : `❌ Out of guesses. It was the ${species.commonName} (${species.sciName}).`;
+    els.resultText.innerHTML = "";
+
+    const outcome = document.createElement("span");
+    outcome.className = "outcome";
+    outcome.textContent = correct
+      ? `Correct on ${guessesUsed === 1 ? "the first guess" : `guess ${guessesUsed}`}`
+      : "Out of guesses";
+
+    const sci = document.createElement("span");
+    sci.className = "sci-name";
+    sci.textContent = species.sciName;
+
+    els.resultText.append(outcome, species.commonName, sci);
 
     state.previousSpeciesId = species.id;
     state.advanceTimer = setTimeout(startNewRound, RESULT_AUTO_ADVANCE_MS);
