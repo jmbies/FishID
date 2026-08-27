@@ -5,23 +5,23 @@
 
 :root {
   --bg: #efe9dc;
-  --card: #f8f4ea;
-  --plate-fill: #f8f4ea;
-  --stripe-a: #e3dccb;
-  --stripe-b: #ded6c3;
-  --ink: #2e2a22;
+  --card: #f4efe3;
+  --plate-fill: #efe9dc;
+  --stripe-a: #e5ded0;
+  --stripe-b: #ded6c5;
+  --ink: #26221b;
   --muted: #6b6552;
   --faint: #8c8471;
-  --fainter: #9c9482;
+  --fainter: #a9a08b;
   --border: #cfc5b0;
-  --hairline: #e0d8c5;
-  --rule: #2e2a22;
+  --hairline: #ded6c5;
+  --rule: #26221b;
   --ochre: #a9762c;
   --sage: #7d8a6a;
   --alarm: #9c4a2f;
   --suggest-active: #e8e0cd;
-  --btn-ink: #f4efe3;
   --on-ochre: #fdfaf2;
+  --on-ink: #f4efe3;
   --overlay: rgba(30, 26, 20, 0.72);
 
   --serif: "Newsreader", Georgia, serif;
@@ -31,71 +31,71 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #1b1813;
-    --card: #1b1813;
-    --plate-fill: #241f18;
-    --stripe-a: #2e2820;
-    --stripe-b: #272118;
-    --ink: #eee6d5;
-    --muted: #bdb29a;
-    --faint: #a2977f;
-    --fainter: #756a56;
-    --border: #4a4133;
-    --hairline: #3d3529;
-    --rule: #d6cbb4;
-    --ochre: #d99a3c;
+    --bg: #0d0c0a;
+    --card: #17150f;
+    --plate-fill: #1d1a13;
+    --stripe-a: #262117;
+    --stripe-b: #201c14;
+    --ink: #ece4d3;
+    --muted: #b3a88f;
+    --faint: #94896f;
+    --fainter: #6b6250;
+    --border: #3a3327;
+    --hairline: #2b261c;
+    --rule: #cfc4ac;
+    --ochre: #dda23f;
     --sage: #96a37c;
     --alarm: #d17a5c;
-    --suggest-active: #332c21;
-    --btn-ink: #1b1813;
-    --on-ochre: #1b1813;
-    --overlay: rgba(8, 7, 5, 0.82);
+    --suggest-active: #2b2418;
+    --on-ochre: #17150f;
+    --on-ink: #17150f;
+    --overlay: rgba(6, 5, 4, 0.85);
   }
 }
 
 /* Manual override wins over the system preference in both directions. */
 [data-theme="light"] {
   --bg: #efe9dc;
-  --card: #f8f4ea;
-  --plate-fill: #f8f4ea;
-  --stripe-a: #e3dccb;
-  --stripe-b: #ded6c3;
-  --ink: #2e2a22;
+  --card: #f4efe3;
+  --plate-fill: #efe9dc;
+  --stripe-a: #e5ded0;
+  --stripe-b: #ded6c5;
+  --ink: #26221b;
   --muted: #6b6552;
   --faint: #8c8471;
-  --fainter: #9c9482;
+  --fainter: #a9a08b;
   --border: #cfc5b0;
-  --hairline: #e0d8c5;
-  --rule: #2e2a22;
+  --hairline: #ded6c5;
+  --rule: #26221b;
   --ochre: #a9762c;
   --sage: #7d8a6a;
   --alarm: #9c4a2f;
   --suggest-active: #e8e0cd;
-  --btn-ink: #f4efe3;
   --on-ochre: #fdfaf2;
+  --on-ink: #f4efe3;
   --overlay: rgba(30, 26, 20, 0.72);
 }
 
 [data-theme="dark"] {
-  --bg: #1b1813;
-  --card: #1b1813;
-  --plate-fill: #241f18;
-  --stripe-a: #2e2820;
-  --stripe-b: #272118;
-  --ink: #eee6d5;
-  --muted: #bdb29a;
-  --faint: #a2977f;
-  --fainter: #756a56;
-  --border: #4a4133;
-  --hairline: #3d3529;
-  --rule: #d6cbb4;
-  --ochre: #d99a3c;
+  --bg: #0d0c0a;
+  --card: #17150f;
+  --plate-fill: #1d1a13;
+  --stripe-a: #262117;
+  --stripe-b: #201c14;
+  --ink: #ece4d3;
+  --muted: #b3a88f;
+  --faint: #94896f;
+  --fainter: #6b6250;
+  --border: #3a3327;
+  --hairline: #2b261c;
+  --rule: #cfc4ac;
+  --ochre: #dda23f;
   --sage: #96a37c;
   --alarm: #d17a5c;
-  --suggest-active: #332c21;
-  --btn-ink: #1b1813;
-  --on-ochre: #1b1813;
-  --overlay: rgba(8, 7, 5, 0.82);
+  --suggest-active: #2b2418;
+  --on-ochre: #17150f;
+  --on-ink: #17150f;
+  --overlay: rgba(6, 5, 4, 0.85);
 }
 
 * { box-sizing: border-box; }
@@ -109,15 +109,22 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-a { color: var(--ochre); }
-a:hover { color: var(--ink); }
+.hidden { display: none !important; }
+
+/* One accent ring everywhere instead of the browser's blue. */
+:focus-visible {
+  outline: 2px solid var(--ochre);
+  outline-offset: 2px;
+}
+
+#guess-input:focus-visible { outline: none; }
 
 .section-label {
   margin: 0;
   font-family: var(--mono);
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   font-weight: 400;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--faint);
 }
@@ -125,31 +132,130 @@ a:hover { color: var(--ink); }
 .app {
   max-width: 560px;
   margin: 0 auto;
-  padding: 1.25rem 1.25rem 3rem;
+  padding: 1.25rem 1.25rem 2.5rem;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+/* Shared filled button: ochre by default, ink for the .dark variant. */
+.primary-btn {
+  width: 100%;
+  padding: 0.95rem 1.4rem;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  border: none;
+  border-radius: 2px;
+  background: var(--ochre);
+  color: var(--on-ochre);
+  cursor: pointer;
+}
+
+.primary-btn:hover { background: var(--ink); color: var(--on-ink); }
+
+.primary-btn.dark { background: var(--ink); color: var(--on-ink); }
+.primary-btn.dark:hover { background: var(--ochre); color: var(--on-ochre); }
+
+.primary-btn:disabled {
+  background: none;
+  box-shadow: inset 0 0 0 1px var(--border);
+  color: var(--fainter);
+  cursor: not-allowed;
+}
+
+/* ---- Intro --------------------------------------------------------------- */
+
+.intro {
+  position: relative;
+  flex: 1;
+  background: var(--card);
+  box-shadow: inset 0 0 0 1px var(--border);
+  padding: 2.5rem 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.intro-settings { position: absolute; top: 1rem; right: 1rem; margin: 0; }
+
+.intro-lede { display: flex; flex-direction: column; }
+
+.eyebrow {
+  margin: 0 0 0.6rem;
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ochre);
+}
+
+.intro-title {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 3.1rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* The ochre rule between the title and the standfirst. */
+.intro-sub {
+  margin: 1rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--ochre);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--ink);
+}
+
+.intro-copy {
+  margin: 1.4rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.intro-start {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+#intro-category { margin-bottom: 1.6rem; }
+
+.intro-credit {
+  margin: 1rem 0 0;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  color: var(--faint);
+}
+
 /* ---- Header -------------------------------------------------------------- */
 
 .app-header {
-  padding: 0.5rem 0 0.75rem;
+  padding: 0.25rem 0 0.7rem;
   border-bottom: 2px solid var(--rule);
 }
 
 .header-top {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 0.7rem;
 }
 
 .app-header h1 {
   margin: 0;
   font-family: var(--serif);
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 400;
   letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 
 .category-switch {
@@ -160,9 +266,9 @@ a:hover { color: var(--ink); }
 }
 
 .category-switch button {
-  padding: 0.34rem 0.7rem;
+  padding: 0.3rem 0.65rem;
   font-family: var(--sans);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 500;
   border: none;
   background: none;
@@ -172,15 +278,30 @@ a:hover { color: var(--ink); }
 
 .category-switch button.active {
   background: var(--ink);
-  color: var(--card);
+  color: var(--on-ink);
   font-weight: 600;
 }
 
-.settings-btn {
+.missed-pill {
   margin-left: auto;
   flex-shrink: 0;
-  width: 1.6rem;
-  height: 1.6rem;
+  padding: 0.25rem 0.55rem;
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.missed-pill:hover { border-color: var(--ochre); color: var(--ochre); }
+
+.settings-btn {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
   border: none;
   background: none;
   padding: 0;
@@ -190,10 +311,14 @@ a:hover { color: var(--ink); }
   justify-content: center;
 }
 
+/* Nothing but the pill sits between the switch and the gear, so the gear
+   takes the auto margin whenever the pill is hidden. */
+.missed-pill.hidden + .settings-btn { margin-left: auto; }
+
 .settings-btn::before {
   content: "";
-  width: 0.85rem;
-  height: 0.85rem;
+  width: 0.8rem;
+  height: 0.8rem;
   border-radius: 50%;
   border: 1.5px solid var(--faint);
 }
@@ -204,46 +329,44 @@ a:hover { color: var(--ink); }
   display: flex;
   gap: 0.9rem;
   flex-wrap: wrap;
-  padding-top: 0.7rem;
+  padding-top: 0.65rem;
 }
 
 .score-pill {
   font-family: var(--mono);
   font-size: 0.7rem;
   letter-spacing: 0.06em;
-  color: var(--faint);
+  color: var(--muted);
 }
 
-.score-pill#streak { color: var(--ochre); }
+.score-pill.streak { color: var(--ochre); }
 
 /* ---- Card + photo plate -------------------------------------------------- */
 
 .card {
   flex: 1;
-  background: var(--card);
-  margin-top: 1.25rem;
+  margin-top: 1.1rem;
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
 }
 
 #game-body {
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
+  gap: 1rem;
 }
 
 .plate {
   margin: 0;
-  border: 1px solid var(--border);
   background: var(--plate-fill);
+  box-shadow: inset 0 0 0 1px var(--border);
   padding: 0.5rem;
 }
 
 .image-wrap {
   position: relative;
   width: 100%;
-  min-height: 240px;
+  min-height: 220px;
   overflow: hidden;
   background: repeating-linear-gradient(
     135deg,
@@ -261,7 +384,7 @@ a:hover { color: var(--ink); }
    rendered full-size and got clipped. */
 .image-wrap img {
   max-width: 100%;
-  max-height: 60vh;
+  max-height: 55vh;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -274,10 +397,10 @@ a:hover { color: var(--ink); }
   align-items: baseline;
   justify-content: space-between;
   gap: 0.75rem;
-  padding: 0.5rem 0.15rem 0;
+  padding: 0.5rem 0.1rem 0.05rem;
   font-family: var(--mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.04em;
+  font-size: 0.6rem;
+  letter-spacing: 0.03em;
   color: var(--faint);
 }
 
@@ -293,8 +416,8 @@ a:hover { color: var(--ink); }
   background: none;
   border: none;
   font-family: var(--mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.04em;
+  font-size: 0.6rem;
+  letter-spacing: 0.03em;
   color: var(--faint);
   cursor: pointer;
   padding: 0;
@@ -305,56 +428,61 @@ a:hover { color: var(--ink); }
 .flag-photo-btn:hover { color: var(--alarm); }
 .flag-photo-btn:disabled { cursor: default; text-decoration: none; }
 
-.zoom-hint,
+/* ---- Guess track (three ticks + counter) --------------------------------- */
+
+/* The track belongs to the round in progress; the result panel replaces it. */
+#game-body.showing-result .guess-track { display: none; }
+
+.guess-track {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.guess-ticks { display: flex; gap: 0.3rem; }
+
+.tick {
+  width: 1.4rem;
+  height: 2px;
+  background: var(--border);
+}
+
+.tick.spent { background: var(--ochre); }
+
 .guesses-remaining {
-  position: absolute;
-  bottom: 0.45rem;
   font-family: var(--mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.05em;
-  padding: 0.2rem 0.45rem;
-  background: var(--overlay);
-  color: var(--card);
-  pointer-events: none;
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
-
-[data-theme="dark"] .zoom-hint,
-[data-theme="dark"] .guesses-remaining { color: var(--ink); }
-
-@media (prefers-color-scheme: dark) {
-  .zoom-hint, .guesses-remaining { color: var(--ink); }
-}
-
-.zoom-hint { left: 0.45rem; }
-.guesses-remaining { right: 0.45rem; }
 
 /* ---- Guess form ---------------------------------------------------------- */
 
 .guess-form {
   display: flex;
-  gap: 0.6rem;
-  align-items: flex-end;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .autocomplete-wrap {
   position: relative;
-  flex: 1;
   min-width: 0;
 }
 
 #guess-input {
   width: 100%;
-  padding: 0.7rem 0;
-  font-family: var(--sans);
-  font-size: 1.05rem;
+  padding: 0.55rem 0;
+  font-family: var(--serif);
+  font-size: 1.35rem;
   border: none;
-  border-bottom: 2px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
   border-radius: 0;
   color: var(--ink);
   background: none;
 }
 
-#guess-input::placeholder { color: var(--fainter); }
+#guess-input::placeholder { color: var(--fainter); font-size: 1.1rem; }
 
 #guess-input:focus {
   outline: none;
@@ -365,7 +493,7 @@ a:hover { color: var(--ink); }
 
 .suggestion-list {
   position: absolute;
-  top: calc(100% + 6px);
+  top: calc(100% + 4px);
   left: 0;
   right: 0;
   z-index: 10;
@@ -373,19 +501,20 @@ a:hover { color: var(--ink); }
   padding: 0;
   list-style: none;
   background: var(--plate-fill);
-  border: 1px solid var(--border);
-  max-height: 220px;
+  box-shadow: inset 0 0 0 1px var(--border);
+  max-height: 240px;
   overflow-y: auto;
 }
-
-.suggestion-list.hidden { display: none; }
 
 /* Hard mode: same input, the dropdown simply stops appearing. */
 [data-suggestions="off"] .suggestion-list { display: none; }
 
 .suggestion-list li {
-  padding: 0.6rem 0.85rem;
-  font-size: 0.95rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.55rem 0.8rem;
+  font-size: 0.9rem;
   color: var(--ink);
   cursor: pointer;
   border-top: 1px solid var(--hairline);
@@ -394,37 +523,26 @@ a:hover { color: var(--ink); }
 .suggestion-list li:first-child { border-top: none; }
 
 .suggestion-list li:hover,
-.suggestion-list li.active {
-  background: var(--suggest-active);
-  font-weight: 600;
+.suggestion-list li.active { background: var(--suggest-active); }
+
+.suggestion-list .s-common { font-weight: 600; }
+
+.suggestion-list .s-sci {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.88rem;
+  color: var(--muted);
 }
 
-.guess-form button {
-  flex-shrink: 0;
-  padding: 0.78rem 1.5rem;
-  font-family: var(--sans);
-  font-size: 1rem;
-  font-weight: 700;
-  border: none;
-  border-radius: 2px;
-  background: var(--ink);
-  color: var(--card);
-  cursor: pointer;
-}
-
-.guess-form button:hover { background: var(--ochre); color: var(--on-ochre); }
-
-.guess-form button:disabled {
-  background: none;
-  box-shadow: inset 0 0 0 1px var(--border);
-  color: var(--fainter);
-  cursor: not-allowed;
-}
+/* Scientific-names-only mode flips the emphasis in the dropdown. */
+[data-answers="sci"] .suggestion-list .s-common { font-weight: 400; color: var(--muted); }
+[data-answers="sci"] .suggestion-list .s-sci { color: var(--ink); }
 
 .feedback {
-  min-height: 1.1rem;
+  min-height: 1rem;
+  margin-top: -0.35rem;
   font-family: var(--mono);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   letter-spacing: 0.04em;
   color: var(--faint);
 }
@@ -437,7 +555,7 @@ a:hover { color: var(--ink); }
 .marks-section {
   display: flex;
   flex-direction: column;
-  gap: 0.7rem;
+  gap: 0.75rem;
 }
 
 /* Empty until the first miss — the label shouldn't sit over nothing. */
@@ -446,14 +564,28 @@ a:hover { color: var(--ink); }
 .hints {
   display: flex;
   flex-direction: column;
-  gap: 0.7rem;
+  gap: 0.75rem;
 }
 
 .hint {
-  padding-left: 0.8rem;
-  border-left: 3px solid var(--ochre);
+  display: flex;
+  gap: 0.7rem;
+  padding-left: 0.75rem;
+  border-left: 2px solid var(--ochre);
+}
+
+.hint .mark-num {
+  flex-shrink: 0;
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+  color: var(--ochre);
+}
+
+.hint .mark-text {
   font-family: var(--serif);
-  font-size: 1.08rem;
+  font-size: 1.05rem;
   line-height: 1.45;
   color: var(--ink);
 }
@@ -466,11 +598,13 @@ a:hover { color: var(--ink); }
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 0.7rem;
   font-family: var(--mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.04em;
+  font-size: 0.66rem;
+  letter-spacing: 0.03em;
 }
+
+.guess-history:empty { display: none; }
 
 .guess-history li.wrong {
   color: var(--fainter);
@@ -482,66 +616,119 @@ a:hover { color: var(--ink); }
 /* ---- Result panel -------------------------------------------------------- */
 
 .result-panel {
-  border-top: 2px solid var(--rule);
-  padding-top: 1.1rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.1rem;
 }
-
-.result-panel.hidden { display: none; }
 
 #result-text {
   margin: 0;
   font-family: var(--serif);
-  font-size: 1.9rem;
-  font-weight: 300;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
 }
 
-/* Set by the game.js patch: an outcome line above, a scientific name below. */
 #result-text .outcome {
   display: block;
   font-family: var(--mono);
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   font-weight: 400;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 
-#result-text.correct .outcome { color: var(--sage); }
+#result-text.correct .outcome { color: var(--muted); }
 #result-text.incorrect .outcome { color: var(--alarm); }
 
 #result-text .sci-name {
   display: block;
   font-style: italic;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   color: var(--muted);
-  margin-top: 0.3rem;
+  margin-top: 0.35rem;
   letter-spacing: 0;
 }
 
-#next-fish-btn {
-  align-self: stretch;
-  padding: 0.85rem 1.4rem;
-  font-family: var(--sans);
-  font-size: 1.05rem;
-  font-weight: 700;
-  border: none;
-  border-radius: 2px;
-  background: var(--ochre);
-  color: var(--on-ochre);
-  cursor: pointer;
+.result-marks {
+  border-top: 1px solid var(--rule);
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
-#next-fish-btn:hover { background: var(--ink); color: var(--card); }
+.result-hints {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  counter-reset: mark;
+}
 
-/* ---- Load error + footer ------------------------------------------------- */
+.result-hints li {
+  display: flex;
+  gap: 0.7rem;
+  counter-increment: mark;
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  line-height: 1.45;
+}
+
+.result-hints li::before {
+  content: counter(mark, decimal-leading-zero);
+  flex-shrink: 0;
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  line-height: 1.9;
+  color: var(--ochre);
+}
+
+.obs-link {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  align-self: flex-start;
+}
+
+.obs-link:hover { color: var(--ochre); }
+
+.result-footer {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.missed-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  color: var(--muted);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.missed-link:hover { color: var(--ochre); }
+
+/* ---- Load error ---------------------------------------------------------- */
 
 .load-error {
-  border: 1px solid var(--ochre);
+  box-shadow: inset 0 0 0 1px var(--ochre);
   padding: 1.1rem;
   font-size: 0.92rem;
   line-height: 1.6;
@@ -555,20 +742,6 @@ a:hover { color: var(--ink); }
   padding: 0.1rem 0.3rem;
 }
 
-.load-error.hidden,
-#game-body.hidden { display: none; }
-
-.app-footer {
-  padding-top: 1.75rem;
-  font-family: var(--mono);
-  font-size: 0.62rem;
-  line-height: 1.7;
-  letter-spacing: 0.02em;
-  color: var(--faint);
-}
-
-.app-footer p { margin: 0; }
-
 /* ---- Settings sheet ------------------------------------------------------ */
 
 .settings-sheet {
@@ -581,14 +754,14 @@ a:hover { color: var(--ink); }
   justify-content: center;
 }
 
-.settings-sheet.hidden { display: none; }
-
 .settings-panel {
   width: 100%;
   max-width: 560px;
-  background: var(--bg);
+  max-height: 92vh;
+  overflow-y: auto;
+  background: var(--card);
   box-shadow: inset 0 0 0 1px var(--border);
-  padding: 1.5rem 1.35rem 1.75rem;
+  padding: 1.4rem 1.35rem 1.75rem;
   display: flex;
   flex-direction: column;
   gap: 1.35rem;
@@ -604,7 +777,7 @@ a:hover { color: var(--ink); }
   margin: 0;
   font-family: var(--serif);
   font-size: 1.6rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .settings-close {
@@ -612,7 +785,7 @@ a:hover { color: var(--ink); }
   background: none;
   border: none;
   font-family: var(--mono);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: var(--faint);
   cursor: pointer;
   padding: 0;
@@ -620,7 +793,10 @@ a:hover { color: var(--ink); }
 
 .settings-close:hover { color: var(--ink); }
 
-.settings-head + .settings-group { border-top: 2px solid var(--rule); padding-top: 1.25rem; }
+.settings-head + .settings-group {
+  border-top: 1px solid var(--rule);
+  padding-top: 1.2rem;
+}
 
 .settings-group {
   display: flex;
@@ -630,7 +806,7 @@ a:hover { color: var(--ink); }
 
 .settings-note {
   margin: 0;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   line-height: 1.55;
   color: var(--faint);
 }
@@ -644,9 +820,9 @@ a:hover { color: var(--ink); }
 
 .segmented button {
   flex: 1;
-  padding: 0.8rem 0.5rem;
+  padding: 0.7rem 0.5rem;
   font-family: var(--sans);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   border: none;
   background: none;
   color: var(--muted);
@@ -659,29 +835,30 @@ a:hover { color: var(--ink); }
   font-weight: 600;
 }
 
+/* The intro's Group switch reads as a plain selector, not an accent control. */
+#intro-category button[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--on-ink);
+}
+
 .setting-row {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 0.85rem 0.95rem;
+  padding: 0.8rem 0.9rem;
   box-shadow: inset 0 0 0 1px var(--border);
   border-radius: 2px;
 }
 
-.setting-copy {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-
-.setting-name { font-size: 0.95rem; font-weight: 600; }
-.setting-desc { font-size: 0.8rem; color: var(--faint); }
+.setting-copy { display: flex; flex-direction: column; gap: 0.15rem; }
+.setting-name { font-size: 0.92rem; font-weight: 600; }
+.setting-desc { font-size: 0.78rem; color: var(--faint); }
 
 .switch {
   margin-left: auto;
   flex-shrink: 0;
-  width: 2.75rem;
-  height: 1.6rem;
+  width: 2.6rem;
+  height: 1.5rem;
   border-radius: 999px;
   border: none;
   background: none;
@@ -700,13 +877,36 @@ a:hover { color: var(--ink); }
 }
 
 .switch-knob {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.1rem;
+  height: 1.1rem;
   border-radius: 50%;
   background: var(--border);
 }
 
 .switch[aria-checked="true"] .switch-knob { background: var(--on-ochre); }
+
+.session-actions { display: flex; gap: 0.6rem; }
+
+.session-btn {
+  flex: 1;
+  padding: 0.75rem 0.5rem;
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 1px var(--border);
+  background: none;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.session-btn:hover:not(:disabled) {
+  box-shadow: inset 0 0 0 1px var(--ochre);
+  color: var(--ochre);
+}
+
+.session-btn:disabled { color: var(--fainter); cursor: not-allowed; }
 
 /* ---- Photo lightbox ------------------------------------------------------ */
 
@@ -714,7 +914,7 @@ a:hover { color: var(--ink); }
   position: fixed;
   inset: 0;
   z-index: 100;
-  background: rgba(10, 8, 6, 0.94);
+  background: rgba(8, 7, 5, 0.95);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -723,8 +923,6 @@ a:hover { color: var(--ink); }
   padding: 2.5rem 1rem 1.5rem;
   cursor: zoom-out;
 }
-
-.lightbox.hidden { display: none; }
 
 .lightbox-image {
   max-width: 100%;
@@ -737,9 +935,9 @@ a:hover { color: var(--ink); }
 
 .lightbox-credit {
   font-family: var(--mono);
-  font-size: 0.65rem;
+  font-size: 0.63rem;
   letter-spacing: 0.04em;
-  color: rgba(238, 230, 213, 0.7);
+  color: rgba(236, 228, 211, 0.7);
   text-align: center;
   max-width: 40rem;
 }
@@ -750,44 +948,29 @@ a:hover { color: var(--ink); }
   right: 0.75rem;
   background: none;
   border: none;
-  color: #eee6d5;
+  color: #ece4d3;
   font-size: 2.2rem;
   line-height: 1;
   padding: 0.25rem 0.5rem;
   cursor: pointer;
 }
 
-.lightbox-close:hover { color: #d99a3c; }
+.lightbox-close:hover { color: #dda23f; }
 
-/* ---- Wide screens: photo left, marks right ------------------------------- */
+/* ---- Wide screens -------------------------------------------------------
+   The design is one column at every width; desktop just gets more room to
+   breathe rather than a second column. */
 
-@media (min-width: 900px) {
-  .app { max-width: 1180px; }
-
-  .card {
-    display: grid;
-    grid-template-columns: 1.35fr 1fr;
-    gap: 2rem;
-    align-items: start;
-  }
-
-  .load-error { grid-column: 1 / -1; }
-
-  #game-body {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 1.35fr 1fr;
-    gap: 2rem;
-    align-items: start;
-  }
-
-  .plate { grid-row: 1 / span 5; }
-  .image-wrap { min-height: 420px; }
-  .image-wrap img { max-height: 70vh; }
+@media (min-width: 720px) {
+  .app { max-width: 620px; padding-top: 2rem; }
+  .intro { padding: 3.25rem 2.5rem 2rem; }
+  .intro-title { font-size: 3.6rem; }
+  .image-wrap { min-height: 300px; }
+  .image-wrap img { max-height: 62vh; }
 }
 
 @media (max-width: 400px) {
-  .app-header h1 { font-size: 1.3rem; }
+  .app-header h1 { font-size: 1.2rem; }
   .header-top { flex-wrap: wrap; }
-  .guess-form { flex-direction: column; align-items: stretch; }
+  .intro-title { font-size: 2.6rem; }
 }

@@ -13,7 +13,43 @@
 </head>
 <body>
   <div class="app">
-    <header class="app-header">
+    <!-- ---- Intro ------------------------------------------------------- -->
+    <section id="intro" class="intro">
+      <button
+        type="button"
+        id="intro-settings-btn"
+        class="settings-btn intro-settings"
+        aria-label="Settings"
+        aria-expanded="false"
+        aria-controls="settings-sheet"
+      ></button>
+
+      <div class="intro-lede">
+        <p class="eyebrow">Aquatic wildlife</p>
+        <h1 class="intro-title">Field Marks</h1>
+        <p class="intro-sub">Species ID practice</p>
+        <p class="intro-copy">
+          One photo, three guesses. Miss and you earn a field mark — a single
+          feature to look for — then guess again.
+        </p>
+      </div>
+
+      <div class="intro-start">
+        <h2 class="section-label">Group</h2>
+        <div class="segmented" id="intro-category">
+          <button type="button" data-category="fish" aria-pressed="true">Fishes</button>
+          <button type="button" data-category="herps" aria-pressed="false">Herps</button>
+        </div>
+        <button type="button" id="start-btn" class="primary-btn">Start a session</button>
+        <p class="intro-credit">
+          Photos by iNaturalist contributors under CC licenses — observations in
+          IA, MO, MN, WI &amp; IL.
+        </p>
+      </div>
+    </section>
+
+    <!-- ---- Session ----------------------------------------------------- -->
+    <header class="app-header hidden" id="app-header">
       <div class="header-top">
         <h1>Field Marks</h1>
 
@@ -21,6 +57,8 @@
           <button type="button" data-category="fish" class="active">Fishes</button>
           <button type="button" data-category="herps">Herps</button>
         </div>
+
+        <button type="button" id="missed-pill" class="missed-pill hidden"></button>
 
         <button
           type="button"
@@ -33,25 +71,18 @@
       </div>
 
       <div class="score-bar">
-        <span id="streak" class="score-pill">Streak: 0</span>
+        <span id="streak" class="score-pill streak">Streak 0</span>
         <span id="score" class="score-pill">0 / 0 correct</span>
       </div>
     </header>
 
-    <main class="card">
+    <main class="card hidden" id="session">
       <div id="load-error" class="load-error hidden"></div>
 
       <div id="game-body">
         <figure class="plate">
           <div class="image-wrap" id="image-wrap">
-            <img
-              id="fish-image"
-              src=""
-              alt="Mystery species"
-              title="Click to enlarge"
-            />
-            <div class="zoom-hint" aria-hidden="true">Click to enlarge</div>
-            <div id="guesses-remaining" class="guesses-remaining">3 guesses left</div>
+            <img id="fish-image" src="" alt="Mystery species" title="Click to enlarge" />
           </div>
           <figcaption class="image-meta">
             <span id="photo-credit" class="photo-credit"></span>
@@ -60,6 +91,13 @@
             </button>
           </figcaption>
         </figure>
+
+        <div class="guess-track">
+          <div id="guess-ticks" class="guess-ticks" aria-hidden="true">
+            <span class="tick"></span><span class="tick"></span><span class="tick"></span>
+          </div>
+          <span id="guesses-remaining" class="guesses-remaining">3 guesses left</span>
+        </div>
 
         <form id="guess-form" class="guess-form" autocomplete="off">
           <div class="autocomplete-wrap">
@@ -80,33 +118,47 @@
             />
             <ul id="suggestion-list" class="suggestion-list hidden" role="listbox"></ul>
           </div>
-          <button id="guess-submit" type="submit">Guess</button>
+
+          <div id="feedback" class="feedback" aria-live="polite"></div>
+
+          <section class="marks-section">
+            <h2 class="section-label">Field marks earned</h2>
+            <div id="hints" class="hints" aria-live="polite"></div>
+          </section>
+
+          <ul id="guess-history" class="guess-history"></ul>
+
+          <button id="guess-submit" type="submit" class="primary-btn dark">Guess</button>
         </form>
-
-        <div id="feedback" class="feedback" aria-live="polite"></div>
-
-        <section class="marks-section">
-          <h2 class="section-label">Field marks earned</h2>
-          <div id="hints" class="hints" aria-live="polite"></div>
-        </section>
-
-        <ul id="guess-history" class="guess-history"></ul>
 
         <div id="result-panel" class="result-panel hidden">
           <p id="result-text"></p>
-          <button id="next-fish-btn" type="button">Next species →</button>
+
+          <section id="result-marks" class="result-marks hidden">
+            <h2 class="section-label">How to know it next time</h2>
+            <ol id="result-hints" class="result-hints"></ol>
+          </section>
+
+          <a
+            id="obs-link"
+            class="obs-link hidden"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >View observation on iNaturalist ↗</a>
+
+          <button id="next-fish-btn" type="button" class="primary-btn">Next species →</button>
+
+          <div class="result-footer">
+            <span id="result-score"></span>
+            <button type="button" id="result-missed" class="missed-link hidden"></button>
+          </div>
         </div>
       </div>
     </main>
-
-    <footer class="app-footer">
-      <p>
-        Photos by iNaturalist contributors under CC licenses, from observations
-        in IA, MO, MN, WI &amp; IL.
-      </p>
-    </footer>
   </div>
 
+  <!-- ---- Settings ------------------------------------------------------ -->
   <div
     id="settings-sheet"
     class="settings-sheet hidden"
@@ -135,6 +187,7 @@
 
       <div class="settings-group">
         <h3 class="section-label">Difficulty</h3>
+
         <div class="setting-row">
           <div class="setting-copy">
             <span class="setting-name">Suggested names</span>
@@ -149,14 +202,41 @@
             aria-label="Suggested names"
           ><span class="switch-knob"></span></button>
         </div>
+
+        <div class="setting-row">
+          <div class="setting-copy">
+            <span class="setting-name">Scientific names only</span>
+            <span class="setting-desc">Answers must be genus + species</span>
+          </div>
+          <button
+            type="button"
+            id="scinames-toggle"
+            class="switch"
+            role="switch"
+            aria-checked="false"
+            aria-label="Scientific names only"
+          ><span class="switch-knob"></span></button>
+        </div>
+
         <p class="settings-note">
           Turning suggestions off keeps the same input — the dropdown just stops
-          appearing, so nothing shifts. You type the full common name.
+          appearing, so nothing shifts. You type the full name.
         </p>
+      </div>
+
+      <div class="settings-group">
+        <h3 class="section-label">Session</h3>
+        <div class="session-actions">
+          <button type="button" id="retry-missed" class="session-btn" disabled>
+            Retry missed
+          </button>
+          <button type="button" id="reset-streak" class="session-btn">Reset streak</button>
+        </div>
       </div>
     </div>
   </div>
 
+  <!-- ---- Lightbox ------------------------------------------------------ -->
   <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="Enlarged photo">
     <button id="lightbox-close" type="button" class="lightbox-close" aria-label="Close enlarged photo">&times;</button>
     <img id="lightbox-image" class="lightbox-image" src="" alt="Mystery species, enlarged" />

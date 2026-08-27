@@ -1,6 +1,6 @@
 // game.js — Field Marks
 // Plain vanilla JS, no framework. Continuous round loop: load a species photo,
-// guess it in 3 tries, see the result, auto-advance to the next.
+// guess it in 3 tries, see the result, move to the next.
 //
 // Data comes from data/species-<category>.json, produced by the local
 // curation tool (curate/server.js) + scripts/export-game-data.js.
@@ -9,7 +9,7 @@
   "use strict";
 
   const TOTAL_GUESSES = 3;
-  const RESULT_AUTO_ADVANCE_MS = 4000;
+  const ORDINALS = ["first", "second", "third", "fourth", "fifth"];
   const CATEGORIES = {
     fish: { label: "Fishes", file: "data/species-fish.json" },
     herps: { label: "Herps", file: "data/species-herps.json" },
@@ -29,12 +29,19 @@
 
   // ---- DOM refs ----------------------------------------------------------
   const els = {
+    intro: document.getElementById("intro"),
+    introCategory: document.getElementById("intro-category"),
+    startBtn: document.getElementById("start-btn"),
+    appHeader: document.getElementById("app-header"),
+    sessionCard: document.getElementById("session"),
     categorySwitch: document.getElementById("category-switch"),
+    missedPill: document.getElementById("missed-pill"),
     loadError: document.getElementById("load-error"),
     gameBody: document.getElementById("game-body"),
     image: document.getElementById("fish-image"),
     imageWrap: document.getElementById("image-wrap"),
     photoCredit: document.getElementById("photo-credit"),
+    guessTicks: document.getElementById("guess-ticks"),
     guessesRemaining: document.getElementById("guesses-remaining"),
     hints: document.getElementById("hints"),
     form: document.getElementById("guess-form"),
@@ -46,9 +53,16 @@
     history: document.getElementById("guess-history"),
     resultPanel: document.getElementById("result-panel"),
     resultText: document.getElementById("result-text"),
+    resultMarks: document.getElementById("result-marks"),
+    resultHints: document.getElementById("result-hints"),
+    obsLink: document.getElementById("obs-link"),
+    resultScore: document.getElementById("result-score"),
+    resultMissed: document.getElementById("result-missed"),
     nextFishBtn: document.getElementById("next-fish-btn"),
     streak: document.getElementById("streak"),
     score: document.getElementById("score"),
+    retryMissedBtn: document.getElementById("retry-missed"),
+    resetStreakBtn: document.getElementById("reset-streak"),
     lightbox: document.getElementById("lightbox"),
     lightboxImage: document.getElementById("lightbox-image"),
     lightboxCredit: document.getElementById("lightbox-credit"),
@@ -67,6 +81,8 @@
     lastImageBySpecies: {},
     // category -> shuffled queue of species ids still owed a turn this cycle.
     speciesBags: {},
+    // category -> ids of species missed and not yet since identified.
+    missed: {},
   };
 
   function scoreFor(category) {
@@ -76,8 +92,14 @@
     return session.scores[category];
   }
 
+  function missedFor(category) {
+    if (!session.missed[category]) session.missed[category] = [];
+    return session.missed[category];
+  }
+
   const state = {
     category: "fish",
+    started: false,
     loaded: {},
     allSpecies: [],
     previousSpeciesId: null,
@@ -86,8 +108,18 @@
     guessesRemaining: TOTAL_GUESSES,
     hintsRevealed: 0,
     roundOver: false,
-    advanceTimer: null,
   };
+
+  // ---- Answer mode --------------------------------------------------------
+  // theme.js owns the setting and writes data-answers on <html>; the game just
+  // reads it to decide which name is the answer and what the dropdown ranks by.
+  function sciMode() {
+    return document.documentElement.getAttribute("data-answers") === "sci";
+  }
+
+  function answerName(species) {
+    return sciMode() ? species.sciName : species.commonName;
+  }
 
   // ---- Autocomplete -------------------------------------------------------
   // Hand-rolled rather than a native <datalist>: datalist popups can't be
@@ -101,19 +133,28 @@
     const q = query.trim().toLowerCase();
     if (!q) return [];
     return state.allSpecies
-      .filter((s) => s.commonName.toLowerCase().startsWith(q))
+      .filter((s) => answerName(s).toLowerCase().startsWith(q))
       // Alphabetical: the underlying list is in taxonomic order, which reads
       // as random when you're scanning a dozen suggestions.
-      .sort((a, b) => a.commonName.localeCompare(b.commonName));
+      .sort((a, b) => answerName(a).localeCompare(answerName(b)));
   }
 
   function renderSuggestions() {
     els.suggestions.innerHTML = "";
     autocomplete.matches.forEach((species, index) => {
       const li = document.createElement("li");
-      li.textContent = species.commonName;
       li.setAttribute("role", "option");
       if (index === autocomplete.activeIndex) li.classList.add("active");
+
+      const common = document.createElement("span");
+      common.className = "s-common";
+      common.textContent = species.commonName;
+
+      const sci = document.createElement("span");
+      sci.className = "s-sci";
+      sci.textContent = species.sciName;
+
+      li.append(common, sci);
       li.addEventListener("mousedown", (e) => {
         e.preventDefault(); // fire before the input's blur
         selectSuggestion(index);
@@ -150,16 +191,17 @@
   function selectSuggestion(index) {
     const species = autocomplete.matches[index];
     if (!species) return;
-    els.input.value = species.commonName;
+    els.input.value = answerName(species);
     closeSuggestions();
     els.input.focus();
   }
 
-  function findSpeciesByCommonName(text) {
+  // An exact match on whichever name the current mode asks for.
+  function findSpeciesByAnswer(text) {
     const normalized = text.trim().toLowerCase();
     if (!normalized) return null;
     return (
-      state.allSpecies.find((s) => s.commonName.toLowerCase() === normalized) ||
+      state.allSpecies.find((s) => answerName(s).toLowerCase() === normalized) ||
       null
     );
   }
@@ -274,12 +316,6 @@
     const image = state.currentImage;
     if (!image || !image.url) return;
 
-    // A photo left open shouldn't get swapped out from under the viewer.
-    if (state.advanceTimer) {
-      clearTimeout(state.advanceTimer);
-      state.advanceTimer = null;
-    }
-
     // Show the photo the game already downloaded straight away, then quietly
     // upgrade to the full-resolution original once it arrives. Loading the
     // original first left the overlay blank for seconds on a big file, which
@@ -328,13 +364,33 @@
     if (replacement && replacement.url !== image.url) setImage(replacement);
   }
 
+  // ---- Score, misses, guess track -----------------------------------------
   function updateScoreDisplay() {
     const s = scoreFor(state.category);
-    els.streak.textContent = `Streak: ${s.streak}`;
+    els.streak.textContent = `Streak ${s.streak}`;
     els.score.textContent = `${s.correctCount} / ${s.totalRounds} correct`;
+    updateMissedDisplays();
   }
 
-  function updateGuessesRemainingDisplay() {
+  function updateMissedDisplays() {
+    const count = missedFor(state.category).length;
+    const label = `${count} missed`;
+
+    els.missedPill.textContent = label;
+    els.missedPill.classList.toggle("hidden", count === 0);
+
+    els.resultMissed.textContent = `${label} ↗`;
+    els.resultMissed.classList.toggle("hidden", count === 0);
+
+    els.retryMissedBtn.disabled = count === 0;
+    els.retryMissedBtn.textContent = count === 0 ? "Retry missed" : `Retry ${label}`;
+  }
+
+  function updateGuessTrack() {
+    const spent = TOTAL_GUESSES - state.guessesRemaining;
+    els.guessTicks.querySelectorAll(".tick").forEach((tick, i) => {
+      tick.classList.toggle("spent", i < spent);
+    });
     const n = state.guessesRemaining;
     els.guessesRemaining.textContent = `${n} guess${n === 1 ? "" : "es"} left`;
   }
@@ -359,22 +415,28 @@
   function revealNextHint() {
     const species = state.currentSpecies;
     if (!species || !species.hints) return;
-    const hintText = species.hints[state.hintsRevealed];
+    const index = state.hintsRevealed;
+    const hintText = species.hints[index];
     state.hintsRevealed += 1;
     if (!hintText) return; // hint not written yet — skip silently
-    const div = document.createElement("div");
-    div.className = "hint";
-    div.textContent = `Hint: ${hintText}`;
-    els.hints.appendChild(div);
+
+    const row = document.createElement("div");
+    row.className = "hint";
+
+    const num = document.createElement("span");
+    num.className = "mark-num";
+    num.textContent = String(index + 1).padStart(2, "0");
+
+    const text = document.createElement("span");
+    text.className = "mark-text";
+    text.textContent = hintText;
+
+    row.append(num, text);
+    els.hints.appendChild(row);
   }
 
   // ---- Round lifecycle ----------------------------------------------------
   function startNewRound() {
-    if (state.advanceTimer) {
-      clearTimeout(state.advanceTimer);
-      state.advanceTimer = null;
-    }
-
     const species = getRandomSpecies(state.previousSpeciesId);
     state.currentSpecies = species;
     setImage(getImageForSpecies(species));
@@ -386,9 +448,11 @@
     els.hints.innerHTML = "";
     els.history.innerHTML = "";
     clearFeedback();
-    updateGuessesRemainingDisplay();
+    updateGuessTrack();
 
     els.resultPanel.classList.add("hidden");
+    els.gameBody.classList.remove("showing-result");
+    els.form.classList.remove("hidden");
     els.input.value = "";
     els.input.disabled = false;
     els.submitBtn.disabled = false;
@@ -403,30 +467,43 @@
   function endRound(correct) {
     state.roundOver = true;
     const s = scoreFor(state.category);
+    const missed = missedFor(state.category);
+    const species = state.currentSpecies;
+    const guessesUsed = TOTAL_GUESSES - state.guessesRemaining;
+
     s.totalRounds += 1;
     if (correct) {
       s.correctCount += 1;
       s.streak += 1;
+      // Getting it right retires it from the missed list.
+      const at = missed.indexOf(species.id);
+      if (at >= 0) missed.splice(at, 1);
     } else {
       s.streak = 0;
+      if (!missed.includes(species.id)) missed.push(species.id);
     }
     updateScoreDisplay();
 
-    const species = state.currentSpecies;
-    const guessesUsed = TOTAL_GUESSES - state.guessesRemaining;
-
+    closeSuggestions();
+    els.form.classList.add("hidden");
     els.input.disabled = true;
     els.submitBtn.disabled = true;
-    closeSuggestions();
 
-    els.resultPanel.classList.remove("hidden");
+    renderResult(correct, species, guessesUsed);
+
+    state.previousSpeciesId = species.id;
+    document.addEventListener("keydown", advanceOnKeydown);
+    els.nextFishBtn.focus();
+  }
+
+  function renderResult(correct, species, guessesUsed) {
     els.resultText.className = correct ? "correct" : "incorrect";
     els.resultText.innerHTML = "";
 
     const outcome = document.createElement("span");
     outcome.className = "outcome";
     outcome.textContent = correct
-      ? `Correct on ${guessesUsed === 1 ? "the first guess" : `guess ${guessesUsed}`}`
+      ? `Correct on the ${ORDINALS[guessesUsed - 1] || guessesUsed} guess`
       : "Out of guesses";
 
     const sci = document.createElement("span");
@@ -435,13 +512,36 @@
 
     els.resultText.append(outcome, species.commonName, sci);
 
-    state.previousSpeciesId = species.id;
-    state.advanceTimer = setTimeout(startNewRound, RESULT_AUTO_ADVANCE_MS);
-    document.addEventListener("keydown", advanceOnKeydown);
+    // All three marks, not just the ones the miss earned — the panel is the
+    // place to learn the species, whether or not you got there.
+    const hints = (species.hints || []).filter(Boolean);
+    els.resultHints.innerHTML = "";
+    hints.forEach((text) => {
+      const li = document.createElement("li");
+      li.textContent = text;
+      els.resultHints.appendChild(li);
+    });
+    els.resultMarks.classList.toggle("hidden", hints.length === 0);
+
+    const obsUrl = state.currentImage && state.currentImage.obsUrl;
+    if (obsUrl) els.obsLink.href = obsUrl;
+    els.obsLink.classList.toggle("hidden", !obsUrl);
+
+    const s = scoreFor(state.category);
+    els.resultScore.textContent =
+      `Streak ${s.streak} · ${s.correctCount} / ${s.totalRounds} correct`;
+
+    els.resultPanel.classList.remove("hidden");
+    els.gameBody.classList.add("showing-result");
   }
 
-  function advanceOnKeydown() {
+  // Any of the obvious "next" keys moves on; the settings sheet and the
+  // lightbox both swallow their own keys before this sees them.
+  function advanceOnKeydown(e) {
     if (lightboxOpen()) return;
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    if (["Enter", " ", "ArrowRight", "n", "N"].indexOf(e.key) < 0) return;
+    e.preventDefault();
     startNewRound();
   }
 
@@ -449,10 +549,12 @@
     event.preventDefault();
     if (state.roundOver) return;
 
-    const matched = findSpeciesByCommonName(els.input.value);
+    const matched = findSpeciesByAnswer(els.input.value);
     if (!matched) {
       showFeedback(
-        "Pick a species from the suggestion list to submit a guess.",
+        sciMode()
+          ? "Type the full scientific name — genus and species."
+          : "Type a full common name to submit a guess.",
         "no-match"
       );
       return;
@@ -462,12 +564,12 @@
     clearFeedback();
 
     const isCorrect = matched.id === state.currentSpecies.id;
-    addHistoryRow(matched.commonName, isCorrect);
+    addHistoryRow(answerName(matched), isCorrect);
 
     if (isCorrect) return endRound(true);
 
     state.guessesRemaining -= 1;
-    updateGuessesRemainingDisplay();
+    updateGuessTrack();
 
     if (state.guessesRemaining <= 0) {
       revealNextHint();
@@ -475,18 +577,47 @@
     }
 
     revealNextHint();
-    showFeedback("Not quite — here's another hint.", "not-quite");
+    showFeedback("Not quite — here's another field mark.", "not-quite");
     els.input.value = "";
     els.input.focus();
   }
 
+  // ---- Session actions ----------------------------------------------------
+  // Queue up only the species this category still owes the player. The regular
+  // bag refills behind it, so the run rejoins normal rotation when it's done.
+  function retryMissed() {
+    const missed = missedFor(state.category).slice();
+    if (missed.length === 0) return;
+    session.speciesBags[state.category] = shuffled(missed);
+    document.dispatchEvent(new CustomEvent("fieldmarks:closesettings"));
+    startNewRound();
+  }
+
+  function resetStreak() {
+    scoreFor(state.category).streak = 0;
+    updateScoreDisplay();
+    if (state.roundOver) {
+      const s = scoreFor(state.category);
+      els.resultScore.textContent =
+        `Streak ${s.streak} · ${s.correctCount} / ${s.totalRounds} correct`;
+    }
+    document.dispatchEvent(new CustomEvent("fieldmarks:closesettings"));
+  }
+
   // ---- Category switching -------------------------------------------------
-  async function switchCategory(category) {
-    if (!CATEGORIES[category]) return;
-    state.category = category;
+  function markCategory(category) {
     els.categorySwitch.querySelectorAll("button").forEach((b) =>
       b.classList.toggle("active", b.dataset.category === category)
     );
+    els.introCategory.querySelectorAll("button").forEach((b) =>
+      b.setAttribute("aria-pressed", b.dataset.category === category ? "true" : "false")
+    );
+  }
+
+  async function switchCategory(category, { play = true } = {}) {
+    if (!CATEGORIES[category]) return;
+    state.category = category;
+    markCategory(category);
 
     try {
       state.allSpecies = await loadCategory(category);
@@ -511,7 +642,7 @@
     hideLoadError();
     state.previousSpeciesId = null;
     updateScoreDisplay();
-    startNewRound();
+    if (play) startNewRound();
   }
 
   function showLoadError(html) {
@@ -525,16 +656,47 @@
     els.gameBody.classList.remove("hidden");
   }
 
+  // ---- Intro --------------------------------------------------------------
+  async function startSession() {
+    els.startBtn.disabled = true;
+    await switchCategory(state.category, { play: false });
+    state.started = true;
+    els.intro.classList.add("hidden");
+    els.appHeader.classList.remove("hidden");
+    els.sessionCard.classList.remove("hidden");
+    els.startBtn.disabled = false;
+    if (!els.loadError.classList.contains("hidden")) return;
+    startNewRound();
+  }
+
   // ---- Wire up & boot -----------------------------------------------------
+  els.startBtn.addEventListener("click", startSession);
+
+  els.introCategory.querySelectorAll("button").forEach((btn) => {
+    // Before the session starts this only picks the group — no round yet.
+    btn.addEventListener("click", () => {
+      state.category = btn.dataset.category;
+      markCategory(state.category);
+    });
+  });
+
+  els.categorySwitch.querySelectorAll("button").forEach((btn) => {
+    btn.addEventListener("click", () => switchCategory(btn.dataset.category));
+  });
+
   els.form.addEventListener("submit", handleGuessSubmit);
   els.nextFishBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     startNewRound();
   });
   els.flagBtn.addEventListener("click", flagCurrentImage);
+  els.missedPill.addEventListener("click", retryMissed);
+  els.resultMissed.addEventListener("click", retryMissed);
+  els.retryMissedBtn.addEventListener("click", retryMissed);
+  els.resetStreakBtn.addEventListener("click", resetStreak);
 
   // The whole frame, not just the photo, so clicks in the letterboxed margin
-  // (and on the badges) open it too.
+  // open it too.
   els.imageWrap.addEventListener("click", openLightbox);
   // Clicking the backdrop (but not the photo itself) dismisses.
   els.lightbox.addEventListener("click", (e) => {
@@ -546,10 +708,6 @@
       closeLightbox();
     }
   }, true);
-
-  els.categorySwitch.querySelectorAll("button").forEach((btn) => {
-    btn.addEventListener("click", () => switchCategory(btn.dataset.category));
-  });
 
   // Only typing opens the dropdown — focusing the empty box should not.
   els.input.addEventListener("input", () => openSuggestions(els.input.value));
@@ -580,5 +738,25 @@
     }
   });
 
-  switchCategory("fish");
+  // Switching answer mode mid-round: the typed text and the open dropdown are
+  // both about the old mode, so drop them rather than leave a stale list.
+  document.addEventListener("fieldmarks:answermode", () => {
+    els.input.placeholder = sciMode()
+      ? "Type a scientific name…"
+      : "Type a species name…";
+    if (state.roundOver) return;
+    els.input.value = "";
+    closeSuggestions();
+  });
+
+  // theme.js applied the stored answer mode before this file ran, so pick the
+  // matching placeholder up front rather than waiting for the next toggle.
+  els.input.placeholder = sciMode()
+    ? "Type a scientific name…"
+    : "Type a species name…";
+
+  // Preload the default group so the intro's Start is instant.
+  loadCategory(state.category).catch(() => {});
+  markCategory(state.category);
+  updateMissedDisplays();
 })();
