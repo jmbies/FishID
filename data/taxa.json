@@ -2908,8 +2908,8 @@
         "sciName": "Notophthalmus viridescens",
         "resolvedCommonName": "Eastern Newt",
         "rank": "species",
-        "needsReview": true,
-        "reviewReason": "Shares a taxon with the Eft card — assign aquatic adult photos here.",
+        "needsReview": false,
+        "reviewReason": "",
         "candidates": [
           {
             "id": 27805,
@@ -2952,7 +2952,7 @@
             "ancestry": "48460/1/2/355675/20978/26718/27701/787591/27800/27805"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       },
       {
         "id": "eastern-newt-eft",
@@ -2965,8 +2965,8 @@
         "sciName": "Notophthalmus viridescens",
         "resolvedCommonName": "Eastern Newt",
         "rank": "species",
-        "needsReview": true,
-        "reviewReason": "Shares a taxon with the Adult card — assign terrestrial orange eft photos here.",
+        "needsReview": false,
+        "reviewReason": "",
         "candidates": [
           {
             "id": 27805,
@@ -3009,7 +3009,7 @@
             "ancestry": "48460/1/2/355675/20978/26718/27701/787591/27800/27805"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       },
       {
         "id": "american-toad",
@@ -3500,8 +3500,8 @@
         "sciName": "Chrysemys picta",
         "resolvedCommonName": "Painted Turtle",
         "rank": "species",
-        "needsReview": true,
-        "reviewReason": "Northern Painted is the subspecies C. p. marginata; iNat may resolve to the species C. picta.",
+        "needsReview": false,
+        "reviewReason": "",
         "candidates": [
           {
             "id": 39771,
@@ -3544,7 +3544,7 @@
             "ancestry": "48460/1/2/355675/26036/39532/39760/797544/39770"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       },
       {
         "id": "blandings-turtle",
@@ -3914,12 +3914,12 @@
         "stage": null,
         "hasCall": false,
         "note": null,
-        "taxonId": 1676768,
+        "taxonId": 515419,
         "sciName": "Lampropeltis triangulum",
-        "resolvedCommonName": "",
+        "resolvedCommonName": "Eastern Milksnake",
         "rank": "complex",
-        "needsReview": true,
-        "reviewReason": "2 taxa share the name \"Lampropeltis triangulum\" — confirm the right one.",
+        "needsReview": false,
+        "reviewReason": "",
         "candidates": [
           {
             "id": 1676768,
@@ -3994,7 +3994,7 @@
             "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/29768"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       },
       {
         "id": "northern-water-snake",
@@ -4114,8 +4114,8 @@
         "sciName": "Pantherophis ramspotti",
         "resolvedCommonName": "Western Foxsnake",
         "rank": "species",
-        "needsReview": true,
-        "reviewReason": "Western Fox Snake was split from P. vulpinus (Eastern Fox Snake) — P. ramspotti is the western form.",
+        "needsReview": false,
+        "reviewReason": "",
         "candidates": [
           {
             "id": 108348,
@@ -4126,7 +4126,7 @@
             "ancestry": "48460/1/2/355675/26036/26172/85553/26504/797520/59649"
           }
         ],
-        "confirmed": false
+        "confirmed": true
       },
       {
         "id": "gopher-snake",

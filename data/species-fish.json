@@ -1,7 +1,7 @@
 {
   "category": "fish",
   "label": "Fishes",
-  "generatedAt": "2026-08-23T15:18:03.275Z",
+  "generatedAt": "2026-08-27T02:34:50.131Z",
   "species": [
     {
       "id": "muskellunge",
@@ -2919,6 +2919,66 @@
       ]
     },
     {
+      "id": "wiper",
+      "commonName": "Wiper",
+      "sciName": "Morone chrysops × saxatilis",
+      "group": "Temperate Basses",
+      "stage": null,
+      "images": [
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/484071092/large.jpeg",
+          "attribution": "(c) Tony Talarico, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/269239788"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/486564369/large.jpg",
+          "attribution": "(c) Ryan Hearn, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/270546763"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/206225455/large.jpg",
+          "attribution": "(c) Frank Ziegler, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/121838726"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/185017541/large.jpg",
+          "attribution": "(c) seanchien, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/109743234"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/334425672/large.jpg",
+          "attribution": "(c) Eli C, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/190731665"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/192584255/large.jpg",
+          "attribution": "(c) Frank Ziegler, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/114023138"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/263825012/large.jpg",
+          "attribution": "(c) Kyle Price, some rights reserved (CC BY-NC-SA)",
+          "obsUrl": "https://www.inaturalist.org/observations/152801370"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/538851787/large.jpg",
+          "attribution": "(c) Maxfield JonasKrueger, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/299107046"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/171893439/large.jpeg",
+          "attribution": "(c) John Aufderheide, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/102784873"
+        }
+      ],
+      "sounds": [],
+      "hints": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
       "id": "common-carp",
       "commonName": "Carp",
       "sciName": "Cyprinus carpio",
@@ -3219,6 +3279,221 @@
       ]
     },
     {
+      "id": "fathead-minnow",
+      "commonName": "Fathead Minnow",
+      "sciName": "Pimephales promelas",
+      "group": "Carps & Minnows",
+      "stage": null,
+      "images": [
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/602856500/large.jpg",
+          "attribution": "(c) Landon Marshall, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/332217151"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/602856603/large.jpg",
+          "attribution": "(c) Landon Marshall, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/332217151"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/191134895/large.jpg",
+          "attribution": "(c) fishecke, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/113126156"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/191134930/large.jpg",
+          "attribution": "(c) fishecke, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/113126156"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/283429731/large.jpeg",
+          "attribution": "(c) Charlie Pavlisich, some rights reserved (CC BY)",
+          "obsUrl": "https://www.inaturalist.org/observations/163849744"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/651116795/large.jpg",
+          "attribution": "(c) Sawyer Hess, some rights reserved (CC BY)",
+          "obsUrl": "https://www.inaturalist.org/observations/357022514"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/665500515/large.jpg",
+          "attribution": "(c) jgeschke, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/364541626"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/665500549/large.jpg",
+          "attribution": "(c) jgeschke, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/364541626"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/365805533/large.jpeg",
+          "attribution": "(c) Cole Wolf, some rights reserved (CC BY)",
+          "obsUrl": "https://www.inaturalist.org/observations/206849480"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/365805532/large.jpeg",
+          "attribution": "(c) Cole Wolf, some rights reserved (CC BY)",
+          "obsUrl": "https://www.inaturalist.org/observations/206849480"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/407024047/large.jpeg",
+          "attribution": "(c) Matthew Kvam, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/229312410"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/196188482/large.jpeg",
+          "attribution": "(c) Ryan Grow, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/116235608"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/562464089/large.jpg",
+          "attribution": "(c) Landon Marshall, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/311574560"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/562464107/large.jpg",
+          "attribution": "(c) Landon Marshall, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/311574560"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/562464136/large.jpg",
+          "attribution": "(c) Landon Marshall, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/311574560"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/518074590/large.jpg",
+          "attribution": "(c) Yinan Li, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/287719034"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/517352596/large.jpg",
+          "attribution": "(c) Yinan Li, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/287719034"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/205881288/large.jpg",
+          "attribution": "(c) dexternienhaus, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/121652166"
+        }
+      ],
+      "sounds": [],
+      "hints": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "bluntnose-minnow",
+      "commonName": "Bluntnose Minnow",
+      "sciName": "Pimephales notatus",
+      "group": "Carps & Minnows",
+      "stage": null,
+      "images": [
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/440947944/large.jpeg",
+          "attribution": "(c) Matthew Kvam, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/246945006"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/345679889/large.jpg",
+          "attribution": "(c) Koaw Nature, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/196359158"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/603522313/large.jpg",
+          "attribution": "(c) Landon Marshall, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/332540546"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/603522339/large.jpg",
+          "attribution": "(c) Landon Marshall, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/332540546"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/603522368/large.jpg",
+          "attribution": "(c) Landon Marshall, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/332540546"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/603522499/large.jpg",
+          "attribution": "(c) Landon Marshall, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/332540546"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/397496461/large.jpeg",
+          "attribution": "(c) jasonrl, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/224286297"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/443416341/large.jpeg",
+          "attribution": "(c) Matthew Kvam, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/248194630"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/276865477/large.jpeg",
+          "attribution": "(c) jasonrl, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/160224141"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/665501911/large.jpg",
+          "attribution": "(c) jgeschke, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/364542422"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/665501985/large.jpg",
+          "attribution": "(c) jgeschke, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/364542422"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/140408061/large.jpeg",
+          "attribution": "(c) scott johnson, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/85346329"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605271580/large.jpg",
+          "attribution": "(c) Steven Wang, some rights reserved (CC BY)",
+          "obsUrl": "https://www.inaturalist.org/observations/333396275"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/229685392/large.jpg",
+          "attribution": "(c) Koaw Nature, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/134724467"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/205128288/large.jpg",
+          "attribution": "(c) Owen Reeves, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/121232229"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/124954344/large.jpg",
+          "attribution": "(c) Adrian Macedo, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/76386216"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/496860556/large.jpeg",
+          "attribution": "(c) aidantonidandel, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/276692216"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/496862597/large.jpeg",
+          "attribution": "(c) aidantonidandel, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/276692216"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/246636635/large.jpg",
+          "attribution": "(c) Michael Verdirame, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/143775568"
+        }
+      ],
+      "sounds": [],
+      "hints": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
       "id": "golden-shiner",
       "commonName": "Golden Shiner",
       "sciName": "Notemigonus crysoleucas",
@@ -3309,6 +3584,86 @@
           "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/67817652/large.jpg",
           "attribution": "(c) schwartz61197, some rights reserved (CC BY-NC)",
           "obsUrl": "https://www.inaturalist.org/observations/42704790"
+        }
+      ],
+      "sounds": [],
+      "hints": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "common-shiner",
+      "commonName": "Common Shiner",
+      "sciName": "Luxilus cornutus",
+      "group": "Carps & Minnows",
+      "stage": null,
+      "images": [
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/80583242/large.jpg",
+          "attribution": "(c) Seth G. Breeding, some rights reserved (CC BY)",
+          "obsUrl": "https://www.inaturalist.org/observations/50736511"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/514429696/large.jpg",
+          "attribution": "(c) Eli Anoszko, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/286167664"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/700552971/large.jpg",
+          "attribution": "(c) Landon Marshall, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/382792023"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/631623736/large.jpg",
+          "attribution": "(c) Landon Marshall, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/346498233"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/538340690/large.jpg",
+          "attribution": "(c) Landon Marshall, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/298841063"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/538340701/large.jpg",
+          "attribution": "(c) Landon Marshall, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/298841063"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/545638638/large.jpg",
+          "attribution": "(c) Zach Gartner, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/302757161"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/435859873/large.jpeg",
+          "attribution": "(c) Daniel Walchak, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/244358436"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/664613473/large.jpg",
+          "attribution": "(c) lroettger, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/364073358"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/695333719/large.jpg",
+          "attribution": "(c) wes_inc, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/380089695"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/608712696/large.jpg",
+          "attribution": "(c) Jonathan Wilson-Thieroff, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/335109933"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/81662729/large.jpeg",
+          "attribution": "(c) dexternienhaus, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/51402525"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/12140948/large.jpeg",
+          "attribution": "(c) pmk00001, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/9006263"
         }
       ],
       "sounds": [],
@@ -4144,6 +4499,46 @@
       ]
     },
     {
+      "id": "lake-sturgeon",
+      "commonName": "Lake Sturgeon",
+      "sciName": "Huso fulvescens",
+      "group": "Primitive Fishes",
+      "stage": null,
+      "images": [
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/671352622/large.jpg",
+          "attribution": "(c) Justin Gillespie, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/367610336"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/54830696/large.jpg",
+          "attribution": "(c) dexternienhaus, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/34809933"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/603378712/large.jpg",
+          "attribution": "(c) Lilly, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/316888180"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/22806098/large.jpg",
+          "attribution": "no rights reserved",
+          "obsUrl": "https://www.inaturalist.org/observations/15241849"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/425854399/large.jpeg",
+          "attribution": "(c) andrewdressel, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/239137677"
+        }
+      ],
+      "sounds": [],
+      "hints": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
       "id": "shovelnose-sturgeon",
       "commonName": "Shovelnose Sturgeon",
       "sciName": "Scaphirhynchus platorynchus",
@@ -4154,6 +4549,51 @@
           "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/706960312/large.jpg",
           "attribution": "(c) Maxfield JonasKrueger, some rights reserved (CC BY-NC)",
           "obsUrl": "https://www.inaturalist.org/observations/386130813"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/496699303/large.jpg",
+          "attribution": "(c) Maxfield JonasKrueger, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/276598688"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/586657170/large.jpg",
+          "attribution": "(c) Collin Nienhaus, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/324153982"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/265416010/large.jpg",
+          "attribution": "(c) missriverqueen, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/153655762"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/328863218/large.jpeg",
+          "attribution": "(c) kaidenv, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/187977789"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/359548609/large.jpg",
+          "attribution": "(c) coater, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/203494973"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/386422509/large.jpg",
+          "attribution": "(c) Matthew Kvam, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/218377425"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/141549834/large.jpg",
+          "attribution": "(c) ap90, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/85972671"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/128141125/large.jpeg",
+          "attribution": "(c) naturalistfishing, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/78309022"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/616400394/large.jpg",
+          "attribution": "(c) Jake McCart, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/338903341"
         }
       ],
       "sounds": [],
@@ -4369,6 +4809,21 @@
           "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/337123736/large.jpg",
           "attribution": "(c) Koaw Nature, some rights reserved (CC BY-NC)",
           "obsUrl": "https://www.inaturalist.org/observations/192090152"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/477314445/large.jpeg",
+          "attribution": "(c) wes_inc, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/265708673"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/461537077/large.jpg",
+          "attribution": "(c) Andrew Sabai, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/257300625"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/461537088/large.jpg",
+          "attribution": "(c) Andrew Sabai, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/257300625"
         }
       ],
       "sounds": [],
@@ -5864,6 +6319,41 @@
           "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/494089175/large.jpg",
           "attribution": "(c) Adam Heikkila, some rights reserved (CC BY-NC)",
           "obsUrl": "https://www.inaturalist.org/observations/274898979"
+        }
+      ],
+      "sounds": [],
+      "hints": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "slimy-sculpin",
+      "commonName": "Slimy Sculpin",
+      "sciName": "Cottus cognatus",
+      "group": "Other Fishes",
+      "stage": null,
+      "images": [
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/573063008/large.jpg",
+          "attribution": "(c) Landon Marshall, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/317151700"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/471392608/large.jpeg",
+          "attribution": "(c) Matthew Kvam, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/262392379"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/530339992/large.jpg",
+          "attribution": "(c) Ryan Grow, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/294636991"
+        },
+        {
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/567046641/large.jpg",
+          "attribution": "(c) Tony Talarico, some rights reserved (CC BY-NC)",
+          "obsUrl": "https://www.inaturalist.org/observations/313974281"
         }
       ],
       "sounds": [],

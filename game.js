@@ -48,6 +48,10 @@
     nextFishBtn: document.getElementById("next-fish-btn"),
     streak: document.getElementById("streak"),
     score: document.getElementById("score"),
+    lightbox: document.getElementById("lightbox"),
+    lightboxImage: document.getElementById("lightbox-image"),
+    lightboxCredit: document.getElementById("lightbox-credit"),
+    lightboxClose: document.getElementById("lightbox-close"),
   };
 
   // ---- Session state ------------------------------------------------------
@@ -198,6 +202,47 @@
     state.currentImage = image;
     els.image.src = image ? image.url : PLACEHOLDER_IMAGE;
     els.photoCredit.textContent = image && image.attribution ? image.attribution : "";
+    closeLightbox();
+  }
+
+  // ---- Photo lightbox -----------------------------------------------------
+  // iNaturalist serves several sizes off the same path; the curated URLs are
+  // the "large" ones, so ask for the original when zooming and fall back to
+  // the large file if that size isn't there.
+  function fullSizeUrl(url) {
+    return url.replace(/\/large\.(jpe?g|png)(\?.*)?$/i, "/original.$1$2");
+  }
+
+  function openLightbox() {
+    const image = state.currentImage;
+    if (!image || !image.url) return;
+
+    // A photo left open shouldn't get swapped out from under the viewer.
+    if (state.advanceTimer) {
+      clearTimeout(state.advanceTimer);
+      state.advanceTimer = null;
+    }
+
+    const large = image.url;
+    els.lightboxImage.onerror = () => {
+      els.lightboxImage.onerror = null;
+      els.lightboxImage.src = large;
+    };
+    els.lightboxImage.src = fullSizeUrl(large);
+    els.lightboxCredit.textContent = image.attribution || "";
+    els.lightbox.classList.remove("hidden");
+    els.lightboxClose.focus();
+  }
+
+  function closeLightbox() {
+    if (els.lightbox.classList.contains("hidden")) return;
+    els.lightbox.classList.add("hidden");
+    els.lightboxImage.onerror = null;
+    els.lightboxImage.removeAttribute("src");
+  }
+
+  function lightboxOpen() {
+    return !els.lightbox.classList.contains("hidden");
   }
 
   // Flagging hides a photo for the session and logs it for permanent removal.
@@ -319,6 +364,7 @@
   }
 
   function advanceOnKeydown() {
+    if (lightboxOpen()) return;
     startNewRound();
   }
 
@@ -409,6 +455,18 @@
     startNewRound();
   });
   els.flagBtn.addEventListener("click", flagCurrentImage);
+
+  els.image.addEventListener("click", openLightbox);
+  // Clicking the backdrop (but not the photo itself) dismisses.
+  els.lightbox.addEventListener("click", (e) => {
+    if (e.target !== els.lightboxImage) closeLightbox();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && lightboxOpen()) {
+      e.stopPropagation();
+      closeLightbox();
+    }
+  }, true);
 
   els.categorySwitch.querySelectorAll("button").forEach((btn) => {
     btn.addEventListener("click", () => switchCategory(btn.dataset.category));
