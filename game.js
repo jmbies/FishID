@@ -33,6 +33,7 @@
     loadError: document.getElementById("load-error"),
     gameBody: document.getElementById("game-body"),
     image: document.getElementById("fish-image"),
+    imageWrap: document.getElementById("image-wrap"),
     photoCredit: document.getElementById("photo-credit"),
     guessesRemaining: document.getElementById("guesses-remaining"),
     hints: document.getElementById("hints"),
@@ -60,6 +61,12 @@
   const session = {
     scores: {},
     flaggedImages: new Set(),
+    // Every photo URL shown this session, so a round never repeats a photo the
+    // player has already been asked about (until its species runs out).
+    seenImages: new Set(),
+    lastImageBySpecies: {},
+    // category -> shuffled queue of species ids still owed a turn this cycle.
+    speciesBags: {},
   };
 
   function scoreFor(category) {
@@ -174,12 +181,45 @@
     return arr[Math.floor(Math.random() * arr.length)];
   }
 
-  function getRandomSpecies(excludeId) {
+  function shuffled(arr) {
+    const out = arr.slice();
+    for (let i = out.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [out[i], out[j]] = [out[j], out[i]];
+    }
+    return out;
+  }
+
+  // Species are drawn from a bag holding every playable species exactly once,
+  // reshuffled when it empties. Picking independently at random meant species
+  // with a deep photo set showed up as often as ones with a single photo only
+  // on average — over a session of a few dozen rounds the counts drifted well
+  // apart. A bag makes each cycle show each species exactly once.
+  function refillSpeciesBag(excludeId) {
     const playable = state.allSpecies.filter((s) => getUsableImages(s).length > 0);
-    const pool = playable.length > 0 ? playable : state.allSpecies;
-    const candidates =
-      pool.length > 1 ? pool.filter((s) => s.id !== excludeId) : pool;
-    return pickRandom(candidates.length > 0 ? candidates : pool);
+    const bag = shuffled(playable.length > 0 ? playable : state.allSpecies).map(
+      (s) => s.id
+    );
+    // A fresh cycle shouldn't open with whatever closed the last one.
+    if (bag.length > 1 && bag[0] === excludeId) {
+      [bag[0], bag[1]] = [bag[1], bag[0]];
+    }
+    session.speciesBags[state.category] = bag;
+    return bag;
+  }
+
+  function getRandomSpecies(excludeId) {
+    for (let refills = 0; refills < 2; refills++) {
+      const bag = session.speciesBags[state.category] || refillSpeciesBag(excludeId);
+      while (bag.length > 0) {
+        const id = bag.shift();
+        const species = state.allSpecies.find((s) => s.id === id);
+        // Skip anything whose photos were all flagged away mid-cycle.
+        if (species && getUsableImages(species).length > 0) return species;
+      }
+      refillSpeciesBag(excludeId);
+    }
+    return pickRandom(state.allSpecies);
   }
 
   // Usable = curated for this species and not flagged during this session.
@@ -189,13 +229,30 @@
     );
   }
 
+  // Same idea one level down: a species shows every one of its photos before
+  // any of them comes back. Only once a species has exhausted its own set does
+  // it start a fresh pass — dropping it from rotation instead would undo the
+  // even species odds above.
   function getImageForSpecies(species) {
     const usable = getUsableImages(species);
-    if (usable.length > 0) return pickRandom(usable);
-    if (species.images && species.images.length > 0) {
-      return pickRandom(species.images);
+    if (usable.length === 0) return null;
+
+    let pool = usable.filter((img) => !session.seenImages.has(img.url));
+    if (pool.length === 0) {
+      // Start a new pass, but hold back the photo that ended the last one so
+      // it can't land twice in a row for this species.
+      const justSeen = usable.length > 1 ? session.lastImageBySpecies[species.id] : null;
+      usable.forEach((img) => {
+        if (img.url !== justSeen) session.seenImages.delete(img.url);
+      });
+      pool = usable.filter((img) => !session.seenImages.has(img.url));
+      if (pool.length === 0) pool = usable;
     }
-    return null;
+
+    const image = pickRandom(pool);
+    session.seenImages.add(image.url);
+    session.lastImageBySpecies[species.id] = image.url;
+    return image;
   }
 
   function setImage(image) {
@@ -223,21 +280,31 @@
       state.advanceTimer = null;
     }
 
+    // Show the photo the game already downloaded straight away, then quietly
+    // upgrade to the full-resolution original once it arrives. Loading the
+    // original first left the overlay blank for seconds on a big file, which
+    // looked like the click had done nothing at all.
     const large = image.url;
-    els.lightboxImage.onerror = () => {
-      els.lightboxImage.onerror = null;
-      els.lightboxImage.src = large;
-    };
-    els.lightboxImage.src = fullSizeUrl(large);
+    els.lightboxImage.src = large;
     els.lightboxCredit.textContent = image.attribution || "";
     els.lightbox.classList.remove("hidden");
     els.lightboxClose.focus();
+
+    const full = fullSizeUrl(large);
+    if (full === large) return;
+    const upgrade = new Image();
+    upgrade.onload = () => {
+      // Bail if the round moved on or the viewer closed up while it loaded.
+      if (state.currentImage === image && lightboxOpen()) {
+        els.lightboxImage.src = full;
+      }
+    };
+    upgrade.src = full;
   }
 
   function closeLightbox() {
     if (els.lightbox.classList.contains("hidden")) return;
     els.lightbox.classList.add("hidden");
-    els.lightboxImage.onerror = null;
     els.lightboxImage.removeAttribute("src");
   }
 
@@ -456,7 +523,9 @@
   });
   els.flagBtn.addEventListener("click", flagCurrentImage);
 
-  els.image.addEventListener("click", openLightbox);
+  // The whole frame, not just the photo, so clicks in the letterboxed margin
+  // (and on the badges) open it too.
+  els.imageWrap.addEventListener("click", openLightbox);
   // Clicking the backdrop (but not the photo itself) dismisses.
   els.lightbox.addEventListener("click", (e) => {
     if (e.target !== els.lightboxImage) closeLightbox();

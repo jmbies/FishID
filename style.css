@@ -454,3 +454,20 @@ body {
 .lightbox-close:hover {
   color: var(--color-border);
 }
+
+.image-wrap {
+  cursor: zoom-in;
+}
+
+.zoom-hint {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  pointer-events: none;
+}
