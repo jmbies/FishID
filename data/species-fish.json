@@ -4493,9 +4493,9 @@
       ],
       "sounds": [],
       "hints": [
-        "",
-        "",
-        ""
+        "Shark-like body shape, cartilaginous skeleton",
+        "Largely scaleless body",
+        "Elongate, paddle-shaped snout"
       ]
     },
     {
@@ -4683,9 +4683,9 @@
       ],
       "sounds": [],
       "hints": [
-        "",
-        "",
-        ""
+        "armor-like, diamond shaped scales (ganoid scales)",
+        "Sharp conical teeth",
+        "Jaws long and slender (length >13x width)"
       ]
     },
     {
@@ -4778,9 +4778,9 @@
       ],
       "sounds": [],
       "hints": [
-        "",
-        "",
-        ""
+        "Jaws short and broad (length < 10x width)",
+        "Spots absent or only on posterior half of body, usually no large spots on head",
+        "Armor-like, diamond shaped scales (ganoid scales)"
       ]
     },
     {
@@ -4828,9 +4828,9 @@
       ],
       "sounds": [],
       "hints": [
-        "",
-        "",
-        ""
+        "Dorsal fin continuous never divided into two fins",
+        "Parasitic adults, teeth numerous, buccal funnel well developed",
+        "Circumoral teeth all unicuspid"
       ]
     },
     {
